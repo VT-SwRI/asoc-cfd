@@ -1,0 +1,13 @@
+../apb/apb3_if.sv
+../apb/apb_decoder.sv
+../common/sync_fifo.sv
+../acq/cfd_engine.sv
+../acq/trigger_detector.sv
+../acq/asoc_acq_core.sv
+../periph/asoc_spi_master.sv
+../periph/apb_asoc_spi_portal.sv
+../periph/apb_fpga_ctrl.sv
+../periph/apb_uart_simple.sv
+../top/asoc_fpga_top.sv
+../top/asoc_fpga_top_example.sv
+apb_smoke_tb.sv

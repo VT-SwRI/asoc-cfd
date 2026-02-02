@@ -1,0 +1,4 @@
+#pragma once
+#define ASOC_FW_VERSION_MAJOR 0
+#define ASOC_FW_VERSION_MINOR 2
+#define ASOC_FW_VERSION_PATCH 0

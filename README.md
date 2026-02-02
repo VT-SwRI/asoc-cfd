@@ -431,3 +431,8 @@ As the project evolves, this repository is expected to grow to include:
 - Additional documentation capturing experimental setups, calibration procedures, and performance results
 
 These elements will be documented here as they are added. For now, the `docs/` folder and this README provide the authoritative, up-to-date description of the repository contents and intended technical direction.
+
+
+## Firmware expanded scaffold
+
+An expanded, multi-module firmware scaffold has been generated under `firmware/` (see `firmware/README.md`).
