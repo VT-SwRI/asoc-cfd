@@ -1,6 +1,6 @@
 ---
-name: Workflow Setup
-about: GitHub setup for code development
+name: 
+about:
 ---
 
 ## 🧩 Summary
