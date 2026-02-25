@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time
+from datetime import datetime
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
 
@@ -262,9 +263,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
     # --- Live acquisition timer ---
     def _init_acquire_timer(self):
-        """Create a 50 ms timer for live random-hit updates."""
+        """Create a 100 ms timer for live random-hit updates."""
         self._acq_timer = QtCore.QTimer(self)
-        self._acq_timer.setInterval(50)  # every 0.05 sec
+        self._acq_timer.setInterval(100)  # every 0.1 sec
         self._acq_timer.timeout.connect(self._on_tick)
 
         # accumulated hit buffers
@@ -273,37 +274,48 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self._phd_samples = np.array([])
         self._det_events = 0
         self._acq_start_time = 0.0
+        self._log_file = None
 
-        # redraw throttle — update plots every 10th tick (every 500 ms)
-        # so the UI stays responsive at 50 ms tick rate
+        # redraw throttle — update plots every 5th tick (every 500 ms)
         self._tick_count = 0
-        self._REDRAW_EVERY = 10  # 10 ticks × 50 ms = 500 ms
+        self._REDRAW_EVERY = 5
 
         self._MAX_DURATION = 120.0  # 2 minutes in seconds
 
     def _on_tick(self):
-        """Called every 50 ms — add 3 random hits."""
-        # Auto-stop after 2 minutes
+        """Called every 100 ms — add 1 random hit and log to file."""
         elapsed = time.time() - self._acq_start_time
         if elapsed >= self._MAX_DURATION:
             self.stop_acquire()
             return
 
-        # 3 random hits per tick
-        n_new = 3
-        new_x = np.random.uniform(0, 4096, n_new)
-        new_y = np.random.uniform(0, 4096, n_new)
+        # 1 random hit in physical coords: -51 to 51 mm
+        pos_x_mm = np.random.uniform(-51, 51)
+        pos_y_mm = np.random.uniform(-51, 51)
+        new_mag = np.random.uniform(0, 10)  # 0-10 nWb
+        hit_time = time.time()  # unix timestamp
 
-        self._hits_x = np.concatenate([self._hits_x, new_x])
-        self._hits_y = np.concatenate([self._hits_y, new_y])
-        self._det_events += n_new
+        # Map mm (-51..51) to pixel coords (0..4096) for the plot
+        pixel_x = (pos_x_mm + 51) / 102 * 4096
+        pixel_y = (pos_y_mm + 51) / 102 * 4096
 
-        # PHD energy samples
-        new_phd = np.random.normal(128, 30, n_new)
-        new_phd = np.clip(new_phd, 0, 256)
-        self._phd_samples = np.concatenate([self._phd_samples, new_phd])
+        self._hits_x = np.append(self._hits_x, pixel_x)
+        self._hits_y = np.append(self._hits_y, pixel_y)
+        self._det_events += 1
 
-        # Only redraw plots every 500 ms to keep the UI smooth
+        # Write to log file: x_pos_mm, y_pos_mm, time_s, magnitude_nWb
+        if self._log_file is not None:
+            readable = datetime.fromtimestamp(hit_time).strftime("%Y-%m-%d %H:%M:%S.%f")
+            self._log_file.write(
+                f"{pos_x_mm:.4f}, {pos_y_mm:.4f}, {readable}, {new_mag:.4f}\n"
+            )
+            self._log_file.flush()
+
+        # PHD energy sample
+        new_phd = np.clip(np.random.normal(128, 30), 0, 256)
+        self._phd_samples = np.append(self._phd_samples, new_phd)
+
+        # Only redraw plots every 500 ms
         self._tick_count += 1
         if self._tick_count % self._REDRAW_EVERY == 0:
             if self.rtImageChk.isChecked():
@@ -321,7 +333,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
                     label="PHD",
                 )
 
-        # Status bar updates are cheap — do every tick
+        # Status bar
         self.detEventsLbl.setText(f"Det Events: {self._det_events}")
         self.countsLbl.setText(f"Counts: {len(self._hits_x)}")
         remaining = max(0, self._MAX_DURATION - elapsed)
@@ -342,6 +354,12 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.bigPlot.clear_axes()
         self.phdPlot.clear_axes()
 
+        # Open log file with timestamp in name
+        filename = f"hits_{int(self._acq_start_time)}.txt"
+        self._log_file = open(filename, "w")
+        self._log_file.write("x_pos_mm, y_pos_mm, datetime, magnitude_nWb\n")
+        print(f"Logging hits to: {filename}")
+
         self.acquireBtn.setEnabled(False)
         self.stopBtn.setEnabled(True)
         self.statusBar().showMessage("Acquiring...", 2000)
@@ -349,6 +367,13 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
     def stop_acquire(self):
         self._acq_timer.stop()
+
+        # Close log file
+        if self._log_file is not None:
+            self._log_file.close()
+            print(f"Log file closed — {self._det_events} hits saved.")
+            self._log_file = None
+
         self.acquireBtn.setEnabled(True)
         self.stopBtn.setEnabled(False)
         self.secondsStatusLbl.setText(f"Seconds: {self.seconds.value()}")
