@@ -3,10 +3,13 @@
 
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
-
+from PyQt5.QtCore import QThread
+import os
+from datetime import datetime
 from plots import MplCanvas
 from mock_data import generate_spiral_hits, generate_phd_samples
-
+from output_gen.output_gen import ListWriter
+from networking.networking import NetworkWorker
 
 class EtherDAQMock(QtWidgets.QMainWindow):
     def __init__(self):
@@ -14,12 +17,14 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.setWindowTitle("EtherDaq [Mock UI]")
         self.resize(1120, 700)
 
+        # sets the top menu items
         menubar = self.menuBar()
         menubar.addMenu("&File").addAction("Exit", self.close)
         menubar.addMenu("&Edit")
         menubar.addMenu("&Settings")
         menubar.addMenu("&Help")
 
+        # creates the layout (left column and right column)
         central = QtWidgets.QWidget()
         root = QtWidgets.QHBoxLayout(central)
         root.setContentsMargins(12, 6, 12, 6)
@@ -38,28 +43,30 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         dataModeLbl = QtWidgets.QLabel("Data Mode:")
         self.dataMode = QtWidgets.QComboBox()
-        self.dataMode.addItems(["Gain"])
+        self.dataMode.addItems(["Gain", "Phton List", "Test"])
         self.dataMode.setFixedWidth(120)
 
         secondsLbl = QtWidgets.QLabel("Seconds:")
         self.seconds = QtWidgets.QSpinBox()
         self.seconds.setRange(1, 3600)
         self.seconds.setValue(100)
-        self.seconds.setFixedWidth(100)
+        self.seconds.setFixedWidth(120)
         self.seconds.valueChanged.connect(self._update_seconds_status)
 
+        self.fileBtn = QtWidgets.QPushButton("Select Save Folder")
         self.acquireBtn = QtWidgets.QPushButton("Acquire")
         self.stopBtn = QtWidgets.QPushButton("Stop")
         self.stopBtn.setEnabled(False)
-        for b in (self.acquireBtn, self.stopBtn):
+        for b in ( self.acquireBtn, self.stopBtn):
             b.setFixedWidth(100)
-
+        self.fileBtn.setFixedWidth(200)
         dataLay.addWidget(dataModeLbl, 0, 0)
-        dataLay.addWidget(self.dataMode, 0, 1)
+        dataLay.addWidget(self.dataMode, 0, 4)
         dataLay.addWidget(secondsLbl, 1, 0)
-        dataLay.addWidget(self.seconds, 1, 1)
-        dataLay.addWidget(self.acquireBtn, 2, 0, 1, 2)
-        dataLay.addWidget(self.stopBtn, 3, 0, 1, 2)
+        dataLay.addWidget(self.seconds, 1, 4)
+        dataLay.addWidget(self.fileBtn,    2, 0, 1, 2)
+        dataLay.addWidget(self.acquireBtn, 2, 2, 1, 2)
+        dataLay.addWidget(self.stopBtn,    2, 3, 1, 2)
 
         leftCol.addWidget(dataBox)
 
@@ -178,13 +185,29 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.acquireBtn.clicked.connect(self.start_acquire)
         self.stopBtn.clicked.connect(self.stop_acquire)
 
+        self.fileBtn.clicked.connect(self.getFilePath)
+        self.save_folder = os.getcwd()
+
         self.xRange.currentIndexChanged.connect(self._update_viewport)
         self.yRange.currentIndexChanged.connect(self._update_viewport)
         self.xOffset.editingFinished.connect(self._update_viewport)
         self.yOffset.editingFinished.connect(self._update_viewport)
 
+
+        self.writer_thread = None
+        self.writer_worker = None
+        self.recv_thread = None
+        self.recv_worker = None
+
+        self.dataType = np.dtype([ ('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
         # initial mock data
-        self._mock_refresh()
+        # self._mock_refresh()
+
+    def getFilePath(self):
+        folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Save Folder")
+
+        if folder:
+            self.save_folder = folder
 
     # --- Seconds status helper ---
     def _update_seconds_status(self, val: int):
@@ -256,12 +279,73 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
 
     def start_acquire(self):
+
+
+        tstamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        tstamp = 50
+        filename = os.path.join(self.save_folder, f"run_{tstamp}.h5")
+
+        self.writer_thread = QThread()
+        self.recv_thread = QThread()
+
+        self.writer_worker = ListWriter(filename, self.dataType)
+        self.recv_worker = NetworkWorker(self.dataType, 561)
+
+        self.writer_worker.moveToThread(self.writer_thread)
+        self.recv_worker.moveToThread(self.recv_thread)
+
+        self.writer_thread.started.connect(self.writer_worker.start)
+        self.recv_thread.started.connect(self.recv_worker.start)
+        
+        self.recv_worker.batch_ready.connect(self.writer_worker.writeBatch)
+
+
+        self.recv_worker.finished.connect(self.debug, QtCore.Qt.QueuedConnection)
+
+        self.writer_worker.finished.connect(self.writer_thread.quit)
+        self.recv_worker.finished.connect(self.recv_thread.quit)
+        
+        self.writer_thread.finished.connect(self.writer_thread.deleteLater)
+        self.recv_thread.finished.connect(self.recv_thread.deleteLater)
+        
+        self.writer_thread.start()
+        self.recv_thread.start()
+
+        self.fileBtn.setEnabled(False)
         self.acquireBtn.setEnabled(False)
         self.stopBtn.setEnabled(True)
         self.statusBar().showMessage("Acquiring...", 2000)
-        self._mock_refresh()
+        if self.dataMode.currentIndex() == 2:
+            self._mock_refresh()
+        
 
     def stop_acquire(self):
+        self.fileBtn.setEnabled(True)
         self.acquireBtn.setEnabled(True)
         self.stopBtn.setEnabled(False)
         self.statusBar().showMessage("Acquisition stopped.", 2000)
+
+        # QtCore.QMetaObject.invokeMethod(
+        #     self.recv_worker,
+        #     "stop",
+        #     QtCore.Qt.QueuedConnection
+        # )
+        self.recv_worker.stop()
+        self.recv_thread.quit()
+        self.recv_thread.wait()
+
+        self.writer_worker.stop()
+        self.writer_thread.wait()
+
+        print(self.recv_thread.isRunning())   # should be False
+        print(self.recv_thread.isFinished())  # should be True
+
+        self.recv_thread = None
+        self.recv_worker = None
+        self.writer_thread = None
+        self.writer_worker = None
+
+
+
+    def debug(self):
+        print("Fired")
