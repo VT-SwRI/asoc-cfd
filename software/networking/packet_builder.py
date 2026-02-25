@@ -1,43 +1,30 @@
 import struct
-from packet_types import PacketType
-from models.parameters import FPGAParameters
+from .packet_types import PacketType
+from ..models.parameters import FPGAParameters
 
 
 class PacketBuilder:
 
     @staticmethod
-    def build_set_parameters_packet(
+    def build_header(
         packet_type: PacketType,
         select: int,
-        mode: int,
-        params: FPGAParameters
+        mode: int
     ) -> bytes:
         """
-        Builds 38-byte packet:
-        [2B type][2B select][2B mode][32B payload]
+        Builds 6-byte header:
+        [2B type][2B select][2B mode]
         """
+        return struct.pack("!HHH", packet_type, select, mode)
 
-        # Header (big-endian network order)
-        header = struct.pack("!HHH",
-                             packet_type,
-                             select,
-                             mode)
-
-        # Payload (define exact layout)
-        # Example:
-        # time (4B)
-        # delay (4B)
-        # attenuation (4B float)
-        # threshold (4B)
-        # remaining padded to 32 bytes
-
-        payload = struct.pack("!IIfI",
-                              params.time,
-                              params.delay,
-                              params.attenuation,
-                              params.threshold)
-
-        # Pad to 32 bytes
-        payload = payload.ljust(32, b'\x00')
-
-        return header + payload
+    @staticmethod
+    def build_set_parameters_payload(params: FPGAParameters) -> bytes:
+        """
+        Builds 16-byte payload with CFD parameters:
+        [4B time][4B delay][4B attenuation][4B threshold]
+        """
+        return struct.pack("!IIfI",
+                           params.time,
+                           params.delay,
+                           params.attenuation,
+                           params.threshold)
