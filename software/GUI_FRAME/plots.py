@@ -176,5 +176,5 @@ class MplCanvas(FigureCanvas):
         self.draw_idle()
 
     def show_heatmap(self, img2d, vmin=None, vmax=None, extent=None):
-        # kept as placeholder if you later want a real heatmap
+        # kept as placeholder if want a real heatmap later
         pass

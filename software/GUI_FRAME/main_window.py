@@ -1,11 +1,11 @@
 # main_window.py
 # -*- coding: utf-8 -*-
 
+import time
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
 
 from plots import MplCanvas
-from mock_data import generate_spiral_hits, generate_phd_samples
 
 
 class EtherDAQMock(QtWidgets.QMainWindow):
@@ -63,22 +63,27 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         leftCol.addWidget(dataBox)
 
-        sizeBox = QtWidgets.QGroupBox("Image Size")
-        sizeLay = QtWidgets.QGridLayout(sizeBox)
-        sizeLay.setContentsMargins(10, 8, 10, 8)
-        sizeLay.setHorizontalSpacing(10)
-        self.xSize = QtWidgets.QComboBox()
-        self.ySize = QtWidgets.QComboBox()
-        for cb in (self.xSize, self.ySize):
-            cb.addItems(["512", "1024", "2048", "4096"])
-            cb.setCurrentText("1024")
-            cb.setFixedWidth(100)
-        sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
-        sizeLay.addWidget(self.xSize, 0, 1)
-        sizeLay.addWidget(QtWidgets.QLabel("Y Size:"), 1, 0)
-        sizeLay.addWidget(self.ySize, 1, 1)
+        paramBox = QtWidgets.QGroupBox("User Parameters")
+        paramLay = QtWidgets.QGridLayout(paramBox)
+        paramLay.setContentsMargins(10, 8, 10, 8)
+        paramLay.setHorizontalSpacing(10)
+        paramLay.setVerticalSpacing(8)
 
-        leftCol.addWidget(sizeBox)
+        self.delayTime = QtWidgets.QLineEdit("0")
+        self.delayTime.setFixedWidth(100)
+        self.fractionParam = QtWidgets.QLineEdit("0.0")
+        self.fractionParam.setFixedWidth(100)
+        self.sampleRate = QtWidgets.QLineEdit("1.0")
+        self.sampleRate.setFixedWidth(100)
+
+        paramLay.addWidget(QtWidgets.QLabel("Delay Time (ns):"), 0, 0)
+        paramLay.addWidget(self.delayTime, 0, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Fraction Parameter:"), 1, 0)
+        paramLay.addWidget(self.fractionParam, 1, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Sample Rate (GHz):"), 2, 0)
+        paramLay.addWidget(self.sampleRate, 2, 1)
+
+        leftCol.addWidget(paramBox)
 
         self.phdChk = QtWidgets.QCheckBox("Real Time PHD")
         self.phdChk.setChecked(True)
@@ -183,8 +188,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.xOffset.editingFinished.connect(self._update_viewport)
         self.yOffset.editingFinished.connect(self._update_viewport)
 
-        # initial mock data
-        self._mock_refresh()
+        # initialise the acquisition timer (does NOT start it)
+        self._init_acquire_timer()
 
     # --- Seconds status helper ---
     def _update_seconds_status(self, val: int):
@@ -232,36 +237,130 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         self.bigPlot.draw_idle()
 
-    # --- Mock handlers ---
-    def _mock_refresh(self):
-        """Generate spiral + PHD and update both graphs."""
+    # ---- settings snapshot ----
+    def get_settings(self) -> dict:
+        """Return all user-chosen parameters as a plain dict."""
+        def _safe_float(text, default=0.0):
+            try:
+                return float(text)
+            except ValueError:
+                return default
 
-        # Spiral hits on the main image
-        x, y = generate_spiral_hits()
-        self._hits_x, self._hits_y = x, y
-        self.bigPlot.show_hits(x, y, label="Test Spiral Pattern")
-        self._update_viewport()
+        return {
+            "data_mode":        self.dataMode.currentText(),
+            "seconds":          self.seconds.value(),
+            "delay_time_ns":    _safe_float(self.delayTime.text(), 0.0),
+            "fraction_param":   _safe_float(self.fractionParam.text(), 0.0),
+            "sample_rate_ghz":  _safe_float(self.sampleRate.text(), 1.0),
+            "x_range":          int(self.xRange.currentText()),
+            "y_range":          int(self.yRange.currentText()),
+            "x_offset":         int(self.xOffset.text() or "0"),
+            "y_offset":         int(self.yOffset.text() or "0"),
+            "rt_image":         self.rtImageChk.isChecked(),
+            "rt_phd":           self.phdChk.isChecked(),
+        }
 
-        # PHD histogram on the left (only if checkbox is enabled)
-        if self.phdChk.isChecked():
-            samples = generate_phd_samples()  # now 0–256 by default
-            self.phdPlot.show_hist(
-                samples,
-                bins=256,
-                range_=(0, 256),
-                label="PHD",
-            )
-        else:
-            self.phdPlot.clear_axes()
+    # --- Live acquisition timer ---
+    def _init_acquire_timer(self):
+        """Create a 50 ms timer for live random-hit updates."""
+        self._acq_timer = QtCore.QTimer(self)
+        self._acq_timer.setInterval(50)  # every 0.05 sec
+        self._acq_timer.timeout.connect(self._on_tick)
 
+        # accumulated hit buffers
+        self._hits_x = np.array([])
+        self._hits_y = np.array([])
+        self._phd_samples = np.array([])
+        self._det_events = 0
+        self._acq_start_time = 0.0
+
+        # redraw throttle — update plots every 10th tick (every 500 ms)
+        # so the UI stays responsive at 50 ms tick rate
+        self._tick_count = 0
+        self._REDRAW_EVERY = 10  # 10 ticks × 50 ms = 500 ms
+
+        self._MAX_DURATION = 120.0  # 2 minutes in seconds
+
+    def _on_tick(self):
+        """Called every 50 ms — add 3 random hits."""
+        # Auto-stop after 2 minutes
+        elapsed = time.time() - self._acq_start_time
+        if elapsed >= self._MAX_DURATION:
+            self.stop_acquire()
+            return
+
+        # 3 random hits per tick
+        n_new = 3
+        new_x = np.random.uniform(0, 4096, n_new)
+        new_y = np.random.uniform(0, 4096, n_new)
+
+        self._hits_x = np.concatenate([self._hits_x, new_x])
+        self._hits_y = np.concatenate([self._hits_y, new_y])
+        self._det_events += n_new
+
+        # PHD energy samples
+        new_phd = np.random.normal(128, 30, n_new)
+        new_phd = np.clip(new_phd, 0, 256)
+        self._phd_samples = np.concatenate([self._phd_samples, new_phd])
+
+        # Only redraw plots every 500 ms to keep the UI smooth
+        self._tick_count += 1
+        if self._tick_count % self._REDRAW_EVERY == 0:
+            if self.rtImageChk.isChecked():
+                self.bigPlot.show_hits(
+                    self._hits_x, self._hits_y,
+                    label=f"Live Hits ({len(self._hits_x)})"
+                )
+                self._update_viewport()
+
+            if self.phdChk.isChecked():
+                self.phdPlot.show_hist(
+                    self._phd_samples,
+                    bins=256,
+                    range_=(0, 256),
+                    label="PHD",
+                )
+
+        # Status bar updates are cheap — do every tick
+        self.detEventsLbl.setText(f"Det Events: {self._det_events}")
+        self.countsLbl.setText(f"Counts: {len(self._hits_x)}")
+        remaining = max(0, self._MAX_DURATION - elapsed)
+        self.secondsStatusLbl.setText(f"Time left: {remaining:.1f}s")
 
     def start_acquire(self):
+        settings = self.get_settings()
+        settings["timestamp"] = int(time.time())
+        print(settings)
+
+        # Clear previous data
+        self._hits_x = np.array([])
+        self._hits_y = np.array([])
+        self._phd_samples = np.array([])
+        self._det_events = 0
+        self._tick_count = 0
+        self._acq_start_time = time.time()
+        self.bigPlot.clear_axes()
+        self.phdPlot.clear_axes()
+
         self.acquireBtn.setEnabled(False)
         self.stopBtn.setEnabled(True)
         self.statusBar().showMessage("Acquiring...", 2000)
-        self._mock_refresh()
+        self._acq_timer.start()
 
     def stop_acquire(self):
+        self._acq_timer.stop()
         self.acquireBtn.setEnabled(True)
         self.stopBtn.setEnabled(False)
-        self.statusBar().showMessage("Acquisition stopped.", 2000)
+        self.secondsStatusLbl.setText(f"Seconds: {self.seconds.value()}")
+
+        # Final redraw with all data
+        if len(self._hits_x) > 0:
+            self.bigPlot.show_hits(
+                self._hits_x, self._hits_y,
+                label=f"Total Hits ({len(self._hits_x)})"
+            )
+            self._update_viewport()
+
+        self.statusBar().showMessage(
+            f"Stopped — {len(self._hits_x)} total hits collected.", 5000
+        )
