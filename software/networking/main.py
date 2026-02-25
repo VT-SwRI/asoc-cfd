@@ -12,7 +12,7 @@ def main():
     params = FPGAParameters(
         time=1000,
         delay=25,
-        attenuation=0.75,
+        attenuation=1,
         threshold=150
     )
 
