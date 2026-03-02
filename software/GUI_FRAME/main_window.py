@@ -277,39 +277,52 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         else:
             self.phdPlot.clear_axes()
 
-
-    def start_acquire(self):
-
-
+    def setupThreads(self):
+        # create a timestamp for the file being created
         tstamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         tstamp = 50
         filename = os.path.join(self.save_folder, f"run_{tstamp}.h5")
 
+        # create each individual thread
         self.writer_thread = QThread()
         self.recv_thread = QThread()
 
+        # create the workers that are going to be living in the thread
         self.writer_worker = ListWriter(filename, self.dataType)
         self.recv_worker = NetworkWorker(self.dataType, 561)
 
+        # move the workers into their respective threads
         self.writer_worker.moveToThread(self.writer_thread)
         self.recv_worker.moveToThread(self.recv_thread)
 
+        # connect the worker's start function so that it is called when the thread is deployed
         self.writer_thread.started.connect(self.writer_worker.start)
         self.recv_thread.started.connect(self.recv_worker.start)
         
+        # connect the batch ready signal from the depacketizer to the writer.
+        # This allows the depacketizer to send batched to the writeBatch function in the writer worker
         self.recv_worker.batch_ready.connect(self.writer_worker.writeBatch)
 
-
-        self.recv_worker.finished.connect(self.debug, QtCore.Qt.QueuedConnection)
-
+        # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
         self.writer_worker.finished.connect(self.writer_thread.quit)
-        self.recv_worker.finished.connect(self.recv_thread.quit)
-        
+        self.recv_worker.done.connect(self.recv_thread.quit)
+
+        # delete later ensures proper cleanup of threads
         self.writer_thread.finished.connect(self.writer_thread.deleteLater)
         self.recv_thread.finished.connect(self.recv_thread.deleteLater)
         
+        # deploy each thread, remember this also starts each worker
         self.writer_thread.start()
         self.recv_thread.start()
+
+        # connect the done signal from the receiver to the function that stops all workers and threads to ensure the socket is closed properly
+        self.recv_worker.done.connect(self.cleanUp)
+
+
+    def start_acquire(self):
+        # sets up the threads and workers for networking and output file generation
+        self.setupThreads()
+        
 
         self.fileBtn.setEnabled(False)
         self.acquireBtn.setEnabled(False)
@@ -325,27 +338,20 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.stopBtn.setEnabled(False)
         self.statusBar().showMessage("Acquisition stopped.", 2000)
 
-        # QtCore.QMetaObject.invokeMethod(
-        #     self.recv_worker,
-        #     "stop",
-        #     QtCore.Qt.QueuedConnection
-        # )
-        self.recv_worker.stop()
-        self.recv_thread.quit()
+        # invoke the stop function 
+        QtCore.QMetaObject.invokeMethod(self.recv_worker, "stop", QtCore.Qt.QueuedConnection)
+
+
+
+    def cleanUp(self):
+        # first we wait until the receive thread is done quitting, should be done automatically once worker emits done signal
         self.recv_thread.wait()
 
-        self.writer_worker.stop()
+        # same as above but for the writer thread, quitting should be done automatically once the writer emits finished signal
         self.writer_thread.wait()
 
-        print(self.recv_thread.isRunning())   # should be False
-        print(self.recv_thread.isFinished())  # should be True
-
+        # clean up the memory
         self.recv_thread = None
         self.recv_worker = None
         self.writer_thread = None
         self.writer_worker = None
-
-
-
-    def debug(self):
-        print("Fired")

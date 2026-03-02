@@ -9,7 +9,7 @@ import struct
 class NetworkWorker(QtCore.QObject):
 
     batch_ready = QtCore.pyqtSignal(object)
-    finished = QtCore.pyqtSignal()
+    done = QtCore.pyqtSignal()
     error = QtCore.pyqtSignal(str)
 
     def __init__(self, type, port=5000):
@@ -48,13 +48,14 @@ class NetworkWorker(QtCore.QObject):
             self.socket.close()
             self.socket.deleteLater()
             self.socket = None
+            print("Deleting Socket")
 
         if self.buffer:
             batch = np.array(self.buffer, dtype=self.type)
             self.batch_ready.emit(batch)
             self.buffer.clear()
 
-        self.finished.emit()
+        self.done.emit()
         print("Done")
 
     @QtCore.pyqtSlot()
