@@ -347,7 +347,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # first we wait until the receive thread is done quitting, should be done automatically once worker emits done signal
         self.recv_thread.wait()
 
-        # same as above but for the writer thread, quitting should be done automatically once the writer emits finished signal
+
+        # call the stop function on the writer worker which will emit a signal causing the thread to quit
+        self.writer_worker.stop()
         self.writer_thread.wait()
 
         # clean up the memory
@@ -355,3 +357,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.recv_worker = None
         self.writer_thread = None
         self.writer_worker = None
+
+    def closeEvent(self, a0):
+        if self.recv_worker is not None:
+            QtCore.QMetaObject.invokeMethod(self.recv_worker, "stop", QtCore.Qt.QueuedConnection)
+        
+        a0.accept()
+        
+        # return super().closeEvent(a0)

@@ -38,7 +38,6 @@ class ListWriter(QObject):
 
     @pyqtSlot()
     def stop(self):
-
         if self.file:
             self.file.flush()
             self.file.close()

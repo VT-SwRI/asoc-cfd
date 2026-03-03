@@ -38,7 +38,7 @@ class NetworkWorker(QtCore.QObject):
             return
 
         self.socket.readyRead.connect(self.read_datagrams)
-        print("Connected")
+        print("Socket connected, waiting for packets... \n")
 
     @QtCore.pyqtSlot()
     def stop(self):
@@ -48,7 +48,6 @@ class NetworkWorker(QtCore.QObject):
             self.socket.close()
             self.socket.deleteLater()
             self.socket = None
-            print("Deleting Socket")
 
         if self.buffer:
             batch = np.array(self.buffer, dtype=self.type)
@@ -56,11 +55,11 @@ class NetworkWorker(QtCore.QObject):
             self.buffer.clear()
 
         self.done.emit()
-        print("Done")
+        print("Disconnected successfully\n")
 
     @QtCore.pyqtSlot()
     def read_datagrams(self):
-        print("Writing data...")
+        print("Writing data...\n")
         while self.running and self.socket.hasPendingDatagrams():
             size = self.socket.pendingDatagramSize()
             datagram, _, _ = self.socket.readDatagram(size)
@@ -73,6 +72,7 @@ class NetworkWorker(QtCore.QObject):
                 batch = np.array(self.buffer, dtype=np.float32)
                 self.buffer.clear()
                 self.batch_ready.emit(batch)
+                print("Batch sent to writer\n")
 
     @QtCore.pyqtSlot()
     def decode_packet(self, datagram):
