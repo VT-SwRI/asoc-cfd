@@ -1,0 +1,111 @@
+name: Task
+description: Create a new task, bug report, or development item
+title: "[TASK] "
+labels: []
+assignees: []
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "🧩 Summary"
+      description: "Briefly describe the issue, bug, or task."
+      placeholder: |
+        Example:
+        - UART RX module drops bytes at high baud rates
+        - Need Python script to parse ADC output packets
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: area
+    attributes:
+      label: "🛠️ Area / Component"
+      description: "Select all that apply."
+      options:
+        - label: "Verilog / HDL"
+        - label: "Python"
+        - label: "Testbench"
+        - label: "Simulation"
+        - label: "Hardware / FPGA"
+        - label: "Documentation"
+
+  - type: textarea
+    id: relevant_files
+    attributes:
+      label: "📂 Relevant Files / Modules"
+      description: "List any relevant files, modules, or directories."
+      placeholder: |
+        Example:
+        - rtl/uart_rx.v
+        - tb/uart_rx_tb.sv
+        - scripts/parse_data.py
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: "🐞 Bug Description (if applicable)"
+      description: "Describe what is going wrong."
+      placeholder: |
+        Expected behavior:
+        Actual behavior:
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "🔁 Steps to Reproduce (for bugs)"
+      description: "Include commands, simulation steps, or test inputs if relevant."
+      placeholder: |
+        1.
+        2.
+        3.
+
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "What must be true for this issue to be considered done?"
+      options:
+        - label: "Module passes provided testbench"
+        - label: "Python script produces correct CSV output"
+        - label: "No simulation errors or warnings"
+
+  - type: textarea
+    id: testing_notes
+    attributes:
+      label: "🧪 Testing Notes"
+      description: "How should this be tested or verified?"
+      placeholder: |
+        - Simulation tool used (ModelSim, Verilator, etc.)
+        - Python version
+        - Hardware test (if any)
+
+  - type: input
+    id: primary
+    attributes:
+      label: "👥 Primary Assignee"
+      placeholder: "@username"
+
+  - type: input
+    id: reviewer
+    attributes:
+      label: "👥 Backup / Reviewer"
+      placeholder: "@username"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⏳ Priority"
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical (blocking others)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "📝 Additional Notes"
+      description: "Anything else helpful (design assumptions, specs, screenshots, waveforms, etc.)"
