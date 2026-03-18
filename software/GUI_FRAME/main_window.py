@@ -4,12 +4,13 @@
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QThread
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel
 import os
 from datetime import datetime
 from plots import MplCanvas
 from mock_data import generate_spiral_hits, generate_phd_samples
 from output_gen.output_gen import ListWriter
-from networking.networking import NetworkWorker
+from networking.networking import RxWorker, TxWorker
 
 class EtherDAQMock(QtWidgets.QMainWindow):
     def __init__(self):
@@ -41,10 +42,15 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         dataLay.setHorizontalSpacing(10)
         dataLay.setVerticalSpacing(8)
 
-        dataModeLbl = QtWidgets.QLabel("Data Mode:")
+        dataModeLbl = QtWidgets.QLabel("Mode:")
         self.dataMode = QtWidgets.QComboBox()
-        self.dataMode.addItems(["Gain", "Phton List", "Test"])
+        self.dataMode.addItems(["Standard", "Test"])
         self.dataMode.setFixedWidth(120)
+
+        typeLabel = QtWidgets.QLabel("Output Type:")
+        self.outType = QtWidgets.QComboBox()
+        self.outType.addItems(["Gain", "Photon List"])
+        self.outType.setFixedWidth(120)
 
         secondsLbl = QtWidgets.QLabel("Seconds:")
         self.seconds = QtWidgets.QSpinBox()
@@ -59,33 +65,65 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.stopBtn.setEnabled(False)
         for b in ( self.acquireBtn, self.stopBtn):
             b.setFixedWidth(100)
+
+
+
         self.fileBtn.setFixedWidth(200)
-        dataLay.addWidget(dataModeLbl, 0, 0)
-        dataLay.addWidget(self.dataMode, 0, 4)
-        dataLay.addWidget(secondsLbl, 1, 0)
-        dataLay.addWidget(self.seconds, 1, 4)
-        dataLay.addWidget(self.fileBtn,    2, 0, 1, 2)
-        dataLay.addWidget(self.acquireBtn, 2, 2, 1, 2)
-        dataLay.addWidget(self.stopBtn,    2, 3, 1, 2)
+        dataLay.addWidget(typeLabel, 0, 0)
+        dataLay.addWidget(self.outType, 0, 4)
+        dataLay.addWidget(dataModeLbl, 1, 0)
+        dataLay.addWidget(self.dataMode, 1, 4)
+        dataLay.addWidget(secondsLbl, 2, 0)
+        dataLay.addWidget(self.seconds, 2, 4)
+        dataLay.addWidget(self.fileBtn,    3, 0, 1, 2)
+        dataLay.addWidget(self.acquireBtn, 3, 2, 1, 2)
+        dataLay.addWidget(self.stopBtn,    3, 3, 1, 2)
 
         leftCol.addWidget(dataBox)
 
-        sizeBox = QtWidgets.QGroupBox("Image Size")
-        sizeLay = QtWidgets.QGridLayout(sizeBox)
-        sizeLay.setContentsMargins(10, 8, 10, 8)
-        sizeLay.setHorizontalSpacing(10)
-        self.xSize = QtWidgets.QComboBox()
-        self.ySize = QtWidgets.QComboBox()
-        for cb in (self.xSize, self.ySize):
-            cb.addItems(["512", "1024", "2048", "4096"])
-            cb.setCurrentText("1024")
-            cb.setFixedWidth(100)
-        sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
-        sizeLay.addWidget(self.xSize, 0, 1)
-        sizeLay.addWidget(QtWidgets.QLabel("Y Size:"), 1, 0)
-        sizeLay.addWidget(self.ySize, 1, 1)
+        # sizeBox = QtWidgets.QGroupBox("Image Size")
+        # sizeLay = QtWidgets.QGridLayout(sizeBox)
+        # sizeLay.setContentsMargins(10, 8, 10, 8)
+        # sizeLay.setHorizontalSpacing(10)
+        # self.xSize = QtWidgets.QComboBox()
+        # self.ySize = QtWidgets.QComboBox()
+        # for cb in (self.xSize, self.ySize):
+        #     cb.addItems(["512", "1024", "2048", "4096"])
+        #     cb.setCurrentText("1024")
+        #     cb.setFixedWidth(100)
+        # sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
+        # sizeLay.addWidget(self.xSize, 0, 1)
+        # sizeLay.addWidget(QtWidgets.QLabel("Y Size:"), 1, 0)
+        # sizeLay.addWidget(self.ySize, 1, 1)
 
-        leftCol.addWidget(sizeBox)
+        # leftCol.addWidget(sizeBox)
+
+        paramBox = QtWidgets.QGroupBox("User Parameters")
+        paramLay = QtWidgets.QGridLayout(paramBox)
+        paramLay.setContentsMargins(10, 8, 10, 8)
+        paramLay.setHorizontalSpacing(10)
+        paramLay.setVerticalSpacing(8)
+
+        self.ParamsBtn = QtWidgets.QPushButton("Set Parameters")
+        self.ParamsBtn.setFixedWidth(200)
+        
+
+        self.delayTime = QtWidgets.QLineEdit("0")
+        self.delayTime.setFixedWidth(100)
+        self.fractionParam = QtWidgets.QLineEdit("0.0")
+        self.fractionParam.setFixedWidth(100)
+        self.sampleRate = QtWidgets.QLineEdit("1.0")
+        self.sampleRate.setFixedWidth(100)
+
+        paramLay.addWidget(QtWidgets.QLabel("Delay Time (ns):"), 0, 0)
+        paramLay.addWidget(self.delayTime, 0, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Fraction Parameter:"), 1, 0)
+        paramLay.addWidget(self.fractionParam, 1, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Sample Rate (GHz):"), 2, 0)
+        paramLay.addWidget(self.sampleRate, 2, 1)
+        paramLay.addWidget(self.ParamsBtn, 3, 0, 1, 2)
+
+        leftCol.addWidget(paramBox)
 
         self.phdChk = QtWidgets.QCheckBox("Real Time PHD")
         self.phdChk.setChecked(True)
@@ -193,15 +231,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.xOffset.editingFinished.connect(self._update_viewport)
         self.yOffset.editingFinished.connect(self._update_viewport)
 
+        self.ParamsBtn.clicked.connect(self.open_popup)
+
 
         self.writer_thread = None
         self.writer_worker = None
+        self.tx_thread = None
+        self.tx_worker = None
         self.recv_thread = None
         self.recv_worker = None
+        self.popup = None
 
-        self.dataType = np.dtype([ ('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
-        # initial mock data
-        # self._mock_refresh()
+        self.inType = np.dtype([ ('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
 
     def getFilePath(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Save Folder")
@@ -280,25 +321,28 @@ class EtherDAQMock(QtWidgets.QMainWindow):
     def setupThreads(self):
         # create a timestamp for the file being created
         tstamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        tstamp = 50
         filename = os.path.join(self.save_folder, f"run_{tstamp}.h5")
 
         # create each individual thread
         self.writer_thread = QThread()
         self.recv_thread = QThread()
+        self.tx_thread = QThread()
 
         # create the workers that are going to be living in the thread
-        self.writer_worker = ListWriter(filename, self.dataType)
-        self.recv_worker = NetworkWorker(self.dataType, 561)
+        self.writer_worker = ListWriter(filename, self.inType)
+        self.recv_worker = RxWorker(self.inType, 561)
+        self.tx_worker = TxWorker(self.outType, )
 
         # move the workers into their respective threads
         self.writer_worker.moveToThread(self.writer_thread)
         self.recv_worker.moveToThread(self.recv_thread)
+        self.tx_worker.moveToThread(self.tx_thread)
 
         # connect the worker's start function so that it is called when the thread is deployed
         self.writer_thread.started.connect(self.writer_worker.start)
         self.recv_thread.started.connect(self.recv_worker.start)
-        
+        self.tx_thread.started.connect(self.tx_worker.start)
+
         # connect the batch ready signal from the depacketizer to the writer.
         # This allows the depacketizer to send batched to the writeBatch function in the writer worker
         self.recv_worker.batch_ready.connect(self.writer_worker.writeBatch)
@@ -306,14 +350,17 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
         self.writer_worker.finished.connect(self.writer_thread.quit)
         self.recv_worker.done.connect(self.recv_thread.quit)
+        self.tx_worker.done.connect(self.tx_thread.quit)
 
         # delete later ensures proper cleanup of threads
         self.writer_thread.finished.connect(self.writer_thread.deleteLater)
         self.recv_thread.finished.connect(self.recv_thread.deleteLater)
+        self.tx_thread.finished.connect(self.tx_thread.deleteLater)
         
         # deploy each thread, remember this also starts each worker
         self.writer_thread.start()
         self.recv_thread.start()
+        self.tx_thread.start()
 
         # connect the done signal from the receiver to the function that stops all workers and threads to ensure the socket is closed properly
         self.recv_worker.done.connect(self.cleanUp)
@@ -328,7 +375,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.acquireBtn.setEnabled(False)
         self.stopBtn.setEnabled(True)
         self.statusBar().showMessage("Acquiring...", 2000)
-        if self.dataMode.currentIndex() == 2:
+        if self.dataMode.currentIndex() == 1:
             self._mock_refresh()
         
 
@@ -346,6 +393,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
     def cleanUp(self):
         # first we wait until the receive thread is done quitting, should be done automatically once worker emits done signal
         self.recv_thread.wait()
+        self.tx_thread.wait()
 
 
         # call the stop function on the writer worker which will emit a signal causing the thread to quit
@@ -357,6 +405,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.recv_worker = None
         self.writer_thread = None
         self.writer_worker = None
+        self.tx_thread = None
+        self.tx_worker = None
 
     def closeEvent(self, a0):
         if self.recv_worker is not None:
@@ -365,3 +415,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         a0.accept()
         
         # return super().closeEvent(a0)
+
+    def open_popup(self):
+        if self.popup is None:
+            self.popup = PopupWindow()
+        self.popup.show()
+
+class PopupWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Popup Window")
+        self.setGeometry(300, 300, 300, 100)
+
+        layout = QVBoxLayout()
+        layout.addWidget(QLabel("Parameters succesfully saved."))
+        self.setLayout(layout)
