@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="datasheet.xsl"?>
+<datasheet>
+  <header>top</header>
+  <project-settings>
+    <fam>ProASIC3E</fam>
+    <die>A3PE1500</die>
+    <package>208 PQFP</package>
+    <speed-grade>STD</speed-grade>
+    <voltage>1.5</voltage>
+    <hdl-type>Verilog</hdl-type>
+    <project-description>
+    </project-description>
+    <location>C:/Users/tyler/S26_23/experiment_8051s/component/work/top</location>
+    <state>GENERATED ( Wed Mar 18 00:40:22 2026 )</state>
+    <swide-toolchain>SoftConsole workspace has not been generated</swide-toolchain>
+  </project-settings>
+  <site-map>
+  </site-map>
+  <fileset>
+    <name>HDL File(s)</name>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\alu.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\clkctrl.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s_globs_a3pe.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\cpu.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\debug.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\instrdec.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\intctrl.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\jtag.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\jtagu.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\main8051.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\oci.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ocia51.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\pmu.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x20.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8_block_ram.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8_registers.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ramsfrctrl.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\rstctrl.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\trace.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\trigger.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3_iaddr_reg.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3_muxptob3.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\work\top\CoreGPIO_0\rtl\vlog\core\coregpio.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\component\work\top\top.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\hdl\mem_interface.v</file>
+    <file>C:\Users\tyler\S26_23\experiment_8051s\smartgen\ram_core\ram_core.v</file>
+  </fileset>
+  <io>
+    <port-name>LED[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SYSCLK</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>NSYSRESET</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <core type="SpiritModule">
+    <core-exttype>IP</core-exttype>
+    <core-type>SpiritModule</core-type>
+    <core-vendor>Actel</core-vendor>
+    <core-lib>DirectCore</core-lib>
+    <core-intname>CORE8051S</core-intname>
+    <core-ver>2.4.101</core-ver>
+    <core-desc>
+8051 processor core with APB master interface.
+
+Core8051s is a small, general-purpose processor. This processor is compatible with the instruction set of
+the 8051 microcontroller and preserves the three distinct software memory spaces so that it may be targeted by
+existing 8051 C compilers. To make it smaller and more flexible than the 8051, however, some of the
+microcontroller-specific features of the 8051 are not present.
+
+A small subset of SFR registers are present but the peripherals are memory-mapped, rather than SFR-mapped.
+The peripherals appear only in external data memory space (on an APB bus) and not in internal memory space.
+The external ROM and external RAM share a common memory bus interface.
+
+This core must be used with CoreAPB3 (not CoreAPB) for connecting to APB peripherals.
+
+		</core-desc>
+    <core-param>
+      <param-name>APB data width:</param-name>
+      <param-value>32 bit</param-value>
+      <param-hdlname>APB_DWIDTH</param-hdlname>
+      <param-hdlvalue>32</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Debug:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>DEBUG</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Enable flip-flop optimizations:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>EN_FF_OPTS</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>FPGA Family:</param-name>
+      <param-value>ProASIC3E</param-value>
+      <param-hdlname>FAMILY</param-hdlname>
+      <param-hdlvalue>16</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Include second data pointer:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>INCL_DPTR1</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Include MUL, DIV and DA instructions:</param-name>
+      <param-value>true</param-value>
+      <param-hdlname>INCL_MUL_DIV_DA</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Include trace RAM:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>INCL_TRACE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Internal RAM (256x8) Implementation:</param-name>
+      <param-value>Instantiate RAM block</param-value>
+      <param-hdlname>INTRAM_IMPLEMENTATION</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>External Data Memory Stretch Cycles:</param-name>
+      <param-value>1</param-value>
+      <param-hdlname>STRETCH_VAL</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Number of hardware triggers/breakpoints:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>TRIG_NUM</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>MEMACKI-controlled External Data Memory:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>VARIABLE_STRETCH</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>MEMPSACKI-controlled Program Memory:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>VARIABLE_WAIT</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Program Memory Wait Cycles:</param-name>
+      <param-value>1</param-value>
+      <param-hdlname>WAIT_VAL</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-name>CORE8051S_0</core-name>
+  </core>
+  <core type="SpiritModule">
+    <core-exttype>IP</core-exttype>
+    <core-type>SpiritModule</core-type>
+    <core-vendor>Actel</core-vendor>
+    <core-lib>DirectCore</core-lib>
+    <core-intname>CoreAPB3</core-intname>
+    <core-ver>4.2.100</core-ver>
+    <core-desc>
+The CoreAPB3 component implements an APB3 (AMBA3 APB) fabric, which is backwards compatible with APB2 slave peripherals.There is one APB3 Master interface.</core-desc>
+    <core-param>
+      <param-name>APB Master Data Bus Width</param-name>
+      <param-value>32-bit</param-value>
+      <param-hdlname>APB_DWIDTH</param-hdlname>
+      <param-hdlvalue>32</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 0:</param-name>
+      <param-value>true</param-value>
+      <param-hdlname>APBSLOT0ENABLE</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 1:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT1ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 2:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT2ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 3:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT3ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 4:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT4ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 5:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT5ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 6:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT6ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 7:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT7ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 8:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT8ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 9:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT9ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 10:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT10ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 11:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT11ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 12:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT12ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 13:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT13ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 14:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT14ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 15:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT15ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>FPGA Family:</param-name>
+      <param-value>ProASIC3E</param-value>
+      <param-hdlname>FAMILY</param-hdlname>
+      <param-hdlvalue>16</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Indirect Addressing:</param-name>
+      <param-value>Not in use</param-value>
+      <param-hdlname>IADDR_OPTION</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Number of address bits driven by master:</param-name>
+      <param-value>12</param-value>
+      <param-hdlname>MADDR_BITS</param-hdlname>
+      <param-hdlvalue>12</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 0:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_0</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 1:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_1</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 2:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_2</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 3:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_3</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 4:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_4</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 5:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_5</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 6:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_6</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 7:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_7</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 8:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_8</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 9:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_9</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 10:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_10</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 11:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_11</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 12:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_12</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 13:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_13</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 14:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_14</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 15:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>SC_15</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Position in slave address of upper 4 bits of master address:</param-name>
+      <param-value>[27:24] (Ignored if master address width >= 32 bits)</param-value>
+      <param-hdlname>UPR_NIBBLE_POSN</param-hdlname>
+      <param-hdlvalue>6</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-name>CoreAPB3_0</core-name>
+  </core>
+  <core type="SpiritModule">
+    <core-exttype>IP</core-exttype>
+    <core-type>SpiritModule</core-type>
+    <core-vendor>Actel</core-vendor>
+    <core-lib>DirectCore</core-lib>
+    <core-intname>CoreGPIO</core-intname>
+    <core-ver>3.2.102</core-ver>
+    <core-desc>CoreGPIO provides APB access to 32 general purpose IOs, with configurable per bit enabling and interrupt generation.</core-desc>
+    <core-param>
+      <param-name>APB Data Width:</param-name>
+      <param-value>32</param-value>
+      <param-hdlname>APB_WIDTH</param-hdlname>
+      <param-hdlvalue>32</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>true</param-value>
+      <param-hdlname>FIXED_CONFIG_0</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_1</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_2</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_3</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_4</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_5</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_6</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_7</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_8</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_9</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_10</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_11</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_12</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_13</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_14</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_15</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_16</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_17</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_18</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_19</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_20</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_21</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_22</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_23</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_24</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_25</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_26</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_27</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_28</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_29</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_30</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Fixed Config:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>FIXED_CONFIG_31</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Single-bit interrupt port:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>INT_BUS</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_0</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_1</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_2</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_3</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_4</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_5</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_6</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_7</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_8</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_9</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_10</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_11</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_12</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_13</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_14</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_15</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_16</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_17</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_18</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_19</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_20</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_21</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_22</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_23</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_24</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_25</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_26</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_27</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_28</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_29</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_30</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Interrupt Type:</param-name>
+      <param-value>Disabled</param-value>
+      <param-hdlname>IO_INT_TYPE_31</param-hdlname>
+      <param-hdlvalue>7</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Number of I/Os:</param-name>
+      <param-value>1</param-value>
+      <param-hdlname>IO_NUM</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Output</param-value>
+      <param-hdlname>IO_TYPE_0</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_1</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_2</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_3</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_4</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_5</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_6</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_7</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_8</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_9</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_10</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_11</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_12</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_13</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_14</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_15</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_16</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_17</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_18</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_19</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_20</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_21</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_22</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_23</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_24</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_25</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_26</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_27</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_28</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_29</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_30</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>I/O Type:</param-name>
+      <param-value>Input</param-value>
+      <param-hdlname>IO_TYPE_31</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_0</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_1</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_2</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_3</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_4</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_5</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_6</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_7</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_8</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_9</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_10</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_11</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_12</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_13</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_14</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_15</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_16</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_17</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_18</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_19</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_20</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_21</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_22</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_23</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_24</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_25</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_26</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_27</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_28</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_29</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_30</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output on Reset:</param-name>
+      <param-value>0</param-value>
+      <param-hdlname>IO_VAL_31</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Output enable:</param-name>
+      <param-value>External</param-value>
+      <param-hdlname>OE_TYPE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-name>CoreGPIO_0</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>mem_interface</core-exttype>
+    <core-location>hdl\mem_interface.v</core-location>
+    <core-name>mem_interface_0</core-name>
+  </core>
+  <core type="ComponentModule">
+    <core-type>ComponentModule</core-type>
+    <core-exttype>SmartGen</core-exttype>
+    <core-location>C:/Users/tyler/S26_23/experiment_8051s/smartgen/ram_core</core-location>
+    <core-name>ram_core_0</core-name>
+  </core>
+  <memorysystem>
+    <title>Memory Map for top</title>
+    <description>The project contains the following subsystems:</description>
+    <subsystems>
+      <subsystem>
+        <name>CORE8051S_0</name>
+        <master>CORE8051S_0</master>
+        <addressNames>
+          <count>1</count>
+          <name>
+          </name>
+        </addressNames>
+        <slave>
+          <name>CoreGPIO_0</name>
+          <fullPinName>CoreGPIO_0:APB_bif</fullPinName>
+          <remapAddress>0x00000000</remapAddress>
+          <fullAddressSpace>0x00000000 - 0x000000FF</fullAddressSpace>
+          <range>0x00000100</range>
+        </slave>
+      </subsystem>
+    </subsystems>
+  </memorysystem>
+</datasheet>

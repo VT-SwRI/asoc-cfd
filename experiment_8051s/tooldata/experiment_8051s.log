@@ -1,0 +1,16 @@
+Project Name: experiment_8051s
+Location: C:\Users\tyler\S26_23\experiment_8051s
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : A3PE1500-PQ208
+Family         : ProASIC3E
+Die            : A3PE1500
+Package        : 208 PQFP
+Speed          : STD
+Core Voltage   : 1.5
+Range          : COM

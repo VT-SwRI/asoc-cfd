@@ -1,0 +1,24 @@
+#===========================================================
+# created by microsemi smartdesign wed mar 18 00:40:15 2026
+#
+# syntax: 
+# ------- 
+#
+# memmap    resource_name base_address;
+#
+# write     width resource_name byte_offset data;
+# read      width resource_name byte_offset;
+# readcheck width resource_name byte_offset data;
+#
+#===========================================================
+
+#-----------------------------------------------------------
+# memory map
+# define name and base address of each resource.
+#-----------------------------------------------------------
+
+memmap coregpio_0 0x00000000;
+#-----------------------------------------------------------
+# Include resource scriptlets
+#-----------------------------------------------------------
+

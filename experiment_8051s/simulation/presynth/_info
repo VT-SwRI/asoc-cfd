@@ -1,0 +1,674 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tyler/S26_23/experiment_8051s/simulation
+vCORE8051S
+Z1 !s110 1773854443
+!i10b 1
+!s100 zLYK>k5iWoR^R[lDF2XHP1
+IT1;X>W7VYYLEj0>AZkbEe0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1772727094
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v
+L0 8
+Z4 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z5 !s108 1773854443.000000
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v|
+!s101 -O0
+!i113 1
+Z6 o-vlog01compat -work presynth -O0
+Z7 tCvgOpt 0
+n@c@o@r@e8051@s
+vCORE8051S_I001I
+Z8 !s110 1773854441
+!i10b 1
+!s100 @3^m;ARE4@lPjYeOjQ`8g0
+IWDP7Izz;Lhe>n1`F09m6Y3
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v
+L0 8
+R4
+r1
+!s85 0
+31
+Z9 !s108 1773854441.000000
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i001@i
+vCORE8051S_I00lI
+Z10 !s110 1773854442
+!i10b 1
+!s100 @i^LThZjkJ]mbk`7IcaNd2
+IQmNoX;fGHJ[D8H6TLzT<d0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v
+L0 8
+R4
+r1
+!s85 0
+31
+Z11 !s108 1773854442.000000
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i00l@i
+vCORE8051S_I01Il
+R10
+!i10b 1
+!s100 <SUZR[HkdKBQ`LZSUJoP>2
+IZ2KafF7l0fbYB@6ID6azV0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i01@il
+vCORE8051S_I0III
+R10
+!i10b 1
+!s100 FLd1:d5A6B4O_2^a8HViD2
+I9lYkW[0BUiH;g`R^UPjnF3
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i0@i@i@i
+vCORE8051S_I0IIl
+R1
+!i10b 1
+!s100 nR?UL61zIYfc65Jc:Yg6S2
+Ii>RKLV;XGX;1jo>kZFEnU3
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i0@i@il
+vCORE8051S_IIlll
+R10
+!i10b 1
+!s100 4dB<`HgmUCFFk]zm5::l_0
+I;XPWQg=zG]FIC5bZN9G`X0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i@illl
+vCORE8051S_Illll
+R10
+!i10b 1
+!s100 NX`dPIa0Gi=2767f^GCDZ2
+I0FEzGG=mV^AmMZo>D;JYH0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@illll
+vCORE8051S_IO0ll
+R10
+!i10b 1
+!s100 E99FcV3jG;KZ[^]FjZFLW3
+IFQR3`4Da:Va07SJLPL_2S1
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i@o0ll
+vCORE8051S_IOI
+R8
+!i10b 1
+!s100 6]:3ef93AlC_PhDWl_j591
+I7IgcCJYNS_4?g>_i?T3BZ0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v
+L0 9
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i@o@i
+vCORE8051S_IOI0I
+R1
+!i10b 1
+!s100 :9R;S6cP@8V@@dkK9]D=20
+I`==n<YT9J]D6U79<XN=0;0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@i@o@i0@i
+vCORE8051S_l0llI
+R1
+!i10b 1
+!s100 B44[>_?2hK`JPzLznkE1=2
+I:5@92hTOAMM9EJ;dDkTSg3
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_l0ll@i
+vCORE8051S_l0lll
+R10
+!i10b 1
+!s100 emohR@=NETdBz:@;gT=nk2
+IkkLIcl=kRbQ<L0Oj[8=Ej0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_l0lll
+vCORE8051S_lII
+R1
+!i10b 1
+!s100 ?m05aO6`fe[GLHL8G<hMK2
+I>]IEO64@9]b4UhP34cYb[1
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_l@i@i
+vCORE8051S_lO10l
+R1
+!i10b 1
+!s100 Q65@5@XDO=fE`2>C7aBHS3
+IG^[5P1]`bS>J<njc>2];51
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_l@o10l
+vCORE8051S_lOO1I
+R10
+!i10b 1
+!s100 YE=NMB_TG06`@TYAQ;Q7K0
+I2Jz<=f?YM`]XcdXC`X?j?2
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v
+L0 9
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_l@o@o1@i
+vCORE8051S_O
+R8
+!i10b 1
+!s100 8Ye2Jo61Xm9WzeD4kkL;D0
+Id>zLaVcCRk`OYZ<]=R?@z1
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v
+L0 9
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o
+vCORE8051S_O0lll
+R10
+!i10b 1
+!s100 RmJl]G28k^W_fkzRg=K^H3
+IBJaS4UCSES[1Zzk^b275<3
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o0lll
+vCORE8051S_OII
+R8
+!i10b 1
+!s100 `^2^?VZ=@oR1i2L?hE[ba0
+I]4WiD@RMT42VaQDIBnM`d0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v
+L0 8
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o@i@i
+vCORE8051S_OIIlI
+R10
+!i10b 1
+!s100 S^eB8Dh9F>C^918^26e[70
+I=]TZ4SHkYdh1fe[>A<oO80
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o@i@il@i
+vCORE8051S_OlI
+R10
+!i10b 1
+!s100 gh;O7FUi9PJl;gzFQoG6j3
+IX9FHkR6m8CF`mJz1Pe<RD1
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@ol@i
+vCORE8051S_OllII
+R10
+!i10b 1
+!s100 N9hFVB;95<WG1H8]EaFib3
+I`WfogLZ;:WaD?XHJEhczA0
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@oll@i@i
+vCORE8051S_OO10l
+R1
+!i10b 1
+!s100 T2@<8@A6B=gAUbg9_bc]81
+ISnO>ak34`h7P8;4Ak;Y:J2
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o@o10l
+vCORE8051S_OOO1I
+R10
+!i10b 1
+!s100 Db3FmOPDNJD;;BI_hD4941
+Ik;zHGNPCd;eiTFzCcYOGL2
+R2
+R0
+R3
+8C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v
+L0 8
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v|
+!s101 -O0
+!i113 1
+R6
+R7
+n@c@o@r@e8051@s_@o@o@o1@i
+vmem_interface
+R1
+!i10b 1
+!s100 eXgI2G>foHlLWjZ`48Ec63
+IcH`Md=eAeG^`8d`TSn;@K3
+R2
+R0
+w1773686559
+8C:/Users/tyler/S26_23/experiment_8051s/hdl/mem_interface.v
+FC:/Users/tyler/S26_23/experiment_8051s/hdl/mem_interface.v
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/hdl/mem_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/hdl/mem_interface.v|
+!s101 -O0
+!i113 1
+R6
+R7
+vram_core
+R1
+!i10b 1
+!s100 SiWMT>5Ya2HO0a3fc8BDD3
+If9E_1fQOO9SXPJ^Rc4hNM2
+R2
+R0
+w1773808794
+8C:/Users/tyler/S26_23/experiment_8051s/smartgen/ram_core/ram_core.v
+FC:/Users/tyler/S26_23/experiment_8051s/smartgen/ram_core/ram_core.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/smartgen/ram_core/ram_core.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/smartgen/ram_core/ram_core.v|
+!s101 -O0
+!i113 1
+R6
+R7
+vtb_top
+R1
+!i10b 1
+!s100 a9cc;83lXSUT?j0J^`bkZ0
+I4F72K>WU976l[Pnmn>k5M3
+R2
+R0
+w1773679800
+8C:/Users/tyler/S26_23/experiment_8051s/stimulus/tb_top.v
+FC:/Users/tyler/S26_23/experiment_8051s/stimulus/tb_top.v
+L0 19
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/stimulus/tb_top.v|
+!s90 -reportprogress|300|+incdir+C:/Users/tyler/S26_23/experiment_8051s/stimulus|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/stimulus/tb_top.v|
+!s101 -O0
+!i113 1
+R6
+!s92 +incdir+C:/Users/tyler/S26_23/experiment_8051s/stimulus -vlog01compat -work presynth -O0
+R7
+vtop
+R1
+!i10b 1
+!s100 0a1_`T`L[CB@AUggdH[[f0
+IBiZf4XHV;>b0_LfcL:71m2
+R2
+R0
+Z12 w1773808815
+8C:/Users/tyler/S26_23/experiment_8051s/component/work/top/top.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/work/top/top.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/work/top/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/work/top/top.v|
+!s101 -O0
+!i113 1
+R6
+R7
+vtop_CoreGPIO_0_CoreGPIO
+R1
+!i10b 1
+!s100 :G?l]id37F0J6^h0K:Z4^2
+I1Gl^9Nkc9AUlUN5P3n6_l1
+R2
+R0
+R12
+8C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/core/coregpio.v
+FC:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/core/coregpio.v
+L0 23
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/core/coregpio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|presynth|C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/core/coregpio.v|
+!s101 -O0
+!i113 1
+R6
+R7
+ntop_@core@g@p@i@o_0_@core@g@p@i@o

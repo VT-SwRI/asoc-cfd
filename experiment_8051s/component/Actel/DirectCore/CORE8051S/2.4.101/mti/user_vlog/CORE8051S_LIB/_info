@@ -1,0 +1,131 @@
+m255
+K3
+z0
+13
+cModel Technology
+Z0 dC:\svn\hoppin\IP\soft\DirectCores\Core8051s\trunk\mti\user_vlog
+vEXTERNAL_ACCESS_COMPARATOR
+!i10b 1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+Z2 OW;L;10.5c;63
+IYX_2>16OF3^aT@6J_>kao0
+w1243683806
+8../../verification/verilog/extacs.v
+F../../verification/verilog/extacs.v
+Z3 L0 22
+Z4 o-work CORE8051S_LIB_tmp -O0
+n@e@x@t@e@r@n@a@l_@a@c@c@e@s@s_@c@o@m@p@a@r@a@t@o@r
+Z5 !s92 -work CORE8051S_LIB_tmp +incdir+../../verification/verilog -O0
+!s100 LkWWC5E?0k[dFj1XG9QPn1
+!s101 -O0
+R0
+vEXTERNAL_CLOCK_GENERATOR
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+I>a50KLF>AY]E`8W2I;0UJ1
+Z6 w1232725246
+8../../verification/verilog/extclock.v
+F../../verification/verilog/extclock.v
+R3
+R4
+R5
+n@e@x@t@e@r@n@a@l_@c@l@o@c@k_@g@e@n@e@r@a@t@o@r
+!s100 cBLW_2nzjcJ16:9P05feg3
+!s101 -O0
+R0
+voci_sys
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+IT`Wa[fE3?CYLSRb@U;V0P0
+w1245866000
+8../../verification/verilog/oci_sys.v
+F../../verification/verilog/oci_sys.v
+Z7 F../../verification/verilog/jtagdef.v
+L0 26
+R4
+R5
+!s100 E5J^85XBmnchCGkoVI_X;2
+!s101 -O0
+R0
+vtb_oci_sys
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+I<KGeCT1z>BW2aS60zU0NG0
+w1245869721
+8../../verification/verilog/tb_oci_sys.v
+F../../verification/verilog/tb_oci_sys.v
+R7
+L0 30
+R4
+R5
+!s100 [N78c@CXchR3^JmJ@HcmG1
+!s101 -O0
+R0
+vtb_verif
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+I5aHYZjbX2?zZGFHgj0DXL3
+w1245667496
+8../../verification/verilog/tb_verif.v
+F../../verification/verilog/tb_verif.v
+L0 21
+R4
+R5
+!s100 eI]5jAKoS_gF@an`3Fc[P1
+!s101 -O0
+R0
+vUSER_RAM
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+Ia]bHj>9I1I^Wh@G^>R4Y23
+R6
+8../../verification/verilog/user_ram.v
+F../../verification/verilog/user_ram.v
+L0 19
+R4
+R5
+n@u@s@e@r_@r@a@m
+!s100 WFmb744AFeQGNHb_4_CYc1
+!s101 -O0
+R0
+vUSER_ROM
+!i10b 1
+R1
+r1
+!s85 0
+31
+R2
+!s100 =D:B1fVj`;1?D9mNO0]dR2
+IZD_@6iRGH5=XG?1VL30TZ3
+R6
+8../../verification/verilog/user_rom.v
+F../../verification/verilog/user_rom.v
+L0 20
+!s101 -O0
+R4
+R5
+n@u@s@e@r_@r@o@m
+R0

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>top</header>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:WDOGRESN</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:WDOGRESN</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:MOVX</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:MOVX</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:TDO</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:TDO</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:BREAKOUT</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:BREAKOUT</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:DBGMEMPSWR</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:DBGMEMPSWR</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:TRIGOUT</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:TRIGOUT</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CORE8051S_0:AUXOUT</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CORE8051S_0:AUXOUT</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin CoreGPIO_0:INT[0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CoreGPIO_0:INT</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.9\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin CoreGPIO_0:GPIO_OE[0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top/pins/CoreGPIO_0:GPIO_OE</crossprobe>
+  </drc>
+</drcreport>

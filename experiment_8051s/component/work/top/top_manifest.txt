@@ -1,0 +1,59 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.9 SP6 (Version 11.9.6.7)
+
+Date      :  Wed Mar 18 00:40:22 2026
+Project   :  C:\Users\tyler\S26_23\experiment_8051s
+Component :  top
+Family    :  ProASIC3E
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/core/coregpio.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/top.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/bfmtovec_compile.do
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/coregpio_usertb_apb_master.bfm
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/coregpio_usertb_include.bfm
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/wave_vlog.do
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/subsystem.bfm
+
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/coreparameters.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_ahbl.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_ahblapb.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_ahbslave.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_ahbslaveext.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_ahbtoapb.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_apb.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_apbslave.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_apbslaveext.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_apbtoapb.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/amba_bfm/bfm_main.v
+    C:/Users/tyler/S26_23/experiment_8051s/component/work/top/CoreGPIO_0/rtl/vlog/test/user/testbench.v
+
