@@ -10,7 +10,7 @@ from mock_data import generate_spiral_hits, generate_phd_samples
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
 from networking.networking import RxWorker, TxWorker, DecWorker
-
+import ipaddress
 
 
 class EtherDAQMock(QtWidgets.QMainWindow):
@@ -309,6 +309,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid sampling rate.")
             self.popup.exec()
             return
+        if not isValidIP(self.ip):
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid IP address.")
+            self.popup.exec()
+            return
         if self.port <= 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid port value.")
@@ -373,23 +378,21 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
     @QtCore.pyqtSlot(object)
     def updatePlot(self, batch):
-        """Generate spiral + PHD and update both graphs."""
+        if self.rtImageChk.isChecked():
+            x = batch["xpos"]
+            y = batch["ypos"]
+            xp = ((x +51) * ((4096) / (102))).astype(np.int32)
+            yp = ((y +51) * ((4096) / (102))).astype(np.int32)
 
-        
-        x = batch["xpos"]
-        y = batch["ypos"]
-        xp = ((x +51) * ((4096) / (102))).astype(np.int32)
-        yp = ((y +51) * ((4096) / (102))).astype(np.int32)
+            mask = ((xp >= 0) & (xp < 4096) & (yp >= 0) & (yp < 4096))
 
-        mask = ((xp >= 0) & (xp < 4096) & (yp >= 0) & (yp < 4096))
+            xp = xp[mask]
+            yp = yp[mask]
 
-        xp = xp[mask]
-        yp = yp[mask]
+            self.bigPlot.show_hits(xp, yp)
+        else:
+            self.bigPlot.clear_axes()
 
-        self.bigPlot.show_hits(xp, yp)
-        # self._update_viewport()
-
-        # PHD histogram on the left (only if checkbox is enabled)
         if self.phdChk.isChecked():
             samples = generate_phd_samples()  # now 0–256 by default
             self.phdPlot.show_hist(
@@ -404,7 +407,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
     def setupThreads(self):
 
         # create the writer and tx individual threads
-        self.writer_thread = QThread()
+        if self.outType.currentIndex() != 0:
+            self.writer_thread = QThread()
         self.tx_thread = QThread()
 
         # create the workers that are going to be living in the thread
@@ -419,30 +423,36 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.decode_worker = DecWorker(q, self.inType)
 
         # move the workers into their respective threads
-        self.writer_worker.moveToThread(self.writer_thread)
+        if self.writer_worker is not None:
+            self.writer_worker.moveToThread(self.writer_thread)
         self.tx_worker.moveToThread(self.tx_thread)
 
         # connect the worker's start function so that it is called when the thread is deployed
-        self.writer_thread.started.connect(self.writer_worker.start)
+        if self.writer_worker is not None:
+            self.writer_thread.started.connect(self.writer_worker.start)
         self.tx_thread.started.connect(self.tx_worker.start)
 
 
         # connect the batch ready signal from the depacketizer to the writer.
         # This allows the depacketizer to send batched to the writeBatch function in the writer worker
-        self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
-        # self.decode_worker.batch_ready.connect(self.updatePlot)
+        if self.writer_worker is not None:
+            self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
+        self.decode_worker.batch_ready.connect(self.updatePlot)
         self.startPacket.connect(self.tx_worker.sendStart)
 
         # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
-        self.writer_worker.finished.connect(self.writer_thread.quit)
+        if self.writer_worker is not None:
+            self.writer_worker.finished.connect(self.writer_thread.quit)
         self.tx_worker.done.connect(self.tx_thread.quit)
 
         # delete later ensures proper cleanup of threads
-        self.writer_thread.finished.connect(self.writer_thread.deleteLater)
+        if self.writer_worker is not None:
+            self.writer_thread.finished.connect(self.writer_thread.deleteLater)
         self.tx_thread.finished.connect(self.tx_thread.deleteLater)
         
         # deploy each thread, remember this also starts each worker
-        self.writer_thread.start()
+        if self.writer_worker is not None:
+            self.writer_thread.start()
         self.recv_worker.start()
         self.tx_thread.start()
         self.decode_worker.start()
@@ -491,8 +501,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
     # This function cleans up the writer and receive threads
     def cleanUp(self):
         # call the stop function on the writer worker which will emit a signal causing the thread to quit
-        self.writer_worker.stop()
-        self.writer_thread.wait()
+        if self.writer_worker is not None:
+            self.writer_worker.stop()
+            self.writer_thread.wait()
 
         self.decode_worker.stop()
 
@@ -530,3 +541,10 @@ class PopupWindow(QDialog):
         layout = QVBoxLayout()
         layout.addWidget(QLabel(msg))
         self.setLayout(layout)
+
+def isValidIP(ip):
+    try:
+        ipaddress.ip_address(ip)
+        return True 
+    except ValueError:
+        return False
