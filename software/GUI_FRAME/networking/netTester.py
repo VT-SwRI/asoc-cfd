@@ -3,6 +3,7 @@ from PyQt5.QtCore import QObject
 from PyQt5 import QtNetwork
 import struct
 import time
+import ipaddress
 
 def generate_spiral_hits(
     center_x=0,
@@ -37,11 +38,18 @@ def main():
 
     socket = QtNetwork.QUdpSocket()
     # while True:
+    refTime = time.time()
     x, y = generate_spiral_hits()
-    for i in range(len(x)):
-        data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
-        payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], x[i], y[i])  
-        socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
+    # for i in range(len(x)):
+    #     data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
+    #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], x[i], y[i])  
+    #     socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
+    # done = time.time()
+
+    # eps = len(x) / (done - refTime)
+    # print(eps)
+
+
     # for i in range(1):
     #     data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
     #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], -25, -25)  
@@ -49,10 +57,8 @@ def main():
     # r = 1/30
     # t = time.time()
     # x = time.time()
-    # print(x)
-    # while x - t < r:
-    #     x = time.time()
-    # print(x)
+
+    print(ipaddress.ip_address("999.999.999.999"))
 
 
 

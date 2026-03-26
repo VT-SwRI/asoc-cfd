@@ -109,7 +109,7 @@ class ListWriter(QObject):
 
 def main():
     file = os.getcwd()
-    file = os.path.join(file, "run_20260326_125718.h5")
+    file = os.path.join(file, "run_20260326_132335.h5")
     print(file)
     t = np.dtype([
         ('xpos', 'f4'),
