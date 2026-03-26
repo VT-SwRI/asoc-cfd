@@ -51,7 +51,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         typeLabel = QtWidgets.QLabel("Output Type:")
         self.outType = QtWidgets.QComboBox()
-        self.outType.addItems(["Gain", "Photon List"])
+        self.outType.addItems(["None", "Gain", "Photon List"])
         self.outType.setFixedWidth(120)
 
         secondsLbl = QtWidgets.QLabel("Seconds:")
@@ -292,9 +292,29 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
-        self.setup = 1
         self.ip = self.boardIP.text()
         self.port = int(self.boardPort.text())
+        if self.delay < 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid delay value.")
+            self.popup.exec()
+            return
+        if self.frac >= 1 or self.frac <= 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid fraction value.")
+            self.popup.exec()
+            return
+        if self.fs > 3.6 or self.fs < 2.4:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid sampling rate.")
+            self.popup.exec()
+            return
+        if self.port <= 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid port value.")
+            self.popup.exec()
+            return
+        self.setup = 1
         self.open_popup()
 
 
@@ -388,9 +408,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.tx_thread = QThread()
 
         # create the workers that are going to be living in the thread
-        if self.outType.currentIndex():
+        if self.outType.currentIndex() == 2:
             self.writer_worker = ListWriter(self.save_folder, self.inType)
-        else:
+        elif self.outType.currentIndex() == 1:
             self.writer_worker = ImageWriter(self.save_folder, self.inType)
         self.tx_worker = TxWorker(self.ip, self.port)
 
@@ -410,7 +430,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # connect the batch ready signal from the depacketizer to the writer.
         # This allows the depacketizer to send batched to the writeBatch function in the writer worker
         self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
-        self.decode_worker.batch_ready.connect(self.updatePlot)
+        # self.decode_worker.batch_ready.connect(self.updatePlot)
         self.startPacket.connect(self.tx_worker.sendStart)
 
         # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
@@ -493,30 +513,20 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
     # function opens a second window, this is called when the user sets the parameters
     def open_popup(self):
-        self.popup = PopupWindow()
+        self.popup = PopupWindow("Param Confirm", "Parameters succesfully saved.")
         self.popup.exec()
 
     # function opens a second window, this is called when the user tries to acquire without setting up parameters
     def paramError(self):
-        self.paramWin = ParamWindow()
-        self.paramWin.exec()
+        self.popup = PopupWindow("Error", "Set parameters first.")
+        self.popup.exec()
 
 class PopupWindow(QDialog):
-    def __init__(self):
+    def __init__(self, title, msg):
         super().__init__()
-        self.setWindowTitle("Param Confirm")
+        self.setWindowTitle(title)
         self.setGeometry(600, 400, 300, 100)
 
         layout = QVBoxLayout()
-        layout.addWidget(QLabel("Parameters succesfully saved."))
-        self.setLayout(layout)
-
-class ParamWindow(QDialog):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Error")
-        self.setGeometry(600, 400, 300, 100)
-
-        layout = QVBoxLayout()
-        layout.addWidget(QLabel("Set parameters first."))
+        layout.addWidget(QLabel(msg))
         self.setLayout(layout)
