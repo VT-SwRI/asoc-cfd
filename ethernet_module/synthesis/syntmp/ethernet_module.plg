@@ -1,0 +1,51 @@
+@P:  Worst Slack : -23.295
+@P:  clock|GLA_inferred_clock - Estimated Frequency : 26.3 MHz
+@P:  clock|GLA_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  clock|GLA_inferred_clock - Estimated Period : 38.019
+@P:  clock|GLA_inferred_clock - Requested Period : 10.000
+@P:  clock|GLA_inferred_clock - Slack : -23.295
+@P:  ethernet_module|CLKR - Estimated Frequency : 72.7 MHz
+@P:  ethernet_module|CLKR - Requested Frequency : 100.0 MHz
+@P:  ethernet_module|CLKR - Estimated Period : 13.761
+@P:  ethernet_module|CLKR - Requested Period : 10.000
+@P:  ethernet_module|CLKR - Slack : -3.761
+@P:  ethernet_module|CLKT - Estimated Frequency : 62.2 MHz
+@P:  ethernet_module|CLKT - Requested Frequency : 100.0 MHz
+@P:  ethernet_module|CLKT - Estimated Period : 16.079
+@P:  ethernet_module|CLKT - Requested Period : 10.000
+@P:  ethernet_module|CLKT - Slack : -6.079
+@P:  Total Area : 8575.0
+@P:  Total Area : 4.0
+@P:  Total Area : 1.0
+@P:  Total Area : 24.0
+@P:  Total Area : 24.0
+@P:  Total Area : 4813.0
+@P:  Total Area : 2.0
+@P:  Total Area : 2.0
+@P:  Total Area : 4756.0
+@P:  Total Area : 79.0
+@P:  Total Area : 1002.0
+@P:  Total Area : 698.0
+@P:  Total Area : 209.0
+@P:  Total Area : 950.0
+@P:  Total Area : 615.0
+@P:  Total Area : 402.0
+@P:  Total Area : 565.0
+@P:  Total Area : 236.0
+@P:  Total Area : 3730.0
+@P:  Total Area : 1.0
+@P:  Total Area : 3726.0
+@P:  Total Area : 215.0
+@P:  Total Area : 6.0
+@P:  Total Area : 622.0
+@P:  Total Area : 6.0
+@P:  Total Area : 11.0
+@P:  Total Area : 1323.0
+@P:  Total Area : 29.0
+@P:  Total Area : 27.0
+@P:  Total Area : 211.0
+@P:  Total Area : 23.0
+@P:  Total Area : 1253.0
+@P:  Total Area : 1.0
+@P:  Total Area : 8575.0
+@P:  CPU Time : 0h:01m:55s

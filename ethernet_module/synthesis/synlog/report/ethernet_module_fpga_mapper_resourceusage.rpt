@@ -1,0 +1,109 @@
+Target Part: A3PE1500_PQFP208_STD
+Report for cell ethernet_module.verilog
+  Core Cell usage:
+              cell count     area count*area
+              AND2   115      1.0      115.0
+             AND2A    13      1.0       13.0
+              AND3    80      1.0       80.0
+             AND3A     1      1.0        1.0
+               AO1   400      1.0      400.0
+              AO13    48      1.0       48.0
+              AO15     1      1.0        1.0
+              AO16     2      1.0        2.0
+              AO18    49      1.0       49.0
+              AO1A   129      1.0      129.0
+              AO1B    19      1.0       19.0
+              AO1C    22      1.0       22.0
+              AO1D    32      1.0       32.0
+              AOI1    28      1.0       28.0
+             AOI1A    21      1.0       21.0
+             AOI1B    16      1.0       16.0
+               AX1    24      1.0       24.0
+              AX1A     4      1.0        4.0
+              AX1B    25      1.0       25.0
+              AX1C    21      1.0       21.0
+              AX1D    32      1.0       32.0
+              AX1E    27      1.0       27.0
+              AXO3     1      1.0        1.0
+              AXO7     1      1.0        1.0
+             AXOI2     1      1.0        1.0
+             AXOI5     1      1.0        1.0
+             AXOI7     1      1.0        1.0
+            CLKINT     4      0.0        0.0
+               GND    33      0.0        0.0
+               INV    32      1.0       32.0
+              MAJ3    11      1.0       11.0
+              MIN3     7      1.0        7.0
+               MX2   903      1.0      903.0
+              MX2A    86      1.0       86.0
+              MX2B    66      1.0       66.0
+              MX2C    63      1.0       63.0
+              NOR2   231      1.0      231.0
+             NOR2A   522      1.0      522.0
+             NOR2B   856      1.0      856.0
+              NOR3    80      1.0       80.0
+             NOR3A   196      1.0      196.0
+             NOR3B   243      1.0      243.0
+             NOR3C   212      1.0      212.0
+               OA1   128      1.0      128.0
+              OA1A    51      1.0       51.0
+              OA1B    45      1.0       45.0
+              OA1C    36      1.0       36.0
+              OAI1    20      1.0       20.0
+               OR2   366      1.0      366.0
+              OR2A   142      1.0      142.0
+              OR2B    51      1.0       51.0
+               OR3   364      1.0      364.0
+              OR3A    38      1.0       38.0
+              OR3B    20      1.0       20.0
+              OR3C     3      1.0        3.0
+               PLL     1      0.0        0.0
+               VCC    33      0.0        0.0
+               XA1    12      1.0       12.0
+              XA1A    21      1.0       21.0
+              XA1B    23      1.0       23.0
+              XA1C    36      1.0       36.0
+              XAI1     1      1.0        1.0
+             XAI1A     1      1.0        1.0
+             XNOR2    99      1.0       99.0
+             XNOR3    44      1.0       44.0
+               XO1    46      1.0       46.0
+              XO1A    11      1.0       11.0
+              XOR2   516      1.0      516.0
+              XOR3    44      1.0       44.0
+
+
+            DFI1C0     6      1.0        6.0
+            DFI1P0     2      1.0        2.0
+              DFN0     1      1.0        1.0
+            DFN0P0     1      1.0        1.0
+              DFN1    37      1.0       37.0
+            DFN1C0   592      1.0      592.0
+            DFN1C1    11      1.0       11.0
+          DFN1E0C0   234      1.0      234.0
+          DFN1E0P0   104      1.0      104.0
+          DFN1E1C0   471      1.0      471.0
+          DFN1E1P0   256      1.0      256.0
+            DFN1P0   117      1.0      117.0
+            DFN1P1     3      1.0        3.0
+            RAM4K9    13      0.0        0.0
+                   -----          ----------
+             TOTAL  8659              8575.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     1
+            CLKBUF     1
+             INBUF     8
+            OUTBUF     8
+                   -----
+             TOTAL    18
+
+
+Core Cells         : 8575 of 38400 (22%)
+IO Cells           : 18
+
+  RAM/ROM Usage Summary
+Block Rams : 13 of 60 (21%)
+

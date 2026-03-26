@@ -1,0 +1,188 @@
+# Thu Mar 26 13:04:18 2026
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\ethernet_module_scck.rpt 
+Printing clock  summary report in "C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\ethernet_module_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 128MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 128MB)
+
+@N: MO111 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\core8051s_globs_a3pe.v":69:0:69:14|Tristate driver CORE8051S_l1lII (in view: work.CORE8051S_OllII_0s(verilog)) on net CORE8051S_l1lII (in view: work.CORE8051S_OllII_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\core8051s.v":312:0:312:2|Tristate driver TDO (in view: work.CORE8051S_Z10(verilog)) on net TDO (in view: work.CORE8051S_Z10(verilog)) has its enable tied to GND.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance sofad[8:0] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1601:4:1601:9|Removing sequential instance invm (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\clkctrl.v":4284:0:4284:5|Removing sequential instance CORE8051S_IOlII[7] (in view: work.CORE8051S_I0III_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\cpu.v":5183:0:5183:5|Removing sequential instance CORE8051S_Ol1lI (in view: work.CORE8051S_I00lI_Z3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":1008:4:1008:9|Removing sequential instance preamble (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\work\ethernet_module\core10100_ahbapb_0\rtl\vlog\amba\core10100_ahbapb.v":230:4:230:9|Removing sequential instance HBUSREQ (in view: work.ethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB_Z19(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\ramsfrctrl.v":6282:0:6282:5|Removing sequential instance CORE8051S_O0O1l (in view: work.CORE8051S_l0lll_Z7(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\memctrl.v":8424:0:8424:5|Removing sequential instance CORE8051S_IOOlI (in view: work.CORE8051S_IIlll_Z6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\rstctrl.v":4872:0:4872:5|Removing sequential instance WDOGRESN (in view: work.CORE8051S_O0lll(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\memctrl.v":8576:0:8576:5|Removing sequential instance CORE8051S_l1IlI (in view: work.CORE8051S_IIlll_Z6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\memctrl.v":8763:0:8763:5|Removing sequential instance CORE8051S_OOllI (in view: work.CORE8051S_IIlll_Z6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\csr.v":2111:4:2111:9|Removing sequential instance tps (in view: work.CSR_Z17(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\csr.v":2312:4:2312:9|Removing sequential instance rps (in view: work.CSR_Z17(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\dma.v":525:4:525:9|Removing sequential instance datarw (in view: work.DMA_Z11(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1693:4:1693:9|Removing sequential instance matchen (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\rstctrl.v":4826:0:4826:5|Removing sequential instance CORE8051S_O101l (in view: work.CORE8051S_O0lll(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\memctrl.v":5537:0:5537:5|Removing sequential instance CORE8051S_l0O0l (in view: work.CORE8051S_IIlll_Z6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\rstctrl.v":4826:0:4826:5|Removing sequential instance CORE8051S_l001l (in view: work.CORE8051S_O0lll(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rlsm.v":1129:4:1129:9|Removing sequential instance rfs (in view: work.RLSM_Z16(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rlsm.v":1129:4:1129:9|Removing sequential instance rls (in view: work.RLSM_Z16(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rlsm.v":1129:4:1129:9|Removing sequential instance rde (in view: work.RLSM_Z16(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1175:4:1175:9|Removing sequential instance ftp (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\work\ethernet_module\core10100_ahbapb_0\rtl\vlog\amba\core10100_ahbapb.v":427:45:427:56|Removing instance U_RECEIVERAM (in view: work.ethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB_Z19(verilog)) of type view:work.DUALRAM_16s_9s_32s_0(verilog) because it does not drive other instances.
+@N: BN115 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\dualram.v":371:27:371:43|Removing instance U_RAMBLOCK512X32\.UU_RAMBLOCK512X32 (in view: work.DUALRAM_16s_9s_32s_0(verilog)) of type view:work.RAMBLOCK512X32_1(verilog) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\ramblocks_a3pe.v":9324:11:9324:25|Removing sequential instance RAMBLOCK_0_inst (in view: work.RAMBLOCK512X32_1(verilog)) of type view:PA3.RAM4K9(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\ramblocks_a3pe.v":9401:11:9401:25|Removing sequential instance RAMBLOCK_1_inst (in view: work.RAMBLOCK512X32_1(verilog)) of type view:PA3.RAM4K9(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\ramblocks_a3pe.v":9478:11:9478:25|Removing sequential instance RAMBLOCK_2_inst (in view: work.RAMBLOCK512X32_1(verilog)) of type view:PA3.RAM4K9(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\ramblocks_a3pe.v":9247:11:9247:25|Removing sequential instance RAMBLOCK_3_inst (in view: work.RAMBLOCK512X32_1(verilog)) of type view:PA3.RAM4K9(prim) because it does not drive other instances.
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 128MB)
+
+
+
+Clock Summary
+*****************
+
+Start                        Requested     Requested     Clock        Clock                   Clock
+Clock                        Frequency     Period        Type         Group                   Load 
+---------------------------------------------------------------------------------------------------
+clock|GLA_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_2     1544 
+ethernet_module|CLKR         100.0 MHz     10.000        inferred     Inferred_clkgroup_1     355  
+ethernet_module|CLKT         100.0 MHz     10.000        inferred     Inferred_clkgroup_0     205  
+===================================================================================================
+
+@W: MT530 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":1164:4:1164:9|Found inferred clock ethernet_module|CLKT which controls 205 sequential elements including CORE10100_AHBAPB_0.UAC.U_TC.pmux[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":823:4:823:9|Found inferred clock ethernet_module|CLKR which controls 355 sequential elements including CORE10100_AHBAPB_0.UAC.U_RC.rsm[9:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\alu.v":6767:0:6767:5|Found inferred clock clock|GLA_inferred_clock which controls 1544 sequential elements including CORE8051S_0.CORE8051S_IIIlI.CORE8051S_l1Ill.CORE8051S_I1OOI[7:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\ethernet_module.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 124MB peak: 128MB)
+
+Encoding state machine CORE8051S_IOOOl[3:0] (in view: work.CORE8051S_I001I_Z4(verilog))
+original code -> new code
+   0000 -> 00
+   0001 -> 01
+   0010 -> 10
+   0011 -> 11
+@N: MO225 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core8051s\2.4.101\rtl\verilog\o\isr.v":7440:0:7440:5|There are no possible illegal states for state machine CORE8051S_IOOOl[3:0] (in view: work.CORE8051S_I001I_Z4(verilog)); safe FSM implementation is not required.
+Encoding state machine dsm[2:0] (in view: work.DMA_Z11(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine lsm[8:0] (in view: work.TLSM_Z12(verilog))
+original code -> new code
+   0000 -> 000000001
+   0010 -> 000000010
+   0011 -> 000000100
+   0100 -> 000001000
+   0101 -> 000010000
+   0110 -> 000100000
+   0111 -> 001000000
+   1000 -> 010000000
+   1010 -> 100000000
+Encoding state machine csm[6:0] (in view: work.TLSM_Z12(verilog))
+original code -> new code
+   000 -> 0000001
+   001 -> 0000010
+   010 -> 0000100
+   011 -> 0001000
+   100 -> 0010000
+   101 -> 0100000
+   110 -> 1000000
+Encoding state machine tsm[8:0] (in view: work.TC_Z14(verilog))
+original code -> new code
+   0000 -> 000000001
+   0001 -> 000000010
+   0010 -> 000000100
+   0011 -> 000001000
+   0100 -> 000010000
+   0101 -> 000100000
+   0111 -> 001000000
+   1000 -> 010000000
+   1001 -> 100000000
+Encoding state machine rsm[9:0] (in view: work.RC_Z15(verilog))
+original code -> new code
+   0000 -> 0000000001
+   0001 -> 0000000010
+   0010 -> 0000000100
+   0011 -> 0000001000
+   0100 -> 0000010000
+   0101 -> 0000100000
+   0110 -> 0001000000
+   0111 -> 0010000000
+   1000 -> 0100000000
+   1001 -> 1000000000
+Encoding state machine fsm[5:0] (in view: work.RC_Z15(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   100 -> 010000
+   101 -> 100000
+Encoding state machine lsm[10:0] (in view: work.RLSM_Z16(verilog))
+original code -> new code
+   0000 -> 00000000001
+   0001 -> 00000000010
+   0010 -> 00000000100
+   0011 -> 00000001000
+   0100 -> 00000010000
+   0101 -> 00000100000
+   0110 -> 00001000000
+   0111 -> 00010000000
+   1000 -> 00100000000
+   1001 -> 01000000000
+   1010 -> 10000000000
+Encoding state machine rpsm[2:0] (in view: work.CSR_Z17(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine tpsm[2:0] (in view: work.CSR_Z17(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\work\ethernet_module\core10100_ahbapb_0\rtl\vlog\amba\core10100_ahbapb.v":230:4:230:9|Removing sequential instance AHBADDR[0] (in view: work.ethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB_Z19(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\work\ethernet_module\core10100_ahbapb_0\rtl\vlog\amba\core10100_ahbapb.v":230:4:230:9|Removing sequential instance AHBADDR[1] (in view: work.ethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB_Z19(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1845:4:1845:9|Removing sequential instance mfcg[15] (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1561:4:1561:9|Removing sequential instance crchash[0] (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1561:4:1561:9|Removing sequential instance crchash[1] (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1561:4:1561:9|Removing sequential instance crchash[2] (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\rc.v":1561:4:1561:9|Removing sequential instance crchash[3] (in view: work.RC_Z15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[0] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[1] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[2] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[3] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[4] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[5] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[6] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\component\actel\directcore\core10100_ahbapb\5.1.105\rtl\vlog\core\tc.v":273:4:273:9|Removing sequential instance rad_r[7] (in view: work.TC_Z14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 128MB peak: 131MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 39MB peak: 131MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Thu Mar 26 13:04:21 2026
+
+###########################################################]

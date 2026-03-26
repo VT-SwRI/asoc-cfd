@@ -1,0 +1,11 @@
+Microsemi Corporation - Microsemi Libero Software Release v11.9 SP6 (Version 11.9.6.7)
+
+Date      :  Wed Mar 18 14:56:00 2026
+Project   :  C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module
+Component :  led_test
+Family    :  ProASIC3E
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/led_test/led_test.v
+

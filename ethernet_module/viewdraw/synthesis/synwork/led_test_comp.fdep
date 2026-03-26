@@ -1,0 +1,20 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\zackp\\OneDrive\\Documents\\ECE_4806\\Libero\\ethernet_module\\synthesis\\synwork\\led_test_comp.srs|-top|led_test|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\zackp\\OneDrive\\Documents\\ECE_4806\\Libero\\ethernet_module\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3e.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509361936
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3e.v":1509031088
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1509033128
+#CUR:"C:\\Users\\zackp\\OneDrive\\Documents\\ECE_4806\\Libero\\ethernet_module\\hdl\\led_blink.v":1773860361
+#CUR:"C:\\Users\\zackp\\OneDrive\\Documents\\ECE_4806\\Libero\\ethernet_module\\component\\work\\led_test\\led_test.v":1773860159
+0			"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\led_blink.v" verilog
+1			"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\led_test\led_test.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 0
+#Dependency Lists(Users Of)
+0 1
+1 -1
+#Design Unit to File Association
+module work led_test 1
+module work led_blink 0

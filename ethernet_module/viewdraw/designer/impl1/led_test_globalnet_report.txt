@@ -1,0 +1,32 @@
+********************************************************************
+                            Global Net Report
+********************************************************************
+  
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Date: Mon Mar 23 16:31:51 2026
+Design Name: led_test  Family: ProASIC3E  Die: A3PE1500  Package: 208 PQFP
+
+
+Automatic Global Net Placement Result:
+Status: Global net placement completed successfully
+
+
+Global Nets Information:
+
+        |-----------------------------------------------------|
+        |Global Nets         |Loads                           |
+        |-----------------------------------------------------|
+        |Name                |Core      |IO        |RAM       |
+        |-----------------------------------------------------|
+        |clock_c             |       28 |        0 |        0 |
+        |-----------------------------------------------------|
+
+Summary of Global Net Placement:
+
+        |------------------------------------------------------------------------|
+        |Global Net          |Assignment          |Violation                     |
+        |------------------------------------------------------------------------|
+        |clock_c             |MIDDLE_LEFT         |                              |
+        |------------------------------------------------------------------------|

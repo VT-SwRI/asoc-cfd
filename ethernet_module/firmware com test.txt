@@ -1,0 +1,40 @@
+// firmware com test
+#include <stdint.h>
+
+// Base addresses of APB registers (example)
+#define MAC_CTRL    (*(volatile uint8_t *)0x4000)  // control register
+#define MAC_STATUS  (*(volatile uint8_t *)0x4001)  // status register
+#define MAC_TXDATA  (*(volatile uint8_t *)0x4002)  // TX buffer
+#define MAC_RXDATA  (*(volatile uint8_t *)0x4003)  // RX buffer
+
+void delay(volatile int count) {
+    while(count--) ;
+}
+
+void main() {
+    // Step 1: Enable MAC TX and RX
+    MAC_CTRL = 0x03;  // bit0 = RX enable, bit1 = TX enable
+
+    // Step 2: Send test frame (8 bytes)
+    uint8_t test_frame[8] = {0xDE,0xAD,0xBE,0xEF,0xCA,0xFE,0x12,0x34};
+    for(int i=0; i<8; i++) {
+        MAC_TXDATA = test_frame[i];
+    }
+
+    // Step 3: Wait until TX done (poll status)
+    while((MAC_STATUS & 0x01) == 0);  // bit0 = TX complete
+
+    // Step 4: Check RX buffer for same data
+    uint8_t rx;
+    for(int i=0; i<8; i++) {
+        while((MAC_STATUS & 0x02) == 0);  // bit1 = RX ready
+        rx = MAC_RXDATA;
+        if(rx != test_frame[i]) {
+            // error handling (blink LED, etc.)
+            while(1);
+        }
+    }
+
+    // Step 5: Loop forever
+    while(1);
+}

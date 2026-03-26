@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>led_test</design>
+	<target_edif>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\led_test.edn</target_edif>
+</SynplifyOutput>
