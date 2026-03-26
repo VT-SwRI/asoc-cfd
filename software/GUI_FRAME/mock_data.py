@@ -5,12 +5,12 @@ import numpy as np
 
 
 def generate_spiral_hits(
-    center_x=2048,
-    center_y=2048,
-    max_radius=1800,
+    center_x=0,
+    center_y=0,
+    max_radius=40,
     n_points=4000,
-    det_min=0,
-    det_max=4096,
+    det_min=-50,
+    det_max=50,
 ):
     """Generate a spiral of (x, y) hit coordinates in detector space."""
     t = np.linspace(0, 8 * np.pi, n_points)
