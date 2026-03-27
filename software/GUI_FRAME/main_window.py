@@ -1,6 +1,6 @@
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtCore import QThread
+from PyQt5.QtCore import QThread, pyqtSlot
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel, QDialog
 import os
 from datetime import datetime
@@ -46,7 +46,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         dataModeLbl = QtWidgets.QLabel("Mode:")
         self.dataMode = QtWidgets.QComboBox()
-        self.dataMode.addItems(["Standard", "Test"])
+        self.dataMode.addItems(["Standard", "Test", "Estimate"])
         self.dataMode.setFixedWidth(120)
 
         typeLabel = QtWidgets.QLabel("Output Type:")
@@ -345,13 +345,13 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             except ValueError:
                 return default
 
-        x_range = int(self.xRange.currentText())+50
-        y_range = int(self.yRange.currentText())+50
+        x_range = int(self.xRange.currentText())
+        y_range = int(self.yRange.currentText())
         x_off = _safe_int(self.xOffset.text(), 0)
         y_off = _safe_int(self.yOffset.text(), 0)
 
-        x_off = max(-50, min(x_off, max_val - x_range))
-        y_off = max(-50, min(y_off, max_val - y_range))
+        x_off = max(0, min(x_off, max_val - x_range))
+        y_off = max(0, min(y_off, max_val - y_range))
 
         self.xOffset.setText(str(x_off))
         self.yOffset.setText(str(y_off))
@@ -360,8 +360,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
     # --- Viewport update when controls change ---
     def _update_viewport(self):
-        if not hasattr(self, "_hits_x"):
-            return
+        # if not hasattr(self, "_hits_x"):
+        #     return
 
         x_range, y_range, x_off, y_off = self._get_axis_params()
 
@@ -373,7 +373,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         yticks = np.linspace(y_off, y_off + y_range, len(self.bigPlot.ticks))
         ax.set_xticks(xticks)
         ax.set_yticks(yticks)
-
         self.bigPlot.draw_idle()
 
     @QtCore.pyqtSlot(object)
@@ -404,6 +403,31 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         else:
             self.phdPlot.clear_axes()
 
+    @pyqtSlot(object)
+    def Estimate(self, pulse):
+        start = False
+        prev = pulse[0]
+        best = 0
+        sample = pulse[0]
+        idx1 = 0
+        idx2 = 0
+        for i in range(len(pulse)):
+            x = pulse[i]
+            if x < 0.0025 and not start:
+                start = True
+                idx1 = i
+            slope = x - prev
+            prev = x
+            if slope < best:
+                best = slope
+                sample = x
+                idx2 = i
+        frac = sample / min(pulse)
+        delay = idx2 - idx1
+        self.popup = PopupWindow("Estimated Paramters", f"Delay = {delay}\nFraction = {frac}")
+        self.popup.exec()
+        self.stop_acquire()
+
     def setupThreads(self):
 
         # create the writer and tx individual threads
@@ -420,7 +444,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         q = queue.Queue(maxsize=1000000)
         self.recv_worker = RxWorker(q, self.ip, self.port)
-        self.decode_worker = DecWorker(q, self.inType)
+        self.decode_worker = DecWorker(q, self.inType, self.mode)
 
         # move the workers into their respective threads
         if self.writer_worker is not None:
@@ -438,6 +462,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.writer_worker is not None:
             self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
         self.decode_worker.batch_ready.connect(self.updatePlot)
+        self.decode_worker.pulse.connect(self.Estimate)
         self.startPacket.connect(self.tx_worker.sendStart)
 
         # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
@@ -464,9 +489,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
     def start_acquire(self):
         if self.setup:
+            self.mode = self.dataMode.currentIndex()
             # sets up the threads and workers for networking and output file generation
             self.setupThreads()
-            
+            self.phdPlot.clear_axes()
+            self.bigPlot.clear_axes()
 
             self.fileBtn.setEnabled(False)
             self.ParamsBtn.setEnabled(False)

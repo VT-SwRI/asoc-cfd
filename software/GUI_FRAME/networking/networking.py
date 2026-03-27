@@ -107,6 +107,7 @@ class RxWorker(QtCore.QObject):
                 try:
                     self.queue.put_nowait(data)
                 except queue.Full:
+                    print("Dropped packets!!")
                     pass
             except OSError:
                 break
@@ -135,9 +136,11 @@ class RxWorker(QtCore.QObject):
 
 class DecWorker(QtCore.QObject):
     batch_ready = QtCore.pyqtSignal(object)
+    pulse = QtCore.pyqtSignal(object)
 
-    def __init__(self, q, type):
+    def __init__(self, q, type, mode):
         super().__init__()
+        self.mode = mode
         self.queue = q
         self.batch_size = 20000
         self.refresh = 1 / 30
@@ -160,16 +163,19 @@ class DecWorker(QtCore.QObject):
                 data = self.queue.get(timeout = 0.01)
             except queue.Empty:
                 data = None
-            
-            if data is not None:
+
+            if data is not None and self.mode < 2 and (data[0] & 0x03) < 2:
                 arr = np.frombuffer(data, dtype=self.packetType)
 
-                valid = arr[arr['valid'] == 1]
+                valid = arr[arr['valid'] == 1 and arr['type'] == 1]
 
                 if len(valid) > 0:
                     lBuffer.append((valid['x'], valid['y'], valid['t'], valid['mag']))
-                curr = time.time()
-            if (lBuffer and (curr - refTime) >= self.refresh) or len(lBuffer) >= self.batch_size:
+            elif data is not None and self.mode == 2:
+                arr = np.frombuffer(data[1:], dtype=np.float64)
+                self.pulse.emit(arr)
+        
+            if (lBuffer and (time.time() - refTime) >= self.refresh) or len(lBuffer) >= self.batch_size:
                 batch = np.array(lBuffer, dtype = self.inType)
                 lBuffer.clear()
                 self.batch_ready.emit(batch)
