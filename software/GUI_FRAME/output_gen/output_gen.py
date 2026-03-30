@@ -11,17 +11,17 @@ DEBUG = 1
 class ImageWriter(QObject):
     finished = pyqtSignal()
 
-    def __init__(self, save_folder, listType, nx=4096, ny=4096, xmin=-51, xmax=51, ymin=-51, ymax=51):
+    def __init__(self, save_folder, listType, nx=4096, ny=4096, x = 102000, y = 102000):
         super().__init__()
         self.nx = nx
         self.ny = ny
-        self.xmin = xmin
-        self.xmax = xmax
-        self.ymin = ymin
-        self.ymax = ymax
+        self.xmin = -x / 2
+        self.xmax = x / 2
+        self.ymin = -y / 2
+        self.ymax = y / 2
 
-        self.dx = (nx) / (xmax - xmin)
-        self.dy = (ny) / (ymax - ymin)
+        self.dx = (nx) / (self.xmax - self.xmin)
+        self.dy = (ny) / (self.ymax - self.ymin)
         self.running = False
         self.type = listType
         tstamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -109,15 +109,8 @@ class ListWriter(QObject):
 
 def main():
     file = os.getcwd()
-    file = os.path.join(file, "run_20260326_132335.h5")
+    file = os.path.join(file, "run_20260326_171148.h5")
     print(file)
-    t = np.dtype([
-        ('xpos', 'f4'),
-        ('ypos', 'f4'),
-        ('time', 'f8'),
-        ('magnitude', 'f4')
-    ])
-
 
     with h5py.File(file, "r") as f:
         print("Keys in file:")

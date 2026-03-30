@@ -8,10 +8,10 @@ import ipaddress
 def generate_spiral_hits(
     center_x=0,
     center_y=0,
-    max_radius=40,
+    max_radius=40000,
     n_points=20000,
-    det_min=-50,
-    det_max=50,
+    det_min=-51000,
+    det_max=51000,
 ):
     """Generate a spiral of (x, y) hit coordinates in detector space."""
     t = np.linspace(0, 8 * np.pi, n_points)
@@ -40,25 +40,23 @@ def main():
     # while True:
     refTime = time.time()
     x, y = generate_spiral_hits()
-    # for i in range(len(x)):
-    #     data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
-    #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], x[i], y[i])  
-    #     socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
-    # done = time.time()
+    for i in range(len(x)):
+        data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
+        payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], x[i], y[i])  
+        socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
+    done = time.time()
 
-    # eps = len(x) / (done - refTime)
-    # print(eps)
+    eps = len(x) / (done - refTime)
+    print(eps)
 
 
     # for i in range(1):
     #     data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
-    #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], -25, -25)  
+    #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], -25000, -25000)  
     #     socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
     # r = 1/30
     # t = time.time()
     # x = time.time()
-
-    print(ipaddress.ip_address("999.999.999.999"))
 
 
 

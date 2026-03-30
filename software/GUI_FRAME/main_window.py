@@ -1,15 +1,16 @@
 import numpy as np
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QThread, pyqtSlot
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel, QDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout, QLabel, QDialog, QTabWidget
 import os
 from datetime import datetime
 import time
 from plots import MplCanvas
-from mock_data import generate_spiral_hits, generate_phd_samples
+from mock_data import generate_phd_samples
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
 from networking.networking import RxWorker, TxWorker, DecWorker
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
 
 
@@ -22,14 +23,81 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.setWindowTitle("EtherDaq")
         self.setGeometry(300, 300, 1300, 1000)
 
+        # create the tabs
+        self.tabs = QTabWidget()
+        self.setCentralWidget(self.tabs)
+        self.tab1 = QWidget()
+        self.tab2 = QWidget()
+        self.tabs.addTab(self.tab1, "Operate")
+        self.tabs.addTab(self.tab2, "Parameters")
+        self.initTab1()
+        self.initTab2()
+
         # sets the top menu items
         menubar = self.menuBar()
         menubar.addMenu("&File").addAction("Exit", self.close)
         menubar.addMenu("&Settings")
 
+
+
+        # ---- Status bar ----
+        self.secondsStatusLbl = QtWidgets.QLabel(f"Seconds: {self.seconds.value()}")
+        self.detEventsLbl = QtWidgets.QLabel("Det Events: 0")
+        self.countsLbl = QtWidgets.QLabel("Counts: 0")
+        self.missingLbl = QtWidgets.QLabel("Missing Packets: 0")
+
+        for w in (self.secondsStatusLbl, self.detEventsLbl, self.countsLbl, self.missingLbl):
+            w.setStyleSheet("color: #444;")
+
+        sb = self.statusBar()
+        sb.addPermanentWidget(self.secondsStatusLbl)
+        sb.addPermanentWidget(self.detEventsLbl)
+        sb.addPermanentWidget(self.countsLbl)
+        sb.addPermanentWidget(self.missingLbl)
+
+        self.acquireBtn.clicked.connect(self.start_acquire)
+        self.stopBtn.clicked.connect(self.stop_acquire)
+
+        self.fileBtn.clicked.connect(self.getFilePath)
+        self.save_folder = os.getcwd()
+
+        self.ParamsBtn.clicked.connect(self.get_settings)
+
+
+        self.writer_thread = None
+        self.writer_worker = None
+        self.tx_thread = None
+        self.tx_worker = None
+        self.recv_worker = None
+        self.popup = None
+        self.decode_worker = None
+        self.paramWin = None
+
+
+        self.mode = -1
+        self.time = -1
+        self.sel = -1
+        self.frac = -1
+        self.thresh = -1
+        self.delay = -1
+        self.fs = -1
+        self.setup = 0
+        self.ip = "127.0.0.1"
+        self.port = 561
+        self.kx = 1
+        self.ky = 1
+        self.x = 102
+        self.y = 102
+        self.ts = 1024
+        self.nx = 4096
+        self.ny = 4096
+
+        self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
+     
+
+    def initTab1(self):
         # creates the layout (left column and right column)
-        central = QtWidgets.QWidget()
-        root = QtWidgets.QHBoxLayout(central)
+        root = QtWidgets.QHBoxLayout(self.tab1)
         root.setContentsMargins(12, 6, 12, 6)
         root.setSpacing(12)
 
@@ -83,63 +151,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         leftCol.addWidget(dataBox)
 
-        # sizeBox = QtWidgets.QGroupBox("Image Size")
-        # sizeLay = QtWidgets.QGridLayout(sizeBox)
-        # sizeLay.setContentsMargins(10, 8, 10, 8)
-        # sizeLay.setHorizontalSpacing(10)
-        # self.xSize = QtWidgets.QComboBox()
-        # self.ySize = QtWidgets.QComboBox()
-        # for cb in (self.xSize, self.ySize):
-        #     cb.addItems(["512", "1024", "2048", "4096"])
-        #     cb.setCurrentText("1024")
-        #     cb.setFixedWidth(100)
-        # sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
-        # sizeLay.addWidget(self.xSize, 0, 1)
-        # sizeLay.addWidget(QtWidgets.QLabel("Y Size:"), 1, 0)
-        # sizeLay.addWidget(self.ySize, 1, 1)
-
-        # leftCol.addWidget(sizeBox)
-
-        paramBox = QtWidgets.QGroupBox("User Parameters")
-        paramLay = QtWidgets.QGridLayout(paramBox)
-        paramLay.setContentsMargins(10, 8, 10, 8)
-        paramLay.setHorizontalSpacing(10)
-        paramLay.setVerticalSpacing(8)
-
-        self.ParamsBtn = QtWidgets.QPushButton("Set Parameters")
-        self.ParamsBtn.setFixedWidth(200)
-        
-
-        self.delayTime = QtWidgets.QLineEdit("123")
-        self.delayTime.setFixedWidth(100)
-        self.fractionParam = QtWidgets.QLineEdit("0.5")
-        self.fractionParam.setFixedWidth(100)
-        self.threshold = QtWidgets.QLineEdit("50")
-        self.threshold.setFixedWidth(100)
-        self.sampleRate = QtWidgets.QLineEdit("3.0")
-        self.sampleRate.setFixedWidth(100)
-        self.boardIP = QtWidgets.QLineEdit("127.0.0.1")
-        self.boardIP.setFixedWidth(100)
-        self.boardPort = QtWidgets.QLineEdit("561")
-        self.boardPort.setFixedWidth(100)
-
-        paramLay.addWidget(QtWidgets.QLabel("Delay Time (ns):"), 0, 0)
-        paramLay.addWidget(self.delayTime, 0, 1)
-        paramLay.addWidget(QtWidgets.QLabel("Fraction Parameter:"), 1, 0)
-        paramLay.addWidget(self.fractionParam, 1, 1)
-        paramLay.addWidget(QtWidgets.QLabel("Threshold:"), 2, 0)
-        paramLay.addWidget(self.threshold, 2, 1)
-        paramLay.addWidget(QtWidgets.QLabel("Sample Rate (GHz):"), 3, 0)
-        paramLay.addWidget(self.sampleRate, 3, 1)
-        paramLay.addWidget(QtWidgets.QLabel("FPGA Board IP Address:"), 4, 0)
-        paramLay.addWidget(self.boardIP, 4, 1)
-        paramLay.addWidget(QtWidgets.QLabel("FPGA Board Port:"), 5, 0)
-        paramLay.addWidget(self.boardPort, 5, 1)
-
-        paramLay.addWidget(self.ParamsBtn, 6, 0, 1, 2)
-
-        leftCol.addWidget(paramBox)
-
         self.phdChk = QtWidgets.QCheckBox("Real Time PHD")
         self.phdChk.setChecked(True)
         leftCol.addWidget(self.phdChk)
@@ -161,121 +172,121 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         topRow.addWidget(self.rtImageChk)
         rightCol.addLayout(topRow)
 
-        canvasRow = QtWidgets.QHBoxLayout()
-        canvasRow.setSpacing(10)
-
-        yBox = QtWidgets.QVBoxLayout()
-        yBox.setSpacing(6)
-        yBox.addWidget(QtWidgets.QLabel("Y Range:"))
-        self.yRange = QtWidgets.QComboBox()
-        self.yRange.addItems(["256", "512", "1024", "2048", "4096"])
-        #TODO - reset yrange
-        self.yRange.setCurrentText("4096")
-        yBox.addWidget(self.yRange)
-        yBox.addStretch(1)
-        canvasRow.addLayout(yBox)
-
         self.bigPlot = MplCanvas(xLabel= "X-Position (mm)", yLabel= "Y-Position (mm)", title = "Position Hit Map")
-        canvasRow.addWidget(self.bigPlot, 1)
-        rightCol.addLayout(canvasRow, 1)
+        toolbar = CustomToolbar(self.bigPlot, self)
+        rightCol.addWidget(toolbar)
+        rightCol.addWidget(self.bigPlot)
 
-        bottomGrid = QtWidgets.QGridLayout()
-        bottomGrid.setHorizontalSpacing(12)
-        bottomGrid.setVerticalSpacing(6)
-
-        yOffLbl = QtWidgets.QLabel("Y Offset:")
-        xOffLbl = QtWidgets.QLabel("X Offset:")
-        self.yOffset = QtWidgets.QLineEdit("0")
-        self.xOffset = QtWidgets.QLineEdit("0")
-        self.yOffset.setFixedWidth(90)
-        self.xOffset.setFixedWidth(90)
-
-        xRangeLbl = QtWidgets.QLabel("X Range:")
-        self.xRange = QtWidgets.QComboBox()
-        self.xRange.addItems(["256", "512", "1024", "2048", "4096"])
-        
-        #TODO - reset the current text
-        self.xRange.setCurrentText("4096")
-        self.xRange.setFixedWidth(100)
-
-        bottomGrid.addWidget(yOffLbl, 0, 0)
-        bottomGrid.addWidget(self.yOffset, 0, 1)
-        bottomGrid.addItem(
-            QtWidgets.QSpacerItem(
-                40,
-                10,
-                QtWidgets.QSizePolicy.Expanding,
-                QtWidgets.QSizePolicy.Minimum,
-            ),
-            0,
-            2,
-        )
-        bottomGrid.addWidget(xRangeLbl, 0, 3, QtCore.Qt.AlignRight)
-        bottomGrid.addWidget(self.xRange, 0, 4)
-
-        bottomGrid.addWidget(xOffLbl, 1, 0)
-        bottomGrid.addWidget(self.xOffset, 1, 1)
-
-        rightCol.addLayout(bottomGrid, 0)
 
         root.addLayout(leftCol, 0)
         root.addLayout(rightCol, 1)
 
-        self.setCentralWidget(central)
+    def initTab2(self):
+        root = QtWidgets.QHBoxLayout(self.tab2)
+        root.setContentsMargins(12, 6, 12, 6)
+        root.setSpacing(12)
 
-        # ---- Status bar ----
-        self.secondsStatusLbl = QtWidgets.QLabel(f"Seconds: {self.seconds.value()}")
-        self.detEventsLbl = QtWidgets.QLabel("Det Events: 0")
-        self.countsLbl = QtWidgets.QLabel("Counts: 0")
-        self.missingLbl = QtWidgets.QLabel("Missing Packets: 0")
+        leftCol = QtWidgets.QVBoxLayout()
+        leftCol.setSpacing(12)
+        
+        # Create the box for networking parameters
+        netBox = QtWidgets.QGroupBox("Connectivity Parameters")
+        netLay = QtWidgets.QGridLayout(netBox)
+        netLay.setContentsMargins(10, 8, 10, 8)
+        netLay.setHorizontalSpacing(10)
+        netLay.setVerticalSpacing(8)
+        self.boardIP = QtWidgets.QLineEdit("127.0.0.1")
+        self.boardIP.setFixedWidth(100)
+        self.boardPort = QtWidgets.QLineEdit("561")
+        self.boardPort.setFixedWidth(100)
+        netLay.addWidget(QtWidgets.QLabel("FPGA Board IP Address:"), 0, 0)
+        netLay.addWidget(self.boardIP, 0, 1)
+        netLay.addWidget(QtWidgets.QLabel("FPGA Board Port:"), 1, 0)
+        netLay.addWidget(self.boardPort, 1, 1)
+        netBox.setSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        leftCol.addWidget(netBox)
+        
+        # create the box for cfd and operation parameters
+        paramBox = QtWidgets.QGroupBox("Operation Parameters")
+        paramLay = QtWidgets.QGridLayout(paramBox)
+        paramLay.setContentsMargins(10, 8, 10, 8)
+        paramLay.setHorizontalSpacing(10)
+        paramLay.setVerticalSpacing(8)
+        self.delayTime = QtWidgets.QLineEdit("123")
+        self.delayTime.setFixedWidth(100)
+        self.fractionParam = QtWidgets.QLineEdit("0.5")
+        self.fractionParam.setFixedWidth(100)
+        self.threshold = QtWidgets.QLineEdit("50")
+        self.threshold.setFixedWidth(100)
+        self.sampleRate = QtWidgets.QLineEdit("3.0")
+        self.sampleRate.setFixedWidth(100)
+        self.zc = QtWidgets.QLineEdit("8")
+        self.zc.setFixedWidth(100)
+        paramLay.addWidget(QtWidgets.QLabel("Delay Time (ns):"), 0, 0)
+        paramLay.addWidget(self.delayTime, 0, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Fraction Parameter:"), 1, 0)
+        paramLay.addWidget(self.fractionParam, 1, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Threshold:"), 2, 0)
+        paramLay.addWidget(self.threshold, 2, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Sample Rate (GHz):"), 3, 0)
+        paramLay.addWidget(self.sampleRate, 3, 1)
+        paramLay.addWidget(QtWidgets.QLabel("Zero Crossing Samples:"), 4, 0)
+        paramLay.addWidget(self.zc, 4, 1)
+        paramBox.setSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        leftCol.addWidget(paramBox)
 
-        for w in (self.secondsStatusLbl, self.detEventsLbl, self.countsLbl, self.missingLbl):
-            w.setStyleSheet("color: #444;")
+        # create the box for detector area parameters
+        detBox = QtWidgets.QGroupBox("Detector Parameters")
+        detLay = QtWidgets.QGridLayout(detBox)
+        detLay.setContentsMargins(10, 8, 10, 8)
+        detLay.setHorizontalSpacing(10)
+        detLay.setVerticalSpacing(8)
 
-        sb = self.statusBar()
-        sb.addPermanentWidget(self.secondsStatusLbl)
-        sb.addPermanentWidget(self.detEventsLbl)
-        sb.addPermanentWidget(self.countsLbl)
-        sb.addPermanentWidget(self.missingLbl)
+        self.detX = QtWidgets.QLineEdit("102")
+        self.detX.setFixedWidth(100)
+        self.detY = QtWidgets.QLineEdit("102")
+        self.detY.setFixedWidth(100)
+        self.kxVal = QtWidgets.QLineEdit("1")
+        self.kxVal.setFixedWidth(100)
+        self.kyVal = QtWidgets.QLineEdit("1")
+        self.kyVal.setFixedWidth(100)
+        self.tsDetails = QtWidgets.QLineEdit("1024")
+        self.tsDetails.setFixedWidth(100)
+        detLay.addWidget(QtWidgets.QLabel("Detector X (mm):"), 0, 0)
+        detLay.addWidget(self.detX, 0, 1)
+        detLay.addWidget(QtWidgets.QLabel("Detector Y (mm):"), 1, 0)
+        detLay.addWidget(self.detY, 1, 1)
+        detLay.addWidget(QtWidgets.QLabel("X-axis Propagation Constant (um/ts):"), 2, 0)
+        detLay.addWidget(self.kxVal, 2, 1)
+        detLay.addWidget(QtWidgets.QLabel("Y-axis Propagation Constant (um/ts):"), 3, 0)
+        detLay.addWidget(self.kyVal, 3, 1)
+        detLay.addWidget(QtWidgets.QLabel("Timestamp Details:"), 4, 0)
+        detLay.addWidget(self.tsDetails, 4, 1)
+        detBox.setSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        leftCol.addWidget(detBox)
 
-        self.acquireBtn.clicked.connect(self.start_acquire)
-        self.stopBtn.clicked.connect(self.stop_acquire)
+        
+        sizeBox = QtWidgets.QGroupBox("Image Size")
+        sizeLay = QtWidgets.QGridLayout(sizeBox)
+        sizeLay.setContentsMargins(10, 8, 10, 8)
+        sizeLay.setHorizontalSpacing(10)
+        self.xSize = QtWidgets.QComboBox()
+        self.ySize = QtWidgets.QComboBox()
+        for cb in (self.xSize, self.ySize):
+            cb.addItems(["512", "1024", "2048", "4096"])
+            cb.setCurrentText("4096")
+            cb.setFixedWidth(100)
+        sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
+        sizeLay.addWidget(self.xSize, 0, 1)
+        sizeLay.addWidget(QtWidgets.QLabel("Y Size:"), 1, 0)
+        sizeLay.addWidget(self.ySize, 1, 1)
+        leftCol.addWidget(sizeBox)
 
-        self.fileBtn.clicked.connect(self.getFilePath)
-        self.save_folder = os.getcwd()
-
-        self.xRange.currentIndexChanged.connect(self._update_viewport)
-        self.yRange.currentIndexChanged.connect(self._update_viewport)
-        self.xOffset.editingFinished.connect(self._update_viewport)
-        self.yOffset.editingFinished.connect(self._update_viewport)
-
-        self.ParamsBtn.clicked.connect(self.get_settings)
-
-
-        self.writer_thread = None
-        self.writer_worker = None
-        self.tx_thread = None
-        self.tx_worker = None
-        self.recv_worker = None
-        self.popup = None
-        self.decode_worker = None
-        self.paramWin = None
-
-
-        self.mode = -1
-        self.time = -1
-        self.sel = -1
-        self.frac = -1
-        self.thresh = -1
-        self.delay = -1
-        self.fs = -1
-        self.setup = 0
-        self.ip = "127.0.0.1"
-        self.port = 561
-
-        self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
-     
-
+        self.ParamsBtn = QtWidgets.QPushButton("Set Parameters")
+        self.ParamsBtn.setFixedWidth(200)
+        leftCol.addWidget(self.ParamsBtn)
+        root.addLayout(leftCol, 0)
+        leftCol.addStretch()
 
     # this function gets called whenever the user clicks the set params button, it saves the parameters entered by the user
     def get_settings(self):
@@ -294,6 +305,13 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
         self.ip = self.boardIP.text()
         self.port = int(self.boardPort.text())
+        self.kx = _safe_float(self.kxVal.text())
+        self.ky = _safe_float(self.kyVal.text())
+        self.ts = _safe_float(self.tsDetails.text())
+        self.x = _safe_float(self.detX.text()) * 1000
+        self.y = _safe_float(self.detY.text()) * 1000
+        self.nx = int(self.xSize.currentText())
+        self.ny = int(self.ySize.currentText())
         if self.delay < 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid delay value.")
@@ -319,6 +337,27 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid port value.")
             self.popup.exec()
             return
+        if self.x <= 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid detector x value.")
+            self.popup.exec()
+            return
+        if self.y <= 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid detector y value.")
+            self.popup.exec()
+            return
+        if self.kx < 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid kx value.")
+            self.popup.exec()
+            return
+        if self.ky < 0:
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Invalid ky value.")
+            self.popup.exec()
+            return
+        
         self.setup = 1
         self.open_popup()
 
@@ -335,55 +374,16 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if hasattr(self, "secondsStatusLbl"):
             self.secondsStatusLbl.setText(f"Seconds: {val}")
 
-    # --- Helpers for axis parameters ---
-    def _get_axis_params(self):
-        max_val = 4096
-
-        def _safe_int(text, default=0):
-            try:
-                return int(text)
-            except ValueError:
-                return default
-
-        x_range = int(self.xRange.currentText())
-        y_range = int(self.yRange.currentText())
-        x_off = _safe_int(self.xOffset.text(), 0)
-        y_off = _safe_int(self.yOffset.text(), 0)
-
-        x_off = max(0, min(x_off, max_val - x_range))
-        y_off = max(0, min(y_off, max_val - y_range))
-
-        self.xOffset.setText(str(x_off))
-        self.yOffset.setText(str(y_off))
-
-        return x_range, y_range, x_off, y_off
-
-    # --- Viewport update when controls change ---
-    def _update_viewport(self):
-        # if not hasattr(self, "_hits_x"):
-        #     return
-
-        x_range, y_range, x_off, y_off = self._get_axis_params()
-
-        ax = self.bigPlot.ax
-        ax.set_xlim(x_off, x_off + x_range)
-        ax.set_ylim(y_off, y_off + y_range)
-
-        xticks = np.linspace(x_off, x_off + x_range, len(self.bigPlot.ticks))
-        yticks = np.linspace(y_off, y_off + y_range, len(self.bigPlot.ticks))
-        ax.set_xticks(xticks)
-        ax.set_yticks(yticks)
-        self.bigPlot.draw_idle()
 
     @QtCore.pyqtSlot(object)
     def updatePlot(self, batch):
         if self.rtImageChk.isChecked():
             x = batch["xpos"]
             y = batch["ypos"]
-            xp = ((x +51) * ((4096) / (102))).astype(np.int32)
-            yp = ((y +51) * ((4096) / (102))).astype(np.int32)
+            xp = ((x + self.x / 2) * ((self.nx) / (self.x))).astype(np.int32)
+            yp = ((y + self.y / 2) * ((self.ny) / (self.y))).astype(np.int32)
 
-            mask = ((xp >= 0) & (xp < 4096) & (yp >= 0) & (yp < 4096))
+            mask = ((xp >= 0) & (xp < self.nx) & (yp >= 0) & (yp < self.ny))
 
             xp = xp[mask]
             yp = yp[mask]
@@ -439,7 +439,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.outType.currentIndex() == 2:
             self.writer_worker = ListWriter(self.save_folder, self.inType)
         elif self.outType.currentIndex() == 1:
-            self.writer_worker = ImageWriter(self.save_folder, self.inType)
+            self.writer_worker = ImageWriter(self.save_folder, self.inType, self.x, self.y)
         self.tx_worker = TxWorker(self.ip, self.port)
 
         q = queue.Queue(maxsize=1000000)
@@ -499,6 +499,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.ParamsBtn.setEnabled(False)
             self.acquireBtn.setEnabled(False)
             self.stopBtn.setEnabled(True)
+            self.dataMode.setEnabled(False)
+            self.outType.setEnabled(False)
+            self.seconds.setEnabled(False)
             self.statusBar().showMessage("Acquiring...", 2000)
 
             self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
@@ -511,6 +514,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.acquireBtn.setEnabled(True)
         self.stopBtn.setEnabled(False)
         self.ParamsBtn.setEnabled(True)
+        self.outType.setEnabled(True)
+        self.dataMode.setEnabled(True)
+        self.seconds.setEnabled(True)
         self.statusBar().showMessage("Acquisition stopped.", 2000)
 
         # invoke the stop function 
@@ -575,3 +581,6 @@ def isValidIP(ip):
         return True 
     except ValueError:
         return False
+
+class CustomToolbar(NavigationToolbar):
+    toolitems = [t for t in NavigationToolbar.toolitems if t[0] in ("Home", "Pan", "Zoom", "Back", "Forward")]
