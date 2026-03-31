@@ -1,0 +1,170 @@
+
+fsm_encoding {874400744010} sequential
+
+fsm_state_encoding {874400744010} 0000 {00}
+
+fsm_state_encoding {874400744010} 0001 {01}
+
+fsm_state_encoding {874400744010} 0010 {10}
+
+fsm_state_encoding {874400744010} 0011 {11}
+
+fsm_registers {874400744010} {CORE8051S_IOOOl[1]}  {CORE8051S_IOOOl[0]} 
+
+fsm_encoding {3629442949} sequential
+
+fsm_state_encoding {3629442949} DSM_IDLE {00}
+
+fsm_state_encoding {3629442949} DSM_CH1 {01}
+
+fsm_state_encoding {3629442949} DSM_CH2 {10}
+
+fsm_registers {3629442949} {dsm[1]}  {dsm[0]} 
+
+fsm_encoding {4853845388} onehot
+
+fsm_state_encoding {4853845388} LSM_IDLE {000000001}
+
+fsm_state_encoding {4853845388} LSM_DES0 {000000010}
+
+fsm_state_encoding {4853845388} LSM_DES1 {000000100}
+
+fsm_state_encoding {4853845388} LSM_DES2 {000001000}
+
+fsm_state_encoding {4853845388} LSM_DES3 {000010000}
+
+fsm_state_encoding {4853845388} LSM_BUF1 {000100000}
+
+fsm_state_encoding {4853845388} LSM_BUF2 {001000000}
+
+fsm_state_encoding {4853845388} LSM_STAT {010000000}
+
+fsm_state_encoding {4853845388} LSM_NXT {100000000}
+
+fsm_registers {4853845388} {lsm[8]}  {lsm[7]}  {lsm[6]}  {lsm[5]}  {lsm[4]}  {lsm[3]}  {lsm[2]}  {lsm[1]}  {lsm[0]} 
+
+fsm_encoding {4867946797} onehot
+
+fsm_state_encoding {4867946797} CSM_IDLE {0000001}
+
+fsm_state_encoding {4867946797} CSM_F {0000010}
+
+fsm_state_encoding {4867946797} CSM_I {0000100}
+
+fsm_state_encoding {4867946797} CSM_L {0001000}
+
+fsm_state_encoding {4867946797} CSM_FL {0010000}
+
+fsm_state_encoding {4867946797} CSM_SET {0100000}
+
+fsm_state_encoding {4867946797} 110 {1000000}
+
+fsm_registers {4867946797} {csm[6]}  {csm[5]}  {csm[4]}  {csm[3]}  {csm[2]}  {csm[1]}  {csm[0]} 
+
+fsm_encoding {4464646466} onehot
+
+fsm_state_encoding {4464646466} TSM_IDLE {000000001}
+
+fsm_state_encoding {4464646466} TSM_PREA {000000010}
+
+fsm_state_encoding {4464646466} TSM_SFD {000000100}
+
+fsm_state_encoding {4464646466} TSM_INFO {000001000}
+
+fsm_state_encoding {4464646466} TSM_PAD {000010000}
+
+fsm_state_encoding {4464646466} TSM_CRC {000100000}
+
+fsm_state_encoding {4464646466} TSM_JAM {001000000}
+
+fsm_state_encoding {4464646466} TSM_FLUSH {010000000}
+
+fsm_state_encoding {4464646466} TSM_INT {100000000}
+
+fsm_registers {4464646466} {tsm[8]}  {tsm[7]}  {tsm[6]}  {tsm[5]}  {tsm[4]}  {tsm[3]}  {tsm[2]}  {tsm[1]}  {tsm[0]} 
+
+fsm_encoding {3882348235} onehot
+
+fsm_state_encoding {3882348235} RSM_IDLE_RCSMT {0000000001}
+
+fsm_state_encoding {3882348235} RSM_SFD {0000000010}
+
+fsm_state_encoding {3882348235} RSM_DEST {0000000100}
+
+fsm_state_encoding {3882348235} RSM_SOURCE {0000001000}
+
+fsm_state_encoding {3882348235} RSM_LENGTH {0000010000}
+
+fsm_state_encoding {3882348235} RSM_INFO {0000100000}
+
+fsm_state_encoding {3882348235} RSM_SUCC {0001000000}
+
+fsm_state_encoding {3882348235} RSM_INT {0010000000}
+
+fsm_state_encoding {3882348235} RSM_INT1 {0100000000}
+
+fsm_state_encoding {3882348235} RSM_BAD {1000000000}
+
+fsm_registers {3882348235} {rsm[9]}  {rsm[8]}  {rsm[7]}  {rsm[6]}  {rsm[5]}  {rsm[4]}  {rsm[3]}  {rsm[2]}  {rsm[1]}  {rsm[0]} 
+
+fsm_encoding {381467414674} onehot
+
+fsm_state_encoding {381467414674} FSM_IDLE {000001}
+
+fsm_state_encoding {381467414674} FSM_PERF1 {000010}
+
+fsm_state_encoding {381467414674} FSM_PERF16 {000100}
+
+fsm_state_encoding {381467414674} FSM_HASH {001000}
+
+fsm_state_encoding {381467414674} FSM_MATCH {010000}
+
+fsm_state_encoding {381467414674} 101 {100000}
+
+fsm_registers {381467414674} {fsm[5]}  {fsm[4]}  {fsm[3]}  {fsm[2]}  {fsm[1]}  {fsm[0]} 
+
+fsm_encoding {4193849383} onehot
+
+fsm_state_encoding {4193849383} LSM_IDLE {00000000001}
+
+fsm_state_encoding {4193849383} LSM_DES0P {00000000010}
+
+fsm_state_encoding {4193849383} LSM_DES0 {00000000100}
+
+fsm_state_encoding {4193849383} LSM_DES1 {00000001000}
+
+fsm_state_encoding {4193849383} LSM_DES2 {00000010000}
+
+fsm_state_encoding {4193849383} LSM_DES3 {00000100000}
+
+fsm_state_encoding {4193849383} LSM_BUF1 {00001000000}
+
+fsm_state_encoding {4193849383} LSM_BUF2 {00010000000}
+
+fsm_state_encoding {4193849383} LSM_STAT {00100000000}
+
+fsm_state_encoding {4193849383} LSM_FSTAT {01000000000}
+
+fsm_state_encoding {4193849383} LSM_NXT {10000000000}
+
+fsm_registers {4193849383} {lsm[10]}  {lsm[9]}  {lsm[8]}  {lsm[7]}  {lsm[6]}  {lsm[5]}  {lsm[4]}  {lsm[3]}  {lsm[2]}  {lsm[1]}  {lsm[0]} 
+
+fsm_encoding {342296422961} sequential
+
+fsm_state_encoding {342296422961} PSM_RUN {00}
+
+fsm_state_encoding {342296422961} PSM_SUSPEND {01}
+
+fsm_state_encoding {342296422961} PSM_STOP {10}
+
+fsm_registers {342296422961} {rpsm[1]}  {rpsm[0]} 
+
+fsm_encoding {342095420952} sequential
+
+fsm_state_encoding {342095420952} PSM_RUN {00}
+
+fsm_state_encoding {342095420952} PSM_SUSPEND {01}
+
+fsm_state_encoding {342095420952} PSM_STOP {10}
+
+fsm_registers {342095420952} {tpsm[1]}  {tpsm[0]} 

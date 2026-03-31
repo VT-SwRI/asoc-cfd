@@ -1,0 +1,15 @@
+*****************************************************************
+Pin Report - Date: Mon Mar 23 16:36:49 2026 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: led_test
+Family: ProASIC3E
+Die: A3PE1500
+Package: 208 PQFP
+*****************************************************************
+Port  |Pin |Fixed |Function         |I/O Std |Output Drive (mA) |Slew |Resistor Pull |Schmitt Trigger |Input Delay |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
+------|----|------|-----------------|--------|------------------|-----|--------------|----------------|------------|-----|-----------------|------------|--------------|
+clock  26   Yes    GFA0/IO190NPB6V2  LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+led    63   Yes    IO161PSB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+SW0    68   Yes    IO153PDB5V2       LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes

@@ -1,0 +1,140 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2810:7:2810:9|Synthesizing module PLL in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1229:7:1229:9|Synthesizing module GND in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2051:7:2051:9|Synthesizing module VCC in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\clock\clock.v":5:7:5:11|Synthesizing module clock in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\alu.v":8:0:8:12|Synthesizing module CORE8051S_OlI in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\clkctrl.v":8:0:8:14|Synthesizing module CORE8051S_I0III in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\cpu.v":8:0:8:14|Synthesizing module CORE8051S_I00lI in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":8:0:8:14|Synthesizing module CORE8051S_I001I in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\intctrl.v":9:0:9:14|Synthesizing module CORE8051S_lOO1I in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v":8:0:8:14|Synthesizing module CORE8051S_IIlll in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\pmu.v":8:0:8:14|Synthesizing module CORE8051S_Illll in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\rstctrl.v":8:0:8:14|Synthesizing module CORE8051S_O0lll in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ramsfrctrl.v":8:0:8:14|Synthesizing module CORE8051S_l0lll in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\oci.v":8:0:8:14|Synthesizing module CORE8051S_IO0ll in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\instrdec.v":8:0:8:14|Synthesizing module CORE8051S_OOO1I in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\main8051.v":8:0:8:14|Synthesizing module CORE8051S_OIIlI in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s_globs_a3pe.v":8:0:8:14|Synthesizing module CORE8051S_OllII in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":8:0:8:8|Synthesizing module CORE8051S in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1401:7:1401:9|Synthesizing module INV in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2180:7:2180:12|Synthesizing module RAM4K9 in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8.v":9:0:9:12|Synthesizing module CORE8051S_IOI in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":64:7:64:9|Synthesizing module DMA in library work.
+@N: CG179 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":331:45:331:49|Removing redundant assignment.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tlsm.v":69:7:69:10|Synthesizing module TLSM in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tfifo.v":72:7:72:11|Synthesizing module TFIFO in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tc.v":97:7:97:8|Synthesizing module TC in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rc.v":109:7:109:8|Synthesizing module RC in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rfifo.v":70:7:70:11|Synthesizing module RFIFO in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rlsm.v":103:7:103:10|Synthesizing module RLSM in library work.
+@N: CG179 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rlsm.v":1268:43:1268:45|Removing redundant assignment.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\csr.v":98:7:98:9|Synthesizing module CSR in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\mac.v":75:7:75:9|Synthesizing module MAC in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rstc.v":27:7:27:10|Synthesizing module RSTC in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dualram.v":20:7:20:13|Synthesizing module DUALRAM in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\ramblocks_a3pe.v":9220:7:9220:20|Synthesizing module RAMBLOCK512X32 in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\CORE10100_AHBAPB_0\rtl\vlog\amba\core10100_ahbapb.v":24:7:24:57|Synthesizing module ethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3_muxptob3.v":30:7:30:23|Synthesizing module COREAPB3_MUXPTOB3 in library COREAPB3_LIB.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":31:7:31:14|Synthesizing module CoreAPB3 in library COREAPB3_LIB.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mdio_tristate.v":21:7:21:19|Synthesizing module mdio_tristate in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mem_interface.v":21:7:21:19|Synthesizing module mem_interface in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\ram_core\ram_core.v":5:7:5:14|Synthesizing module ram_core in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\reset_test.v":21:7:21:16|Synthesizing module reset_test in library work.
+@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\ethernet_module.v":9:7:9:21|Synthesizing module ethernet_module in library work.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mem_interface.v":27:18:27:25|Input MEMDATAO is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mem_interface.v":29:18:29:22|Input MEMRD is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mem_interface.v":30:18:30:22|Input MEMWR is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":72:36:72:40|Input IADDR is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":73:13:73:19|Input PRESETN is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":74:13:74:16|Input PCLK is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":106:18:106:25|Input PRDATAS2 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":107:18:107:25|Input PRDATAS3 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":108:18:108:25|Input PRDATAS4 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":109:18:109:25|Input PRDATAS5 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":110:18:110:25|Input PRDATAS6 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":111:18:111:25|Input PRDATAS7 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":112:18:112:25|Input PRDATAS8 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":113:18:113:25|Input PRDATAS9 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":114:18:114:26|Input PRDATAS10 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":115:18:115:26|Input PRDATAS11 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":116:18:116:26|Input PRDATAS12 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":117:18:117:26|Input PRDATAS13 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":118:18:118:26|Input PRDATAS14 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":119:18:119:26|Input PRDATAS15 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":123:13:123:20|Input PREADYS2 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":124:13:124:20|Input PREADYS3 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":125:13:125:20|Input PREADYS4 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":126:13:126:20|Input PREADYS5 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":127:13:127:20|Input PREADYS6 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":128:13:128:20|Input PREADYS7 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":129:13:129:20|Input PREADYS8 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":130:13:130:20|Input PREADYS9 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":131:13:131:21|Input PREADYS10 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":132:13:132:21|Input PREADYS11 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":133:13:133:21|Input PREADYS12 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":134:13:134:21|Input PREADYS13 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":135:13:135:21|Input PREADYS14 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":136:13:136:21|Input PREADYS15 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":140:13:140:21|Input PSLVERRS2 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":141:13:141:21|Input PSLVERRS3 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":142:13:142:21|Input PSLVERRS4 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":143:13:143:21|Input PSLVERRS5 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":144:13:144:21|Input PSLVERRS6 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":145:13:145:21|Input PSLVERRS7 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":146:13:146:21|Input PSLVERRS8 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":147:13:147:21|Input PSLVERRS9 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":148:13:148:22|Input PSLVERRS10 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":149:13:149:22|Input PSLVERRS11 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":150:13:150:22|Input PSLVERRS12 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":151:13:151:22|Input PSLVERRS13 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":152:13:152:22|Input PSLVERRS14 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v":153:13:153:22|Input PSLVERRS15 is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\CORE10100_AHBAPB_0\rtl\vlog\amba\core10100_ahbapb.v":64:15:64:19|Input HRESP is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\CORE10100_AHBAPB_0\rtl\vlog\amba\core10100_ahbapb.v":80:10:80:15|Input CRS_DV is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\mac.v":180:10:180:12|Input CRS is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\mac.v":196:10:196:17|Input RMII_CLK is unused.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\csr.v":2296:4:2296:9|Trying to extract state machine for register rpsm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\csr.v":2095:4:2095:9|Trying to extract state machine for register tpsm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rlsm.v":938:4:938:9|Trying to extract state machine for register lsm.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rlsm.v":113:10:113:16|Input cachenf is unused.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rc.v":1467:4:1467:9|Trying to extract state machine for register fsm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rc.v":823:4:823:9|Trying to extract state machine for register rsm.
+@N: CL189 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tc.v":803:4:803:9|Register bit brel[6] is always 0.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tc.v":646:4:646:9|Trying to extract state machine for register tsm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tlsm.v":679:4:679:9|Trying to extract state machine for register csm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tlsm.v":538:4:538:9|Trying to extract state machine for register lsm.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":294:4:294:9|Trying to extract state machine for register dsm.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":81:10:81:12|Input ble is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":82:10:82:12|Input dbo is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":83:10:83:13|Input rdes is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":84:10:84:13|Input rbuf is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":85:10:85:14|Input rstat is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":86:10:86:13|Input tdes is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":87:10:87:13|Input tbuf is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v":88:10:88:14|Input tstat is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":306:0:306:2|Input TMS is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":309:0:309:2|Input TDI is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":315:0:315:4|Input TRSTN is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":329:0:329:6|Input MEMBANK is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v":300:0:300:6|Input PSLVERR is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s_globs_a3pe.v":66:0:66:2|Input TCK is unused.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v":5080:0:5080:5|Trying to extract state machine for register CORE8051S_lOl0l.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v":4319:0:4319:14|Input CORE8051S_Ollll is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v":4495:0:4495:14|Input CORE8051S_l1III is unused.
+@N: CL201 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":7440:0:7440:5|Trying to extract state machine for register CORE8051S_IOOOl.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4220:0:4220:14|Input CORE8051S_O0O1I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4226:0:4226:14|Input CORE8051S_I0O1I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4232:0:4232:14|Input CORE8051S_OlIlI is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4235:0:4235:14|Input CORE8051S_IlIlI is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4238:0:4238:14|Input CORE8051S_l001I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4241:0:4241:14|Input CORE8051S_O101I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4244:0:4244:14|Input CORE8051S_I101I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4247:0:4247:14|Input CORE8051S_l101I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4250:0:4250:14|Input CORE8051S_OO11I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4253:0:4253:14|Input CORE8051S_IO11I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4256:0:4256:14|Input CORE8051S_lO11I is unused.
+@N: CL159 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v":4259:0:4259:14|Input CORE8051S_OI11I is unused.
+@N|Running in 64-bit mode
+

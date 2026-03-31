@@ -1,0 +1,1645 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/simulation
+vBD
+Z1 !s110 1774467445
+!i10b 1
+!s100 Qd`6li7WL?=O1En9AZ>0O2
+I_6`9hm73zj]=A@CEOAh0H1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1769640189
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/bd.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/bd.v
+Z4 FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v
+L0 83
+Z5 OW;L;10.5c;63
+r1
+!s85 0
+31
+Z6 !s108 1774467445.000000
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/bd.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/bd.v|
+!s101 -O0
+!i113 1
+Z7 o-vlog01compat -work presynth -O0
+Z8 !s92 +incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core +incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core -vlog01compat -work presynth -O0
+Z9 tCvgOpt 0
+n@b@d
+vclock
+Z10 !s110 1774467444
+!i10b 1
+!s100 ib[BUQMjPQig>]L7@Ib=S1
+If1LIR;EEk=5Xm_>n`gE1G1
+R2
+R0
+w1773923779
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/clock/clock.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/clock/clock.v
+L0 5
+R5
+r1
+!s85 0
+31
+Z11 !s108 1774467444.000000
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/clock/clock.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/clock/clock.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vCORE8051S
+R10
+!i10b 1
+!s100 zLYK>k5iWoR^R[lDF2XHP1
+I7DVSjGz`>Yjm_z:Sg`=aN3
+R2
+R0
+Z12 w1772470079
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v
+L0 8
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s
+vCORE8051S_I001I
+Z13 !s110 1774467442
+!i10b 1
+!s100 @3^m;ARE4@lPjYeOjQ`8g0
+I<77JHkagiO<1UX1GQH<UN3
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v
+L0 8
+R5
+r1
+!s85 0
+31
+Z14 !s108 1774467442.000000
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/isr.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i001@i
+vCORE8051S_I00lI
+R13
+!i10b 1
+!s100 @i^LThZjkJ]mbk`7IcaNd2
+I<IPS0F97bIoPcZQ8^JG]l2
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/cpu.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i00l@i
+vCORE8051S_I01Il
+Z15 !s110 1774467443
+!i10b 1
+!s100 <SUZR[HkdKBQ`LZSUJoP>2
+I0l_EQX@Ik4ThQLSLBbN3f1
+R2
+R0
+Z16 w1772486795
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v
+L0 8
+R5
+r1
+!s85 0
+31
+Z17 !s108 1774467443.000000
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtagu.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i01@il
+vCORE8051S_I0III
+R13
+!i10b 1
+!s100 FLd1:d5A6B4O_2^a8HViD2
+I[Y@HFd7c=]8kM8WY;FeY82
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/clkctrl.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i0@i@i@i
+vCORE8051S_I0IIl
+R15
+!i10b 1
+!s100 nR?UL61zIYfc65Jc:Yg6S2
+I8fIi[7=:EfRgLPL]3X8Om0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/jtag.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i0@i@il
+vCORE8051S_IIlll
+R13
+!i10b 1
+!s100 4dB<`HgmUCFFk]zm5::l_0
+I4@4go;?<g7bSFz0UERD=W0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/memctrl.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i@illl
+vCORE8051S_Illll
+R15
+!i10b 1
+!s100 NX`dPIa0Gi=2767f^GCDZ2
+I@iXmnT_c`eN5CA7e9NE:E3
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/pmu.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@illll
+vCORE8051S_IO0ll
+R13
+!i10b 1
+!s100 E99FcV3jG;KZ[^]FjZFLW3
+IL8]YboR@oFfD=oSf_CT]22
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/oci.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i@o0ll
+vCORE8051S_IOI
+R13
+!i10b 1
+!s100 6]:3ef93AlC_PhDWl_j591
+IjVjOPdF_AIKfS8E=gEHIT3
+R2
+R0
+R16
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v
+L0 9
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i@o@i
+vCORE8051S_IOI0I
+R15
+!i10b 1
+!s100 :9R;S6cP@8V@@dkK9]D=20
+IGiV_5olUlYYBi0d[Aem810
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/debug.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@i@o@i0@i
+vCORE8051S_l0llI
+R10
+!i10b 1
+!s100 B44[>_?2hK`JPzLznkE1=2
+I7NE1VgNaAJmBE>g8lk`<c1
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v
+L0 8
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ocia51.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_l0ll@i
+vCORE8051S_l0lll
+R15
+!i10b 1
+!s100 emohR@=NETdBz:@;gT=nk2
+IIY_GZa@mbMZE?fDJVWLOX0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ramsfrctrl.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_l0lll
+vCORE8051S_lII
+R10
+!i10b 1
+!s100 ?m05aO6`fe[GLHL8G<hMK2
+Ik9^VlS9S;D9<I0:U[XRM93
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v
+L0 8
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_registers.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_l@i@i
+vCORE8051S_lO10l
+R10
+!i10b 1
+!s100 Q65@5@XDO=fE`2>C7aBHS3
+I4S7<QN4@O38M6@TA=fX^e0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trigger.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_l@o10l
+vCORE8051S_lOO1I
+R15
+!i10b 1
+!s100 YE=NMB_TG06`@TYAQ;Q7K0
+I>;KLEETLUH?VRKXbcFldh2
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v
+L0 9
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/intctrl.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_l@o@o1@i
+vCORE8051S_O
+R13
+!i10b 1
+!s100 8Ye2Jo61Xm9WzeD4kkL;D0
+INJU^mjmK`e[;lhM:]226<0
+R2
+R0
+R16
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v
+L0 9
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x20.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o
+vCORE8051S_O0lll
+R15
+!i10b 1
+!s100 RmJl]G28k^W_fkzRg=K^H3
+IU:XNc=Eh??J^IOnO:S]8Y0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/rstctrl.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o0lll
+vCORE8051S_OII
+R13
+!i10b 1
+!s100 `^2^?VZ=@oR1i2L?hE[ba0
+IJbd=Q?BC<R5z66WkOeFV]3
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v
+L0 8
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/ram256x8_block_ram.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o@i@i
+vCORE8051S_OIIlI
+R15
+!i10b 1
+!s100 S^eB8Dh9F>C^918^26e[70
+IEaW3Bk7Jkebn70hiG45LC1
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/main8051.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o@i@il@i
+vCORE8051S_OlI
+R15
+!i10b 1
+!s100 gh;O7FUi9PJl;gzFQoG6j3
+Ic2RlOhRj_RE59Qm@5nHho0
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/alu.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@ol@i
+vCORE8051S_OllII
+R15
+!i10b 1
+!s100 N9hFVB;95<WG1H8]EaFib3
+I?9J11X0BSX`4^58;`Fg1<3
+R2
+R0
+R16
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/core8051s_globs_a3pe.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@oll@i@i
+vCORE8051S_OO10l
+R15
+!i10b 1
+!s100 T2@<8@A6B=gAUbg9_bc]81
+IIzeE5nL`b@f=M<_3^=<UE2
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/trace.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o@o10l
+vCORE8051S_OOO1I
+R15
+!i10b 1
+!s100 Db3FmOPDNJD;;BI_hD4941
+IS22QQkT02l8j71@Xg@Da23
+R2
+R0
+R12
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v
+L0 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE8051S/2.4.101/rtl/verilog/o/instrdec.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e8051@s_@o@o@o1@i
+vCOREAPBSRAM
+R10
+!i10b 1
+!s100 3kRcC3C<Fj@RHo[Wlj[Bb3
+ICKC91ie@l7mY?Ke5JN1T_3
+R2
+R0
+Z18 w1772472346
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/coreapbsram.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/coreapbsram.v
+Z19 L0 16
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/coreapbsram.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/coreapbsram.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@o@r@e@a@p@b@s@r@a@m
+vCoreApbSram_l1I
+R10
+!i10b 1
+!s100 T>ULVX0Pc9zB0]Z6Km4hM0
+IK3R]CH>BeoXd9<UJg`Abz2
+R2
+R0
+R18
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/sram_512to8192x8.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/sram_512to8192x8.v
+R19
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/sram_512to8192x8.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/COREAPBSRAM/2.0.102/rtl/vlog/core_obfuscated/sram_512to8192x8.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@core@apb@sram_l1@i
+vCSR
+R1
+!i10b 1
+!s100 jX8[:;6Yz2LC0Tle1D?Ne3
+I;12L:PAj623:0mZEz@09B1
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/csr.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/csr.v
+R4
+L0 98
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/csr.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/csr.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@c@s@r
+vDMA
+R1
+!i10b 1
+!s100 RffD?C99fR>F@8iJ_jJfI3
+IiJL4G@>z47V:08k9Jb=7O1
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dma.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dma.v
+R4
+L0 64
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dma.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dma.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@d@m@a
+vDUALRAM
+R1
+!i10b 1
+!s100 5IP5m4_6b45j2fc67Ce@a0
+INX:9b298BB2IJEYl=m_dK1
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dualram.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dualram.v
+L0 20
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dualram.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/dualram.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@d@u@a@l@r@a@m
+vethernet_module
+Z20 !s110 1774467446
+!i10b 1
+!s100 SIn?S3OTY8WAPm;?PmeRC1
+IMUEAXDg]5<93>zGAK:P4?2
+R2
+R0
+Z21 w1774467236
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/ethernet_module.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/ethernet_module.v
+L0 9
+R5
+r1
+!s85 0
+31
+Z22 !s108 1774467446.000000
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/ethernet_module.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/ethernet_module.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vethernet_module_CORE10100_AHBAPB_0_CORE10100_AHBAPB
+R20
+!i10b 1
+!s100 :hXl_=BVhX:O4gCz@;EZU0
+IL7COhECI`XOEbkFE7XVOH0
+R2
+R0
+R21
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/amba/core10100_ahbapb.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/amba/core10100_ahbapb.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core/../core/utilitya.v
+L0 24
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core/../core/utilitya.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/amba/core10100_ahbapb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/amba/core10100_ahbapb.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+nethernet_module_@c@o@r@e10100_@a@h@b@a@p@b_0_@c@o@r@e10100_@a@h@b@a@p@b
+vMAC
+R1
+!i10b 1
+!s100 C;OZd^];Cci;Hgn0RJa@n3
+IcdfKRd?TS>`93;]I<5BcU3
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/mac.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/mac.v
+R4
+L0 75
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/mac.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/mac.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@m@a@c
+vmdio_tristate
+R20
+!i10b 1
+!s100 3XVc`oiJY0XK6IE4WeCll1
+IKn3B20T?F]Bh4LYAZo?]U1
+R2
+R0
+w1774377073
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mdio_tristate.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mdio_tristate.v
+Z23 L0 21
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mdio_tristate.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mdio_tristate.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vmem_interface
+R20
+!i10b 1
+!s100 eXgI2G>foHlLWjZ`48Ec63
+I9eikhCK4DPPOJ;5dGz>k70
+R2
+R0
+w1773855820
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mem_interface.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mem_interface.v
+R23
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mem_interface.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/mem_interface.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vram_core
+R20
+!i10b 1
+!s100 jGkF<b:6j;DO:89=]gbUF3
+Iiccc=OCU[k^97zC<n7HU]2
+R2
+R0
+w1774466032
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/ram_core/ram_core.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/ram_core/ram_core.v
+L0 5
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/ram_core/ram_core.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/smartgen/ram_core/ram_core.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vRAMBLOCK1024X16
+R10
+!i10b 1
+!s100 :D2X_Dnelocl;1;@A;^?S1
+ID5PLh`C[h7NL7VG3z?1Yi3
+R2
+R0
+R16
+Z24 8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/ramblocks_a3pe.v
+Z25 FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/ramblocks_a3pe.v
+L0 6000
+R5
+r1
+!s85 0
+31
+R11
+Z26 !s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/ramblocks_a3pe.v|
+Z27 !s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/ramblocks_a3pe.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k1024@x16
+vRAMBLOCK1024X32
+R10
+!i10b 1
+!s100 OT27LDC2jeGm3`7KP]olR3
+IdKNg[W>MgB5_PA:5WL?WQ2
+R2
+R0
+R16
+R24
+R25
+L0 4706
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k1024@x32
+vRAMBLOCK1024X8
+R10
+!i10b 1
+!s100 SVYXQNL]<VH2BL;C>@gIW3
+IkcGFid]8iShhzkjo5QD7z2
+R2
+R0
+R16
+R24
+R25
+L0 3019
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k1024@x8
+vRAMBLOCK128X16
+R10
+!i10b 1
+!s100 m^Tfl5Z43LAhLSe?MWQ0m0
+IM@m6SfJ<0dMLfEAI_AZW40
+R2
+R0
+R16
+R24
+R25
+L0 4503
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k128@x16
+vRAMBLOCK128X32
+R10
+!i10b 1
+!s100 hTTZnDCBYilHo1`of`LM]3
+IiL?@Y?XnTOLeV@HNP1mOS0
+R2
+R0
+R16
+R24
+R25
+L0 2662
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k128@x32
+vRAMBLOCK128X8
+R10
+!i10b 1
+!s100 zgfkmFcOl;MHII792NZd83
+ISG9SYh:;kcRbA?^PdEGg82
+R2
+R0
+R16
+R24
+R25
+L0 5371
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k128@x8
+vRAMBLOCK2048X16
+R10
+!i10b 1
+!s100 H9XFBlT<V9o6SLZ@K:R4]2
+IaPkcCZ_fl7mWdZMo]glFS1
+R2
+R0
+R16
+R24
+R25
+L0 9906
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k2048@x16
+vRAMBLOCK2048X32
+R10
+!i10b 1
+!s100 ?RkC[m<Q43haR?a>J2J<B3
+IV:L4`meF_S2hb5On[cl331
+R2
+R0
+R16
+R24
+R25
+L0 7939
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k2048@x32
+vRAMBLOCK2048X8
+R10
+!i10b 1
+!s100 Y>=8:d:fVBWP9TKi8=FgV3
+IaDb@_3J?R`:Kk?[24fLZY0
+R2
+R0
+R16
+R24
+R25
+L0 5623
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k2048@x8
+vRAMBLOCK256X16
+R10
+!i10b 1
+!s100 _f=N^5n=Y7^H2f>mMdNX11
+Ib6hL85VQmM`n1U13TJhH30
+R2
+R0
+R16
+R24
+R25
+L0 9703
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k256@x16
+vRAMBLOCK256X32
+R10
+!i10b 1
+!s100 3EP[Cdj]1CF2kzz^aYR8m1
+IOi5DoSZ47APOohmEeB`nj1
+R2
+R0
+R16
+R24
+R25
+L0 7379
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k256@x32
+vRAMBLOCK256X8
+R10
+!i10b 1
+!s100 ENnJRjGeBZEPm<Eo@jJBQ3
+I6?bD>YfkaoBAh@_zH<<G71
+R2
+R0
+R16
+R24
+R25
+L0 9577
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k256@x8
+vRAMBLOCK4096X16
+R10
+!i10b 1
+!s100 oTU5@N>WFP4P72@Y^kOBU1
+ITPcFV@A:anackA>Unlc0]1
+R2
+R0
+R16
+R24
+R25
+L0 3222
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k4096@x16
+vRAMBLOCK4096X32
+R10
+!i10b 1
+!s100 dg82[2@]05Wmk:V^21fQR0
+IG[Vm7PFOMjV>k@>DXV^S71
+R2
+R0
+R16
+R24
+R25
+L0 23
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k4096@x32
+vRAMBLOCK4096X8
+R10
+!i10b 1
+!s100 SeHUU38d9I44hA:4LK^gJ0
+IE@>FCBS9Wm9]b4hC3=aA:1
+R2
+R0
+R16
+R24
+R25
+L0 6357
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k4096@x8
+vRAMBLOCK512X16
+R10
+!i10b 1
+!s100 OG4PoiLeO5zj[GlS;gJii0
+IicOi?^=lQV7H9ei7SRAY90
+R2
+R0
+R16
+R24
+R25
+L0 10571
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k512@x16
+vRAMBLOCK512X32
+R10
+!i10b 1
+!s100 I9_aX39JNAG8:4AUG40QN2
+I0W747BdGhXgXj^JeD`U=b1
+R2
+R0
+R16
+R24
+R25
+L0 9220
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k512@x32
+vRAMBLOCK512X8
+R10
+!i10b 1
+!s100 7?Rlo]`TQA;NW^LK;43^?3
+I<g4AA_1:6gHzgXE6zh:oZ1
+R2
+R0
+R16
+R24
+R25
+L0 2536
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k512@x8
+vRAMBLOCK64X16
+R10
+!i10b 1
+!s100 9_7MngBG=nOTeZ3Sk`B8E3
+IoEJ7P]OV95fl16?J8VJKb2
+R2
+R0
+R16
+R24
+R25
+L0 7736
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k64@x16
+vRAMBLOCK64X32
+R10
+!i10b 1
+!s100 befHk``dYanB0PP=An4F51
+ITfB:OU@b1DXNFb_68:oH83
+R2
+R0
+R16
+R24
+R25
+L0 7022
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k64@x32
+vRAMBLOCK64X8
+R10
+!i10b 1
+!s100 8c<DZ7Rz`c1<9Dl1l<9az1
+Ih4H6:LhaHFCF=:E8;^RR[3
+R2
+R0
+R16
+R24
+R25
+L0 5497
+R5
+r1
+!s85 0
+31
+R11
+R26
+R27
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@a@m@b@l@o@c@k64@x8
+vRC
+R1
+!i10b 1
+!s100 =KDRIOlIX=j788K4TL_[K1
+IVk9HLDC@;GG533EXGLh2:0
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rc.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rc.v
+R4
+L0 109
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rc.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rc.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@c
+vreset_test
+R20
+!i10b 1
+!s100 UNmZTTY]C5G]b:Fj2A^JH0
+IaNFL1oB:b?_bjW87IRSI:2
+R2
+R0
+w1774378627
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/reset_test.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/reset_test.v
+R23
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/reset_test.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/hdl/reset_test.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+vRFIFO
+R1
+!i10b 1
+!s100 n5IIo@H_do>kR@^9ILUmf1
+ICP<4XK_QRCPD1L=W]<2130
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rfifo.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rfifo.v
+L0 70
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rfifo.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rfifo.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@f@i@f@o
+vRLSM
+R1
+!i10b 1
+!s100 SH23G;kE;nDT3VngXXjl]0
+Iom=oS1if^XCVde^AdCi?33
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rlsm.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rlsm.v
+R4
+L0 103
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rlsm.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rlsm.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@l@s@m
+vRMII_MII
+R20
+!i10b 1
+!s100 :5H7@lQFN`CF8]G<GEb4T3
+IZPCc<nm[k0Vnc0?8TV]Pa3
+R2
+R0
+R16
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rmii_mii.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rmii_mii.v
+Z28 L0 27
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rmii_mii.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rmii_mii.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@m@i@i_@m@i@i
+vRSTC
+R1
+!i10b 1
+!s100 eaU6STAR4R1DJ`7FBfN_g1
+I_bKaRKFOn3FL_U=7Xm:L30
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rstc.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rstc.v
+R28
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rstc.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/rstc.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@r@s@t@c
+vsd_tb
+R20
+!i10b 1
+!s100 =L:mD2W_RfHQ[=4Fibad;0
+Io8TaiTSAWmR7]bR>7dDN51
+R2
+R0
+w1774467210
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb/sd_tb.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb/sd_tb.v
+L0 9
+R5
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb/sd_tb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb/sd_tb.v|
+!s101 -O0
+!i113 1
+R7
+!s92 +incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core +incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core +incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/sd_tb -vlog01compat -work presynth -O0
+R9
+vTC
+R1
+!i10b 1
+!s100 [bN7@d7[AICHbK<5VeOY;0
+IL[QdQbB9d:f@Y?jaYlo8X0
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tc.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tc.v
+R4
+L0 97
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tc.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tc.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@t@c
+vTFIFO
+R1
+!i10b 1
+!s100 G>b0d7;9;IQ@^0n?XSK^41
+I>QCo_BU[9lkfH@l7TPbeF2
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tfifo.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tfifo.v
+R4
+L0 72
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tfifo.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tfifo.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@t@f@i@f@o
+vTLSM
+R1
+!i10b 1
+!s100 64>aQX^hXIB@e@lgNLPf32
+Ik:4[ETomgzchK[hdHKLAV3
+R2
+R0
+R3
+8C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tlsm.v
+FC:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tlsm.v
+R4
+L0 69
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/utility.v|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tlsm.v|
+!s90 -reportprogress|300|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core|+incdir+C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/ethernet_module/CORE10100_AHBAPB_0/rtl/vlog/core|-vlog01compat|-work|presynth|C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/Actel/DirectCore/CORE10100_AHBAPB/5.1.105/rtl/vlog/core/tlsm.v|
+!s101 -O0
+!i113 1
+R7
+R8
+R9
+n@t@l@s@m

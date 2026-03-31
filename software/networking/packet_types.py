@@ -9,8 +9,8 @@ class PacketType(IntEnum):
 
 # Fixed sizes
 HOST_HEADER_SIZE = 2 + 2 + 2          # 6 bytes
-HOST_PAYLOAD_SIZE = 32                # 32 bytes
-HOST_PACKET_SIZE = HOST_HEADER_SIZE + HOST_PAYLOAD_SIZE  # 38 bytes
+HOST_PAYLOAD_SIZE = 16                # 16 bytes (packed parameters)
+HOST_PACKET_SIZE = HOST_HEADER_SIZE + HOST_PAYLOAD_SIZE  # 22 bytes
 
 FPGA_HEADER_SIZE = 2 + 2              # 4 bytes
 FPGA_PACKET_SIZE = 2 + 2 + 4 + 8 + 4 + 4  # 24 bytes

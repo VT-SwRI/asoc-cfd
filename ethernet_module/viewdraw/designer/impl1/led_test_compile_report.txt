@@ -1,0 +1,215 @@
+***************************************************************************
+                               Status Report
+                          Mon Mar 23 16:28:53 2026 ***************************************************************************
+
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+File Name: C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\designer\impl1\led_test.adb
+Design Name: led_test  Design State: compile
+Last Saved: Wed Mar 18 15:55:34 2026
+
+***** Device Data **************************************************
+
+Family: ProASIC3E  Die: A3PE1500  Package: 208 PQFP
+Speed: STD  Voltage: 1.5
+
+Restrict JTAG Pins: YES
+Restrict Probe Pins: YES
+
+Junction Temperature Range:   COM
+Voltage Range:   COM
+
+***** Import Variables *********************************************
+
+Source File(s) Imported on Mon Mar 23 16:28:52 2026:
+        C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\led_test.edn
+
+
+***** CAE Variables ************************************************
+
+Back Annotation File: N/A
+
+
+***** Bitstream Variables ******************************************
+
+Bitstream File: N/A
+     Lock Mode: off
+
+
+***** Compile Variables ********************************************
+
+Netlist PIN properties overwrite existing properties: 0
+
+Compile Output:
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : ProASIC3E
+Device      : A3PE1500
+Package     : 208 PQFP
+Source      :
+C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\led_test.edn
+Format      : EDIF
+Topcell     : led_test
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : Yes
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        1
+
+    Total macros optimized  1
+
+There were 0 error(s) and 0 warning(s) in this design.
+=====================================================================
+
+Reading previous post-compile physical placement constraints.
+
+
+There were 0 error(s) and 0 warning(s).
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:    113  Total:  38400   (0.29%)
+    IO (W/ clocks)             Used:      3  Total:    147   (2.04%)
+    Differential IO            Used:      0  Total:     65   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      1  Total:     18   (5.56%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:      0  Total:     60   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 1      | 6  (16.67%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 85           | 85
+    SEQ     | 28           | 28
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 2             | 0            | 0
+    Output I/O                            | 1             | 0            | 0
+    Bidirectional I/O                     | 0             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 2     | 1      | 0
+
+I/O Placement:
+
+    Locked  :   3 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
+
+Net information report:
+=======================
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    28      CLK_NET       Net   : clock_c
+                          Driver: clock_pad
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    13      INT_NET       Net   : led_blink_0/counter_n25_0_0
+                          Driver: led_blink_0/counter_RNINAA87[8]
+    12      INT_NET       Net   : led_blink_0/counter_n25_0
+                          Driver: led_blink_0/counter_RNINAA87_0[8]
+    6       INT_NET       Net   : SW0_c
+                          Driver: SW0_pad
+    6       INT_NET       Net   : led_blink_0/counter_c3
+                          Driver: led_blink_0/counter_RNIAVIM[3]
+    6       INT_NET       Net   : led_blink_0/counter10_20_2
+                          Driver: led_blink_0/counter_RNIQFJM[5]
+    5       INT_NET       Net   : led_blink_0/counter[8]
+                          Driver: led_blink_0/counter[8]
+    5       INT_NET       Net   : led_blink_0/counter[9]
+                          Driver: led_blink_0/counter[9]
+    5       INT_NET       Net   : led_blink_0/counter[18]
+                          Driver: led_blink_0/counter[18]
+    5       INT_NET       Net   : led_blink_0/counter[16]
+                          Driver: led_blink_0/counter[16]
+    5       INT_NET       Net   : led_blink_0/counter_m6_0_a2_3
+                          Driver: led_blink_0/counter_RNIOLH71[1]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    13      INT_NET       Net   : led_blink_0/counter_n25_0_0
+                          Driver: led_blink_0/counter_RNINAA87[8]
+    12      INT_NET       Net   : led_blink_0/counter_n25_0
+                          Driver: led_blink_0/counter_RNINAA87_0[8]
+    6       INT_NET       Net   : SW0_c
+                          Driver: SW0_pad
+    6       INT_NET       Net   : led_blink_0/counter_c3
+                          Driver: led_blink_0/counter_RNIAVIM[3]
+    6       INT_NET       Net   : led_blink_0/counter10_20_2
+                          Driver: led_blink_0/counter_RNIQFJM[5]
+    5       INT_NET       Net   : led_blink_0/counter[8]
+                          Driver: led_blink_0/counter[8]
+    5       INT_NET       Net   : led_blink_0/counter[9]
+                          Driver: led_blink_0/counter[9]
+    5       INT_NET       Net   : led_blink_0/counter[18]
+                          Driver: led_blink_0/counter[18]
+    5       INT_NET       Net   : led_blink_0/counter[16]
+                          Driver: led_blink_0/counter[16]
+    5       INT_NET       Net   : led_blink_0/counter_m6_0_a2_3
+                          Driver: led_blink_0/counter_RNIOLH71[1]
+
+

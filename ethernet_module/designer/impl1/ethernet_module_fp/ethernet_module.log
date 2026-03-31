@@ -1,0 +1,45 @@
+FlashPro
+Version: 11.9.6.7
+Release: v11.9 SP6
+
+Software Version: 11.9.6.7
+PDB file
+'C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\designer\impl1\ethernet_modu\
+le.pdb' has been loaded successfully.
+DESIGN : ethernet_module;  CHECKSUM : 3C7C;  PDB_VERSION : 1.9
+Driver : 3.0.0 build 1
+programmer '05191' : FlashPro4
+Opened
+'C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\designer\impl1\ethernet_modu\
+le_fp\ethernet_module.pro'
+Checking for software updates...
+Info: The software cannot reach the Microsemi SoC server to confirm the version you are running.
+      Visit
+      http://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#do\
+      wnloads to download the latest major release or service pack.
+      You can check the version of your current installation by starting the tool and selecting
+      Help -> About.
+PDB file
+'C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\designer\impl1\ethernet_modu\
+le.pdb' has been loaded successfully.
+DESIGN : ethernet_module;  CHECKSUM : 3C7C;  PDB_VERSION : 1.9
+programmer '05191' : Scan Chain...
+Warning: programmer '05191' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '05191' : Scan Chain PASSED.
+programmer '05191' : Executing action PROGRAM
+programmer '05191' : EXPORT FSN[48] = 904e2f043890
+programmer '05191' : Erase ...
+programmer '05191' : Completed erase
+programmer '05191' : EXPORT CHECKSUM[16] = 3c7c
+programmer '05191' : Programming FPGA Array
+programmer '05191' : Verifying FPGA Array
+programmer '05191' :         Verifying FPGA Array -- pass
+programmer '05191' : Finished: Wed Mar 25 15:23:50 2026 (Elapsed time 00:01:08)
+programmer '05191' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+Warning: Project 'ethernet_module' has been modified. Do you want to save it? [YES]
+Project saved.
+Project closed.

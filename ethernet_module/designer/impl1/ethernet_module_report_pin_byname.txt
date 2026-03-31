@@ -1,0 +1,30 @@
+*****************************************************************
+Pin Report - Date: Thu Mar 26 13:06:55 2026 UNCOMPLETED LAYOUT
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: ethernet_module
+Family: ProASIC3E
+Die: A3PE1500
+Package: 208 PQFP
+*****************************************************************
+Port      |Pin |Fixed |Function         |I/O Std |Output Drive (mA) |Slew |Resistor Pull |Schmitt Trigger |Input Delay |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
+----------|----|------|-----------------|--------|------------------|-----|--------------|----------------|------------|-----|-----------------|------------|--------------|
+CLK        26   Yes    GFA0/IO190NPB6V2  LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+CLKR       165  Yes    GBC0/IO55NDB1V3   LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+CLKT       185  Yes    IO23NDB0V2        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+LED        61   Yes    IO163PSB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+MDC        201  Yes    GAC1/IO02PDB0V0   LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+mdio       205  Yes    GAA1/IO00PDB0V0   LVTTL    12                 High  None           No               Off          No    35                No           Yes
+NSYSRESET  68   Yes    IO153PDB5V2       LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+RX_DV      189  Yes    IO18NDB0V2        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+RXD[0]     191  Yes    IO15NDB0V1        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+RXD[1]     193  Yes    IO11PDB0V1        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+RXD[2]     197  Yes    IO08NDB0V1        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+RXD[3]     199  Yes    IO05NDB0V0        LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+TX_EN      179  Yes    IO31NDB0V3        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+TXD[0]     177  Yes    IO31PDB0V3        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+TXD[1]     175  Yes    IO35PDB1V0        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+TXD[2]     173  Yes    IO41PDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+TXD[3]     169  Yes    IO47NDB1V1        LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+TXER       181  Yes    IO29NDB0V3        LVTTL    12                 High  None           ---              ---          No    35                No           Yes

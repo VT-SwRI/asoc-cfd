@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="datasheet.xsl"?>
+<datasheet>
+  <header>led_test</header>
+  <project-settings>
+    <fam>ProASIC3E</fam>
+    <die>A3PE1500</die>
+    <package>208 PQFP</package>
+    <speed-grade>STD</speed-grade>
+    <voltage>1.5</voltage>
+    <hdl-type>Verilog</hdl-type>
+    <project-description>ethernet module using correct device</project-description>
+    <location>C:/Users/zackp/OneDrive/Documents/ECE_4806/Libero/ethernet_module/component/work/led_test</location>
+    <state>GENERATED ( Wed Mar 18 14:56:00 2026 )</state>
+    <swide-toolchain>SoftConsole workspace has not been generated</swide-toolchain>
+  </project-settings>
+  <site-map>
+  </site-map>
+  <fileset>
+    <name>HDL File(s)</name>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\bd.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\csr.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dma.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\dualram.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\mac.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\ramblocks_a3pe.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rc.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rfifo.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rlsm.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rmii_mii.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\rstc.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tc.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tfifo.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\tlsm.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE10100_AHBAPB\5.1.105\rtl\vlog\core\utility.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\alu.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\clkctrl.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\core8051s_globs_a3pe.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\cpu.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\debug.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\instrdec.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\intctrl.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\isr.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\jtag.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\jtagu.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\main8051.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\memctrl.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\oci.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ocia51.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\pmu.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x20.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8_block_ram.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ram256x8_registers.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\ramsfrctrl.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\rstctrl.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\trace.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CORE8051S\2.4.101\rtl\verilog\o\trigger.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3_iaddr_reg.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3_muxptob3.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\CORE10100_AHBAPB_0\rtl\vlog\amba\core10100_ahbapb.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\CORE10100_AHBAPB_0\rtl\vlog\core\utilitya.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\ethernet_module\ethernet_module.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\led_test\led_test.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\led_blink.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\mem_interface.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\clk\clk.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\clock\clock.v</file>
+    <file>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\ram_core\ram_core.v</file>
+  </fileset>
+  <io>
+    <port-name>SW0</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>led</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>clock</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>led_blink</core-exttype>
+    <core-location>hdl\led_blink.v</core-location>
+    <core-name>led_blink_0</core-name>
+  </core>
+  <memorysystem>
+    <title>Memory Map for led_test</title>
+    <description>The project does not contain any subsystems.</description>
+  </memorysystem>
+</datasheet>

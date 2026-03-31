@@ -1,0 +1,11 @@
+----------------------------------------------------------------------
+Report for cell clk.verilog
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                              INBUF         2       0.0        0.0
+                             OUTBUF         2       0.0        0.0
+                                PLL         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL              7                  0.0
