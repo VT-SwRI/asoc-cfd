@@ -5,13 +5,14 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVB
 import os
 from datetime import datetime
 import time
-from plots import MplCanvas
+from plots import MplCanvas, HeatmapWidget
 from mock_data import generate_phd_samples
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
 from networking.networking import RxWorker, TxWorker, DecWorker
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
+import pyqtgraph as pg
 
 
 class EtherDAQMock(QtWidgets.QMainWindow):
@@ -66,7 +67,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         self.writer_thread = None
         self.writer_worker = None
+        self.image_worker = None
         self.tx_thread = None
+        self.image_thread = None
         self.tx_worker = None
         self.recv_worker = None
         self.popup = None
@@ -172,10 +175,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         topRow.addWidget(self.rtImageChk)
         rightCol.addLayout(topRow)
 
-        self.bigPlot = MplCanvas(xLabel= "X-Position (mm)", yLabel= "Y-Position (mm)", title = "Position Hit Map")
-        toolbar = CustomToolbar(self.bigPlot, self)
-        rightCol.addWidget(toolbar)
-        rightCol.addWidget(self.bigPlot)
+        self.hitmap = HeatmapWidget()
+        rightCol.addWidget(self.hitmap)
+
 
 
         root.addLayout(leftCol, 0)
@@ -375,33 +377,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.secondsStatusLbl.setText(f"Seconds: {val}")
 
 
-    @QtCore.pyqtSlot(object)
-    def updatePlot(self, batch):
-        if self.rtImageChk.isChecked():
-            x = batch["xpos"]
-            y = batch["ypos"]
-            xp = ((x + self.x / 2) * ((self.nx) / (self.x))).astype(np.int32)
-            yp = ((y + self.y / 2) * ((self.ny) / (self.y))).astype(np.int32)
-
-            mask = ((xp >= 0) & (xp < self.nx) & (yp >= 0) & (yp < self.ny))
-
-            xp = xp[mask]
-            yp = yp[mask]
-
-            self.bigPlot.show_hits(xp, yp)
-        else:
-            self.bigPlot.clear_axes()
-
-        if self.phdChk.isChecked():
-            samples = generate_phd_samples()  # now 0–256 by default
-            self.phdPlot.show_hist(
-                samples,
-                bins=256,
-                range_=(0, 256),
-                label="PHD",
-            )
-        else:
-            self.phdPlot.clear_axes()
 
     @pyqtSlot(object)
     def Estimate(self, pulse):
@@ -434,14 +409,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.outType.currentIndex() != 0:
             self.writer_thread = QThread()
         self.tx_thread = QThread()
+        self.image_thread = QThread()
 
         # create the workers that are going to be living in the thread
         if self.outType.currentIndex() == 2:
             self.writer_worker = ListWriter(self.save_folder, self.inType)
-        elif self.outType.currentIndex() == 1:
-            self.writer_worker = ImageWriter(self.save_folder, self.inType, self.x, self.y)
+        
+        if self.outType.currentIndex() == 1:
+            self.image_worker = ImageWriter(self.save_folder, self.inType, x = self.x, y = self.y, save = True, nx = self.nx, ny = self.ny)
+        else:
+            self.image_worker = ImageWriter(self.save_folder, self.inType, x = self.x, y = self.y, save = False, nx = self.nx, ny = self.ny)
         self.tx_worker = TxWorker(self.ip, self.port)
-
+        
         q = queue.Queue(maxsize=1000000)
         self.recv_worker = RxWorker(q, self.ip, self.port)
         self.decode_worker = DecWorker(q, self.inType, self.mode)
@@ -450,18 +429,21 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.writer_worker is not None:
             self.writer_worker.moveToThread(self.writer_thread)
         self.tx_worker.moveToThread(self.tx_thread)
+        self.image_worker.moveToThread(self.image_thread)
 
         # connect the worker's start function so that it is called when the thread is deployed
         if self.writer_worker is not None:
             self.writer_thread.started.connect(self.writer_worker.start)
         self.tx_thread.started.connect(self.tx_worker.start)
+        self.image_thread.started.connect(self.image_worker.start)
 
 
         # connect the batch ready signal from the depacketizer to the writer.
         # This allows the depacketizer to send batched to the writeBatch function in the writer worker
         if self.writer_worker is not None:
             self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
-        self.decode_worker.batch_ready.connect(self.updatePlot)
+        self.decode_worker.batch_ready.connect(self.image_worker.writeBatch)
+        self.image_worker.image_ready.connect(self.updateHeatmap)
         self.decode_worker.pulse.connect(self.Estimate)
         self.startPacket.connect(self.tx_worker.sendStart)
 
@@ -469,11 +451,13 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.writer_worker is not None:
             self.writer_worker.finished.connect(self.writer_thread.quit)
         self.tx_worker.done.connect(self.tx_thread.quit)
+        self.image_worker.finished.connect(self.image_thread.quit)
 
         # delete later ensures proper cleanup of threads
         if self.writer_worker is not None:
             self.writer_thread.finished.connect(self.writer_thread.deleteLater)
         self.tx_thread.finished.connect(self.tx_thread.deleteLater)
+        self.image_thread.finished.connect(self.image_thread.deleteLater)
         
         # deploy each thread, remember this also starts each worker
         if self.writer_worker is not None:
@@ -481,11 +465,15 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.recv_worker.start()
         self.tx_thread.start()
         self.decode_worker.start()
+        self.image_thread.start()
 
         # connect the done signal from the receiver to the function that stops all workers and threads to ensure the socket is closed properly
         self.tx_worker.done.connect(self.txCleanUp)
         self.recv_worker.done.connect(self.cleanUp)
     
+    def updateHeatmap(self, img, x, y):
+        if self.rtImageChk.isChecked():
+            self.hitmap.set_image(img, x, y)
 
     def start_acquire(self):
         if self.setup:
@@ -493,7 +481,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             # sets up the threads and workers for networking and output file generation
             self.setupThreads()
             self.phdPlot.clear_axes()
-            self.bigPlot.clear_axes()
+            self.hitmap.clear()
 
             self.fileBtn.setEnabled(False)
             self.ParamsBtn.setEnabled(False)
@@ -538,6 +526,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.writer_worker.stop()
             self.writer_thread.wait()
 
+        self.image_worker.stop()
+        self.image_thread.wait()
+
         self.decode_worker.stop()
 
         # clean up the memory
@@ -545,6 +536,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.decode_worker = None
         self.writer_thread = None
         self.writer_worker = None
+        self.image_thread = None
+        self.image_worker = None
 
     # this functions ensures the proper cleanup of threads when the user randomly exits the application
     def closeEvent(self, a0):

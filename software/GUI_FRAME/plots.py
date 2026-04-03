@@ -5,8 +5,67 @@ import numpy as np
 from PyQt5 import QtCore, QtGui, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
+import pyqtgraph as pg
+from PyQt5.QtGui import QTransform
 
+class HeatmapWidget(QtWidgets.QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
 
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # Graphics view
+        self.view = pg.GraphicsLayoutWidget()
+        layout.addWidget(self.view)
+
+        # Plot
+        self.plot = self.view.addPlot()
+        self.plot.setLabel('left', 'Y-Position')
+        self.plot.setLabel('bottom', 'X-Position')
+        # self.plot.setAspectLocked(True, ratio = 1)
+
+        # Image item
+        self.img = pg.ImageItem()
+        self.plot.addItem(self.img)
+
+        # Colormap
+        self.cmap = pg.colormap.get("magma")
+        self.img.setColorMap(self.cmap)
+
+        # Colorbar
+        self.cbar = pg.ColorBarItem(colorMap=self.cmap)
+        self.cbar.setImageItem(self.img)
+        self.view.addItem(self.cbar)
+
+        # Track current downsample factor
+        self.factor = 1
+
+        # Optional: lock initial levels (prevents flicker)
+        self.img.setLevels((0, 10))
+
+    def set_image(self, image, x, y, factor=1):
+
+        self.factor = factor
+        sx = x / image.shape[1]
+        sy = y / image.shape[0]
+        
+        # Update image
+        self.img.setImage(image.T, autoLevels=True)
+
+        t = QTransform()
+        t.scale(sx, sy)
+        t.translate(-image.shape[1] / 2, -image.shape[0] / 2)
+        self.img.setTransform(t)
+
+    def auto_levels(self):
+        self.img.setImage(self.img.image, autoLevels=True)
+
+    def set_levels(self, vmin, vmax):
+        self.img.setLevels((vmin, vmax))
+
+    def clear(self):
+        if self.img.image is not None:
+            self.img.setImage(np.zeros_like(self.img.image), autoLevels=False)
 
 
 class MplCanvas(FigureCanvas):
@@ -91,35 +150,7 @@ class MplCanvas(FigureCanvas):
         self.draw_idle()
 
 
-    # def show_hits(self, x, y):
-    #     """Scatter for detector hits (spiral)."""
-    #     self.clear_axes()
-    #     self.ax.scatter(x, y, s=5, c="yellow", marker=".", linewidths=0)
-    #     # self.ax.set_xlim(0, 4096)
-    #     # self.ax.set_ylim(0, 4096)
-        
-    #     self.ax.set_xticks(self.ticks)
-    #     self.ax.set_yticks(self.ticks)
-
-    #     self.ax.set_title(self.title)
-    #     self.draw_idle()
-
-    def show_hits(self, x, y):
-        self.clear_axes()
-
-        self.x.extend(x)
-        self.y.extend(y)
-
-        self.ax.scatter(self.x, self.y, s=5, c="yellow", marker=".", linewidths=0)
-
-        self.ax.set_xticks(self.ticks)
-        self.ax.set_yticks(self.ticks)
-        self.ax.set_xlim(self.ticks[0], self.ticks[-1])
-        self.ax.set_ylim(self.ticks[0], self.ticks[-1])
-
-        self.ax.set_title(self.title)
-        self.draw_idle()
-
     def show_heatmap(self, img2d, vmin=None, vmax=None, extent=None):
         # kept as placeholder if you later want a real heatmap
-        pass
+        self.ax.imshow(img2d, origin = "lower", cmap="gray")
+        self.draw_idle()

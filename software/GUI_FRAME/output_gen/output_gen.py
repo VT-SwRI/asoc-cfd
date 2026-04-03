@@ -4,26 +4,35 @@ import h5py
 import os
 from astropy.io import fits
 from datetime import datetime
+import time
     
 DEBUG = 1
 
 
 class ImageWriter(QObject):
     finished = pyqtSignal()
-
-    def __init__(self, save_folder, listType, nx=4096, ny=4096, x = 102000, y = 102000):
+    image_ready = pyqtSignal(object, object, object)
+    def __init__(self, save_folder, listType, save = False, nx=4096, ny=4096, x = 102000, y = 102000):
         super().__init__()
         self.nx = nx
         self.ny = ny
+        self.x = x
+        self.y = y
         self.xmin = -x / 2
         self.xmax = x / 2
         self.ymin = -y / 2
+        self.refresh = 1/30
         self.ymax = y / 2
+        self.save = save
+        self.scale = 1
+        if np.max([nx, ny]) > 1024:
+            self.scale = np.max([nx, ny]) / 1024
 
         self.dx = (nx) / (self.xmax - self.xmin)
         self.dy = (ny) / (self.ymax - self.ymin)
         self.running = False
         self.type = listType
+        self.ref = time.time()
         tstamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         self.filename = os.path.join(save_folder, f"run_{tstamp}.fits")
 
@@ -31,13 +40,18 @@ class ImageWriter(QObject):
     def start(self):
         self.image = np.zeros((self.ny, self.nx), dtype = np.uint32)
         self.running = True
-        print(f"\nImage writer started, writing to {self.filename}")
+        if self.save:
+            print(f"\nImage writer started, writing to {self.filename}")
+        else:
+            print("\nImage writer started")
 
     @pyqtSlot()
     def stop(self):
-        self.running= False
-        self.save_file()
+        self.running = False
+        if self.save:
+            self.save_file()
         self.finished.emit()
+        print("\nImage writer stopped")
 
     @pyqtSlot()
     def save_file(self):
@@ -47,7 +61,7 @@ class ImageWriter(QObject):
         hdu.header['XMAX'] = self.xmax
         hdu.header['YMAX'] = self.ymax
         hdu.writeto(self.filename, overwrite = True)
-        print("\nImage writer stopped")
+        
 
     @pyqtSlot(object)
     def writeBatch(self, batch):
@@ -60,8 +74,25 @@ class ImageWriter(QObject):
 
         xp = xp[mask]
         yp = yp[mask]
-        
         np.add.at(self.image, (yp, xp), 1)
+        if (time.time() - self.ref) >= self.refresh: 
+            self.ref = time.time()
+            img = self.downsample(self.scale)
+            self.image_ready.emit(img.copy(), self.x, self.y)
+    
+    def downsample(self, scale):
+        scale = int(scale)
+        h, w = self.image.shape
+
+        h2 = h - h % scale
+        w2 = w - w % scale
+
+        img = self.image[:h2, :w2]
+
+        return img.reshape(
+            h2 // scale, scale,
+            w2 // scale, scale
+        ).sum(axis=(1, 3)) 
 
 
 

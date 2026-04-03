@@ -8,7 +8,7 @@ from main_window import EtherDAQMock
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    app.setApplicationName("EtherDaq Mock")
+    app.setApplicationName("RT-DEDVI")
 
     f = app.font()
     f.setPointSize(f.pointSize() + 1)
