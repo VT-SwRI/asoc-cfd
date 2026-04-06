@@ -1,10 +1,8 @@
-# plots.py
-# -*- coding: utf-8 -*-
-
 import numpy as np
 from PyQt5 import QtCore, QtGui, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
+import time
 import pyqtgraph as pg
 from PyQt5.QtGui import QTransform
 
@@ -67,90 +65,139 @@ class HeatmapWidget(QtWidgets.QWidget):
         if self.img.image is not None:
             self.img.setImage(np.zeros_like(self.img.image), autoLevels=False)
 
-
-class MplCanvas(FigureCanvas):
-    def __init__(self, ticks=(0, 2048, 4096), xLabel = "", yLabel = "", title = "", parent=None, ):
-        self.fig = Figure(figsize=(6, 4), tight_layout=True)
-        super().__init__(self.fig)
-        self.setParent(parent)
-
-        self.setSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-        )
-        self.updateGeometry()
-        self.xLabel = xLabel
-        self.yLabel = yLabel
-        self.ax = self.fig.add_subplot(111)
-        self.x = []
-        self.y = []
-        self.ticks = ticks
-        self._init_axes()
-        self._img = None
-        self._line, = self.ax.plot([], [])
-        self._hist_patches = None
-        self.title = title
-        self.ax.set_title(title)
-
-    def _init_axes(self):
-        self.ax.set_facecolor("#000000")
-        self.ax.grid(True, linewidth=1, color="#999999")
-        self.ax.tick_params(colors="#555555")
-        for spine in self.ax.spines.values():
-            spine.set_color("#000000")
-        self.ax.set_xticks(self.ticks)
-        self.ax.set_yticks(self.ticks)
-        self.ax.set_xlim(self.ticks[0], self.ticks[-1])
-        self.ax.set_ylim(self.ticks[0], self.ticks[-1])
-        self.ax.set_xlabel(self.xLabel)
-        self.ax.set_ylabel(self.yLabel)
-
-    def clear_axes(self):
-        self.ax.cla()
-        self._init_axes()
-        self._img = None
-        self._line, = self.ax.plot([], [])
-        self._hist_patches = None
-        self.draw_idle()
-
-    def show_line(self, x, y, label=None):
-        self.clear_axes()
-        self._line.set_data(x, y)
-        self.ax.add_line(self._line)
-        if label:
-            self.ax.legend([label])
-        self.ax.relim()
-        # self.ax.autoscale_view()
-        self.draw_idle()
-
-    def show_hist(self, data, bins=256, range_=None, label=None, step=True):
-        """Histogram (used for the PHD plot)."""
-        self.clear_axes()
-
-        histtype = "step" if step else "bar"
-        self._hist_patches = self.ax.hist(
-            data,
-            bins=bins,
-            range=range_,
-            histtype=histtype,
-            linewidth=1.2,
-        )
-
-        # Make sure x-axis matches the specified range
-        if range_ is not None:
-            self.ax.set_xlim(range_[0], range_[1])
-
-        # Start y at 0 and let matplotlib auto-pick the top
-        self.ax.set_ylim(bottom=0)
-
-        if label:
-            self.ax.legend([label])
-
-        self.ax.set_title(self.title)
-        self.draw_idle()
+class PHDWidget(QtWidgets.QWidget):
+    def __init__(self, bins = 256, parent = None):
+        super().__init__(parent)
+        self.bins = bins
+        layout = QtWidgets.QVBoxLayout(self)
+        self.view = pg.GraphicsLayoutWidget()
+        layout.addWidget(self.view)
 
 
-    def show_heatmap(self, img2d, vmin=None, vmax=None, extent=None):
-        # kept as placeholder if you later want a real heatmap
-        self.ax.imshow(img2d, origin = "lower", cmap="gray")
-        self.draw_idle()
+        self.plot = self.view.addPlot()
+        self.plot.setLabel('left', 'Counts')
+        self.plot.setLabel('bottom', 'Bin')
+        self.plot.showGrid(x = False, y = False)
+
+        self.bar = pg.BarGraphItem(x = np.arange(self.bins), height = np.zeros(self.bins), width = 1)
+
+        self.plot.addItem(self.bar)
+        self.hist = np.zeros(self.bins, dtype = np.int64)
+        self.plot.setLimits(yMin = 0, xMin = -10, xMax = 266)
+        self.plot.setXRange(0, self.bins)
+        self.plot.enableAutoRange(axis = 'y', enable = False)
+        self.ymax = 50
+        self.plot.setYRange(0, self.ymax)
+        vb = self.plot.getViewBox()
+        vb.setMenuEnabled(False)
+
+    def start(self):
+        vb = self.plot.getViewBox()
+        vb.setMenuEnabled(False)
+        vb.setMouseEnabled(x = False, y = False)
+    
+    def stop(self):
+        vb = self.plot.getViewBox()
+        vb.setMenuEnabled(True)
+        vb.setMouseEnabled(x = True, y = True)
+
+    def updatePlot(self, batch):
+        self.hist += batch
+        self.bar.setOpts(height = self.hist)
+
+        ymax = np.max(self.hist)
+        if ymax > self.ymax:
+            self.ymax = ymax
+            self.plot.setYRange(0, int(ymax * 1.1))
+
+    def clear(self):
+        self.hist[:] = 0
+        self.ymax = 50
+        self.bar.setOpts(height = self.hist)
+
+class EventRateWidget(QtWidgets.QWidget):
+    def __init__(self, window = 10, parent = None):
+        super().__init__(parent)
+
+        self.window = window
+
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # Graphics view
+        self.view = pg.GraphicsLayoutWidget()
+        layout.addWidget(self.view)
+
+        # Plot
+        self.plot = self.view.addPlot()
+        self.plot.setLabel('left', 'Events')
+        self.plot.setLabel('bottom', 'Time (s)')
+        self.plot.showGrid(x = False, y = False)
+
+        self.curve = self.plot.plot(pen = pg.mkPen(width=2))
+
+        self.plot.enableAutoRange(axis = 'y', enable = False)
+        self.plot.setLimits(yMin = 0)
+        self.plot.getViewBox().setYRange(0, 1)
+        
+        # Data storage
+        self.times = []
+        self.rates = []
+
+        self.count = 0
+
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.update)
+        self.running = False
+    
+    def start(self):
+        self.running = True
+        self.clear()
+        self.startTime = time.time()
+        self.timer.start(1000)
+        vb = self.plot.getViewBox()
+        vb.setMenuEnabled(False)
+        vb.setMouseEnabled(x = False, y = False)
+
+
+    def clear(self):
+        self.count = 0
+        self.times = []
+        self.rates = []
+        self.plot.getViewBox().setYRange(0, 1)
+        self.plot.getViewBox().setXRange(0, self.window)
+
+    def stop(self, stopAcq):
+        if stopAcq:
+            self.timer.stop()
+        vb = self.plot.getViewBox()
+        vb.setMenuEnabled(True)
+        vb.setMouseEnabled(x = True, y = True)
+        self.curve.setData(self.times, self.rates)
+    
+    def update(self):
+        now = time.time() - self.startTime
+        rate = self.count
+        self.count = 0
+        self.times.append(now)
+        self.rates.append(rate)
+
+        if len(self.times) > self.window:
+            times = self.times[-self.window:]
+            rates = self.rates[-self.window:]
+        else:
+            times = self.times
+            rates = self.rates
+            
+        if self.running:
+            vb = self.plot.getViewBox()
+            vb.setMenuEnabled(False)
+            vb.setMouseEnabled(x = False, y = False)
+            self.curve.setData(times, rates)
+
+            ymax = max(rates) if rates else 1
+            ymin = min(rates) if rates else 0
+            self.plot.getViewBox().setYRange(ymin // 1.1, ymax * 1.1, padding = 0)
+            self.plot.getViewBox().setXRange(times[0], times[-1] if len(times) == self.window else self.window)
+
+    def addEvents(self, counts):
+        self.count += counts

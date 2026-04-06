@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVB
 import os
 from datetime import datetime
 import time
-from plots import MplCanvas, HeatmapWidget
+from plots import HeatmapWidget, PHDWidget, EventRateWidget
 from mock_data import generate_phd_samples
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
@@ -44,16 +44,14 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # ---- Status bar ----
         self.secondsStatusLbl = QtWidgets.QLabel(f"Seconds: {self.seconds.value()}")
         self.detEventsLbl = QtWidgets.QLabel("Det Events: 0")
-        self.countsLbl = QtWidgets.QLabel("Counts: 0")
         self.missingLbl = QtWidgets.QLabel("Missing Packets: 0")
 
-        for w in (self.secondsStatusLbl, self.detEventsLbl, self.countsLbl, self.missingLbl):
+        for w in (self.secondsStatusLbl, self.detEventsLbl, self.missingLbl):
             w.setStyleSheet("color: #444;")
 
         sb = self.statusBar()
         sb.addPermanentWidget(self.secondsStatusLbl)
         sb.addPermanentWidget(self.detEventsLbl)
-        sb.addPermanentWidget(self.countsLbl)
         sb.addPermanentWidget(self.missingLbl)
 
         self.acquireBtn.clicked.connect(self.start_acquire)
@@ -63,6 +61,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.save_folder = os.getcwd()
 
         self.ParamsBtn.clicked.connect(self.get_settings)
+        self.erChk.toggled.connect(self.erControl)
 
 
         self.writer_thread = None
@@ -95,7 +94,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.nx = 4096
         self.ny = 4096
 
-        self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('magnitude', 'f4')])
+        self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('mag', 'f4')])
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self._update_seconds_status)
      
 
     def initTab1(self):
@@ -158,9 +159,17 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.phdChk.setChecked(True)
         leftCol.addWidget(self.phdChk)
 
-        self.phdPlot = MplCanvas(ticks=(0, 128, 256), xLabel = "Pulse Height (mV)", yLabel= "Number of Detections", title="Pulse Height Distribution")
+        self.phdPlot = PHDWidget(bins = 256)
         self.phdPlot.setMinimumSize(300, 200)
         leftCol.addWidget(self.phdPlot)
+
+        self.erChk = QtWidgets.QCheckBox("Running Event Rate")
+        self.erChk.setChecked(True)
+        leftCol.addWidget(self.erChk)
+
+        self.erPlot = EventRateWidget()
+        self.erPlot.setMinimumSize(300, 200)
+        leftCol.addWidget(self.erPlot)
 
         leftCol.addStretch(1)
 
@@ -371,12 +380,17 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if folder:
             self.save_folder = folder
 
-    # --- Seconds status helper ---
-    def _update_seconds_status(self, val: int):
-        if hasattr(self, "secondsStatusLbl"):
-            self.secondsStatusLbl.setText(f"Seconds: {val}")
+    def _update_seconds_status(self):
+        time = self.erPlot.times[-1] if self.erPlot.times else 0
+        time = int(time)
+        time = self.seconds.value() - time
+        self.secondsStatusLbl.setText(f"Seconds: {time}")
+        if time <= 0:
+            self.stop_acquire()
 
-
+    def eventsStatus(self):
+        count = np.sum(self.erPlot.rates)
+        self.detEventsLbl.setText(f"Det Events: {count}")
 
     @pyqtSlot(object)
     def Estimate(self, pulse):
@@ -443,7 +457,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         if self.writer_worker is not None:
             self.decode_worker.batch_ready.connect(self.writer_worker.writeBatch)
         self.decode_worker.batch_ready.connect(self.image_worker.writeBatch)
-        self.image_worker.image_ready.connect(self.updateHeatmap)
+        self.image_worker.image_ready.connect(self.updatePlots)
         self.decode_worker.pulse.connect(self.Estimate)
         self.startPacket.connect(self.tx_worker.sendStart)
 
@@ -471,16 +485,25 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.tx_worker.done.connect(self.txCleanUp)
         self.recv_worker.done.connect(self.cleanUp)
     
-    def updateHeatmap(self, img, x, y):
+    def updatePlots(self, img, x, y, hist, count):
         if self.rtImageChk.isChecked():
             self.hitmap.set_image(img, x, y)
+        if self.phdChk.isChecked():
+            self.phdPlot.updatePlot(hist)
+        self.erPlot.addEvents(count)
+        self.eventsStatus()
+
+    def erControl(self, check):
+        self.erPlot.running = check
+        if not check:
+            self.erPlot.stop(False)
 
     def start_acquire(self):
         if self.setup:
             self.mode = self.dataMode.currentIndex()
             # sets up the threads and workers for networking and output file generation
             self.setupThreads()
-            self.phdPlot.clear_axes()
+            self.phdPlot.clear()
             self.hitmap.clear()
 
             self.fileBtn.setEnabled(False)
@@ -493,11 +516,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.statusBar().showMessage("Acquiring...", 2000)
 
             self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
+            if self.mode < 2:
+                self.phdPlot.start()
+                self.erPlot.start()
+            self.timer.start(1000)
         else:
             self.paramError()
         
 
     def stop_acquire(self):
+        self.timer.stop()
+        self.erPlot.stop(True)
+        self.phdPlot.stop()
         self.fileBtn.setEnabled(True)
         self.acquireBtn.setEnabled(True)
         self.stopBtn.setEnabled(False)

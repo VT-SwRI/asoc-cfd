@@ -8,10 +8,9 @@ import time
     
 DEBUG = 1
 
-
 class ImageWriter(QObject):
     finished = pyqtSignal()
-    image_ready = pyqtSignal(object, object, object)
+    image_ready = pyqtSignal(object, object, object, object, object)
     def __init__(self, save_folder, listType, save = False, nx=4096, ny=4096, x = 102000, y = 102000):
         super().__init__()
         self.nx = nx
@@ -23,6 +22,8 @@ class ImageWriter(QObject):
         self.ymin = -y / 2
         self.refresh = 1/30
         self.ymax = y / 2
+        self.count = 0
+ 
         self.save = save
         self.scale = 1
         if np.max([nx, ny]) > 1024:
@@ -67,6 +68,7 @@ class ImageWriter(QObject):
     def writeBatch(self, batch):
         x = batch['xpos']
         y = batch['ypos']
+        
         xp = ((x - self.xmin) * self.dx).astype(np.int32)
         yp = ((y - self.ymin) * self.dy).astype(np.int32)
 
@@ -75,10 +77,18 @@ class ImageWriter(QObject):
         xp = xp[mask]
         yp = yp[mask]
         np.add.at(self.image, (yp, xp), 1)
+
+        mag = batch['mag']
+        mag = (mag.astype(np.int32) + 32768) >> 8
+        mag = np.bincount(mag, minlength = 256)
+
+        self.count += len(batch)
+
         if (time.time() - self.ref) >= self.refresh: 
             self.ref = time.time()
             img = self.downsample(self.scale)
-            self.image_ready.emit(img.copy(), self.x, self.y)
+            self.image_ready.emit(img.copy(), self.x, self.y, mag, self.count)
+            self.count = 0
     
     def downsample(self, scale):
         scale = int(scale)
