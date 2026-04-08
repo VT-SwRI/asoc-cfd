@@ -40,19 +40,22 @@ def main():
     # while True:
     refTime = time.time()
     x, y = generate_spiral_hits()
-    for i in range(len(x)):
-        data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
-        payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], x[i], y[i])  
-        socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
+    rng = np.random.default_rng()
+    while True:
+        for i in range(len(x)):
+            data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
+
+            payload = struct.pack("!HHfdff", 1, 1,  np.random.normal(0, 5000), data[0][2], x[i], y[i])  
+            socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
     done = time.time()
 
-    eps = len(x) / (done - refTime)
-    print(eps)
+    # eps = len(x) / (done - refTime)
+    # print(eps)
 
 
-    # for i in range(1):
+    # for i in range(100):
     #     data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
-    #     payload = struct.pack("!HHfdff", 1, 1, data[0][3], data[0][2], -25000, -25000)  
+    #     payload = struct.pack("!HHfdff", 1, 1, 00, data[0][2], -25000, -25000)  
     #     socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
     # r = 1/30
     # t = time.time()
