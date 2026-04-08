@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>ethernet_module</design>
-	<target_edif>C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\synthesis\ethernet_module.edn</target_edif>
-</SynplifyOutput>

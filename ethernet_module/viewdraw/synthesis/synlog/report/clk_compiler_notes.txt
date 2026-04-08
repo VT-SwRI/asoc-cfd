@@ -1,8 +1,0 @@
-@N|Running in 64-bit mode
-@N|Running in 64-bit mode
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2810:7:2810:9|Synthesizing module PLL in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1229:7:1229:9|Synthesizing module GND in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2051:7:2051:9|Synthesizing module VCC in library work.
-@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\smartgen\clk\clk.v":5:7:5:9|Synthesizing module clk in library work.
-@N|Running in 64-bit mode
-

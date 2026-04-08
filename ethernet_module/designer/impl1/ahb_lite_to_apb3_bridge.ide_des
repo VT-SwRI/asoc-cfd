@@ -1,8 +1,0 @@
-KEY IDE_DES_TOOL "Ide"
-KEY IDE_DES_ADB_PATH "C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\designer\impl1\ahb_lite_to_apb3_bridge.adb"
-LIST SOURCE_FILES
-ENDLIST
-LIST OPTIONAL_FILES
-ENDLIST
-LIST VCD_FILES
-ENDLIST

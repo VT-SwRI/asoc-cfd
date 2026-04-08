@@ -1,1 +1,0 @@
-@W: MT530 :"c:\users\zackp\onedrive\documents\ece_4806\libero\ethernet_module\hdl\led_blink.v":10:0:10:5|Found inferred clock led_test|clock which controls 28 sequential elements including led_blink_0.counter[25:0]. This clock has no specified timing constraint which may adversely impact design performance. 

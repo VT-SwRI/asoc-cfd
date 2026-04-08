@@ -1,3 +1,0 @@
-CKID0001:@|S:clock_0.Core@|E:mem_interface_0.psack_reg@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
-CKID0002:@|S:CLKR@|E:CORE10100_AHBAPB_0.UAC.U_RC.radg_r[8]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 
-CKID0003:@|S:CLKT@|E:CORE10100_AHBAPB_0.UAC.U_MII_RSTC.U_RSTC.rstcsrr_en@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 

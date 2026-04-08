@@ -1,6 +1,0 @@
-@N|Running in 64-bit mode
-@N|Running in 64-bit mode
-@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\hdl\led_blink.v":1:7:1:15|Synthesizing module led_blink in library work.
-@N: CG364 :"C:\Users\zackp\OneDrive\Documents\ECE_4806\Libero\ethernet_module\component\work\led_test\led_test.v":9:7:9:14|Synthesizing module led_test in library work.
-@N|Running in 64-bit mode
-
