@@ -38,7 +38,6 @@ class HeatmapWidget(QtWidgets.QWidget):
         # Track current downsample factor
         self.factor = 1
 
-        # Optional: lock initial levels (prevents flicker)
         self.img.setLevels((0, 10))
 
     def set_image(self, image, x, y, factor=1):
@@ -173,6 +172,7 @@ class EventRateWidget(QtWidgets.QWidget):
         vb.setMenuEnabled(True)
         vb.setMouseEnabled(x = True, y = True)
         self.curve.setData(self.times, self.rates)
+        self.running = not stopAcq
     
     def update(self):
         now = time.time() - self.startTime

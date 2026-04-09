@@ -42,7 +42,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
 
         # ---- Status bar ----
-        self.secondsStatusLbl = QtWidgets.QLabel(f"Seconds: {self.seconds.value()}")
+        self.secondsStatusLbl = QtWidgets.QLabel(f"Seconds: {self.acqLen.value()}")
         self.detEventsLbl = QtWidgets.QLabel("Det Events: 0")
         self.missingLbl = QtWidgets.QLabel("Missing Packets: 0")
 
@@ -126,12 +126,14 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.outType.addItems(["None", "Gain", "Photon List"])
         self.outType.setFixedWidth(120)
 
-        secondsLbl = QtWidgets.QLabel("Seconds:")
-        self.seconds = QtWidgets.QSpinBox()
-        self.seconds.setRange(1, 3600)
-        self.seconds.setValue(100)
-        self.seconds.setFixedWidth(120)
-        self.seconds.valueChanged.connect(self._update_seconds_status)
+
+        self.acqType = QtWidgets.QComboBox()
+        self.acqType.addItems(["Seconds:", "Events:"])
+        self.acqLen = QtWidgets.QSpinBox()
+        self.acqLen.setRange(1, 2147483647)
+        self.acqLen.setValue(100)
+        self.acqLen.setFixedWidth(120)
+        self.acqLen.valueChanged.connect(self._update_seconds_status)
 
         self.fileBtn = QtWidgets.QPushButton("Select Save Folder")
         self.acquireBtn = QtWidgets.QPushButton("Acquire")
@@ -147,8 +149,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         dataLay.addWidget(self.outType, 0, 4)
         dataLay.addWidget(dataModeLbl, 1, 0)
         dataLay.addWidget(self.dataMode, 1, 4)
-        dataLay.addWidget(secondsLbl, 2, 0)
-        dataLay.addWidget(self.seconds, 2, 4)
+        dataLay.addWidget(self.acqType, 2, 0)
+        dataLay.addWidget(self.acqLen, 2, 4)
         dataLay.addWidget(self.fileBtn,    3, 0, 1, 2)
         dataLay.addWidget(self.acquireBtn, 3, 2, 1, 2)
         dataLay.addWidget(self.stopBtn,    3, 3, 1, 2)
@@ -309,7 +311,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
         self.sel = 0
         self.mode = self.dataMode.currentIndex()
-        self.time = self.seconds.value()
+        self.time = time.time()
         self.thresh = 50
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
@@ -371,9 +373,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
         self.setup = 1
         self.open_popup()
-
-
-    # this function gets the user selected file path and is called whenever the user clicks the "save folder" button
+ 
     def getFilePath(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Save Folder")
 
@@ -381,17 +381,61 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.save_folder = folder
 
     def _update_seconds_status(self):
-        time = self.erPlot.times[-1] if self.erPlot.times else 0
+        time = self.erPlot.times[-1] if self.erPlot.times and self.erPlot.running else 0
         time = int(time)
-        time = self.seconds.value() - time
+        if self.acqType.currentIndex() == 0:
+            time = self.acqLen.value() - time
+            if time <= 0:
+                self.secondsStatusLbl.setText(f"Seconds: {time}")
+                self.stop_acquire()
+                return
         self.secondsStatusLbl.setText(f"Seconds: {time}")
-        if time <= 0:
-            self.stop_acquire()
 
     def eventsStatus(self):
-        count = np.sum(self.erPlot.rates)
+        count = np.sum(self.erPlot.rates) if self.erPlot.rates and self.erPlot.running else 0
         self.detEventsLbl.setText(f"Det Events: {count}")
+        if self.acqType.currentIndex() == 1 and count > self.acqLen.value():
+            self.stop_acquire()    
 
+    def updatePlots(self, img, x, y, hist, count):
+        if self.rtImageChk.isChecked():
+            self.hitmap.set_image(img, x, y)
+        if self.phdChk.isChecked():
+            self.phdPlot.updatePlot(hist)
+        self.erPlot.addEvents(count)
+        self.eventsStatus()
+
+    def erControl(self, check):
+        self.erPlot.running = check
+        if not check:
+            self.erPlot.stop(False)
+
+    def start_acquire(self):
+        if self.setup:
+            self.mode = self.dataMode.currentIndex()
+            # sets up the threads and workers for networking and output file generation
+            self.setupThreads()
+            self.phdPlot.clear()
+            self.hitmap.clear()
+
+            self.fileBtn.setEnabled(False)
+            self.ParamsBtn.setEnabled(False)
+            self.acquireBtn.setEnabled(False)
+            self.stopBtn.setEnabled(True)
+            self.dataMode.setEnabled(False)
+            self.outType.setEnabled(False)
+            self.acqLen.setEnabled(False)
+            self.acqType.setEnabled(False)
+            self.statusBar().showMessage("Acquiring...", 2000)
+
+            self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
+            if self.mode < 2:
+                self.phdPlot.start()
+                self.erPlot.start()
+            self.timer.start(1000)
+        else:
+            self.paramError()
+    
     @pyqtSlot(object)
     def Estimate(self, pulse):
         start = False
@@ -484,45 +528,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # connect the done signal from the receiver to the function that stops all workers and threads to ensure the socket is closed properly
         self.tx_worker.done.connect(self.txCleanUp)
         self.recv_worker.done.connect(self.cleanUp)
-    
-    def updatePlots(self, img, x, y, hist, count):
-        if self.rtImageChk.isChecked():
-            self.hitmap.set_image(img, x, y)
-        if self.phdChk.isChecked():
-            self.phdPlot.updatePlot(hist)
-        self.erPlot.addEvents(count)
-        self.eventsStatus()
-
-    def erControl(self, check):
-        self.erPlot.running = check
-        if not check:
-            self.erPlot.stop(False)
-
-    def start_acquire(self):
-        if self.setup:
-            self.mode = self.dataMode.currentIndex()
-            # sets up the threads and workers for networking and output file generation
-            self.setupThreads()
-            self.phdPlot.clear()
-            self.hitmap.clear()
-
-            self.fileBtn.setEnabled(False)
-            self.ParamsBtn.setEnabled(False)
-            self.acquireBtn.setEnabled(False)
-            self.stopBtn.setEnabled(True)
-            self.dataMode.setEnabled(False)
-            self.outType.setEnabled(False)
-            self.seconds.setEnabled(False)
-            self.statusBar().showMessage("Acquiring...", 2000)
-
-            self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
-            if self.mode < 2:
-                self.phdPlot.start()
-                self.erPlot.start()
-            self.timer.start(1000)
-        else:
-            self.paramError()
-        
+       # this function gets the user selected file path and is called whenever the user clicks the "save folder" button
 
     def stop_acquire(self):
         self.timer.stop()
@@ -534,7 +540,8 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.ParamsBtn.setEnabled(True)
         self.outType.setEnabled(True)
         self.dataMode.setEnabled(True)
-        self.seconds.setEnabled(True)
+        self.acqLen.setEnabled(True)
+        self.acqType.setEnabled(True)
         self.statusBar().showMessage("Acquisition stopped.", 2000)
 
         # invoke the stop function 
