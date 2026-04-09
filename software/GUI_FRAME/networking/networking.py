@@ -10,6 +10,11 @@ import queue
 import time
 
 DEBUG = 0
+def fixed_to_float(num, Q):
+    return float(num) / float(Q)
+
+def float_to_fixed(num, Q):
+    return np.int64(round(num * Q))
 
 class TxWorker(QtCore.QObject):
     
@@ -123,10 +128,12 @@ class RxWorker(QtCore.QObject):
             try:
                 self.socket.close()
             except Exception:
+                print("Error shutting down rx socket.")
                 pass
+        print("Shutting down rx thread")
         if self.thread:
             self.thread.join()
-
+        print("Rx thread shut down.\n")
         self.done.emit()
         if DEBUG:
             print("\nRx Disconnected successfully")

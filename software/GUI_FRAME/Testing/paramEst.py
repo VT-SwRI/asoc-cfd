@@ -4,6 +4,12 @@ import numpy as np
 import socket
 
 def main():
+    
+
+    # mag = np.array([0, 10000])
+    # mag = (mag.astype(np.int32) + 32768) >> 8
+    # mag = np.bincount(mag, minlength = 256)
+    # print(mag)
     pulse = pd.read_csv('pulse.csv', header = None).values
     pulse = pulse.flatten()
 
@@ -34,3 +40,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

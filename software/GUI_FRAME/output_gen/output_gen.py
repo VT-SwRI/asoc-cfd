@@ -43,8 +43,8 @@ class ImageWriter(QObject):
         self.running = True
         if self.save:
             print(f"\nImage writer started, writing to {self.filename}")
-        else:
-            print("\nImage writer started")
+        # else:
+        #     print("\nImage writer started")
 
     @pyqtSlot()
     def stop(self):
@@ -52,7 +52,6 @@ class ImageWriter(QObject):
         if self.save:
             self.save_file()
         self.finished.emit()
-        print("\nImage writer stopped")
 
     @pyqtSlot()
     def save_file(self):
@@ -103,7 +102,6 @@ class ImageWriter(QObject):
             h2 // scale, scale,
             w2 // scale, scale
         ).sum(axis=(1, 3)) 
-
 
 
 class ListWriter(QObject):

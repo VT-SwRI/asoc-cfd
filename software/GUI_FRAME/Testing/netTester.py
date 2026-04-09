@@ -46,7 +46,7 @@ def main():
             data = np.array([(2.5, 2.5, 12345.6789, 42.0)], dtype=t)
 
             payload = struct.pack("!HHfdff", 1, 1,  np.random.normal(0, 5000), data[0][2], x[i], y[i])  
-            socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 562)
+            socket.writeDatagram(payload, QtNetwork.QHostAddress("127.0.0.1"), 5611)
     done = time.time()
 
     # eps = len(x) / (done - refTime)

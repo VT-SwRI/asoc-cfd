@@ -6,7 +6,6 @@ import os
 from datetime import datetime
 import time
 from plots import HeatmapWidget, PHDWidget, EventRateWidget
-from mock_data import generate_phd_samples
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
 from networking.networking import RxWorker, TxWorker, DecWorker
