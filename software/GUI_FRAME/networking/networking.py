@@ -7,66 +7,41 @@ import struct
 import socket
 import threading
 import queue
+import serial
 import time
 
 DEBUG = 0
-def fixed_to_float(num, Q):
+PORT = 'COM3'
+BR = 9600
+
+def fixed_to_float(num, Qint, Qfrac, sgn):
+    len = Qint + Qfrac + (1 if sgn else 0)
+
+    num &= (1 << len) - 1
+
+    if sgn:
+        if num & (1 << (len - 1)):
+            num -= (1 << len)
+
+    Q = 1 << Qfrac
     return float(num) / float(Q)
 
-def float_to_fixed(num, Q):
-    return np.int64(round(num * Q))
-
-class TxWorker(QtCore.QObject):
+def float_to_fixed(num, Qint, Qfrac, sgn):
+    Q = 1 << Qfrac
+    val = qRound(num * Q)
+    len = Qint + Qfrac + (1 if sgn else 0)
+    if sgn:
+        min_val = -(1 << (len - 1))
+        max_val = (1 << (len - 1)) - 1
+    else:
+        min_val = 0
+        max_val = (1 << len) - 1
     
-    done = QtCore.pyqtSignal()
-    error = QtCore.pyqtSignal(str)
+    val = max(min_val, min(max_val, val))
+    return val
 
-    def __init__(self, ip, port=5000):
-        super().__init__()
-        self.port = port
-        self.ip = ip
-        self.socket = None
-
-    @QtCore.pyqtSlot()
-    def start(self):
-        self.running = True
-        self.socket = QtNetwork.QUdpSocket()
-        
-    @QtCore.pyqtSlot()
-    def stop(self):
-        self.sendStop()
-        self.running = False
-        if self.socket:
-            self.socket.close()
-            self.socket.deleteLater()
-            self.socket = None
-
-        self.done.emit()
-        if DEBUG:
-            print("\nTx Disconnected successfully")
-    
-    @QtCore.pyqtSlot(int, int, int, int, int, float, float)
-    def sendStart(self, sel, mode, time, thresh, delay, frac, fs):
-        header = struct.pack("!HHH", 0, sel, mode)
-  
-        payload = struct.pack("!IIfIf", time, delay, frac, thresh, fs)
-
-        payload = payload.ljust(32, b'\x00')
-        pck = header + payload
-
-        self.socket.writeDatagram(pck, QtNetwork.QHostAddress(self.ip), self.port)
-
-        if DEBUG:
-            print("\nStart packet sent")
-    
-    @QtCore.pyqtSlot()
-    def sendStop(self):
-        header = struct.pack("!HHH", 0, 0, 2)
-        payload = struct.pack("!I", 0)
-        payload = payload.ljust(32, b'\x00')
-        pck = header + payload
-
-        self.socket.writeDatagram(pck, QtNetwork.QHostAddress(self.ip), self.port)
+def qRound(num):
+    return int(np.floor(num + 0.5)) if num >= 0 else int(np.ceil(num - 0.5))
 
 
 class RxWorker(QtCore.QObject):
@@ -78,43 +53,49 @@ class RxWorker(QtCore.QObject):
         self.port = port
         self.queue = q
         self.buff_size = 100000
-
+        self.pack_len = 18
+        
         self.socket = None
+        self.ser = None
         self.running = False
         self.count = None
         self.thread = None
 
     @QtCore.pyqtSlot()
-    def start(self):
+    def start(self, frac, delay, thresh, zc, kx, ky, t):
         self.running = True
 
         self.refTime = time.time()
-        
         self.count = 0
-
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.socket.bind(("127.0.0.1", self.port + 1))
-        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 10 * 1024 * 1024)
+        self.ser = serial.Serial(port=PORT, baudrate=BR)
+        
+        self.sendStart(frac, delay, thresh, zc, kx, ky, t)
+        # self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        # self.socket.bind(("127.0.0.1", self.port + 1))
+        # self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 10 * 1024 * 1024)
 
         self.thread = threading.Thread(target = self.recvLoop, daemon=True)
         self.thread.start()
 
 
-        if DEBUG:
-            print(f"\nSocket connected to {self.socket.localAddress().toString()}, waiting for packets...")
+        # if DEBUG:
+            # print(f"\nSocket connected to {self.socket.localAddress().toString()}, waiting for packets...")
 
     def recvLoop(self):
         while self.running:
             try:
-                data, addr = self.socket.recvfrom(self.buff_size)
-                if addr[0] != self.ip:
-                    continue
-                try:
-                    self.queue.put_nowait(data)
-                except queue.Full:
-                    print("Dropped packets!!")
-                    pass
-            except OSError:
+                data = self.ser.read(self.pack_len)
+                if len(data) == self.pack_len:
+                    try:
+                        self.queue.put_nowait(data)
+                    except queue.Full:
+                        print("Dropped packets!!")
+                        pass
+            except self.ser.SerialException as e:
+                print(f"UART Error: {e}")
+                break
+            except Exception as e:
+                print(f"Error: {e}")
                 break
     
     @QtCore.pyqtSlot()
@@ -124,12 +105,24 @@ class RxWorker(QtCore.QObject):
         
         self.running = False
         
-        if self.socket:
+        if self.ser:
+
             try:
-                self.socket.close()
+                self.ser.flush()
             except Exception:
-                print("Error shutting down rx socket.")
                 pass
+            try:
+
+                self.ser.close()
+            except Exception:
+                pass
+            self.ser = None
+        # if self.socket:
+        #     try:
+        #         self.socket.close()
+        #     except Exception:
+        #         print("Error shutting down rx socket.")
+        #         pass
         print("Shutting down rx thread")
         if self.thread:
             self.thread.join()
@@ -137,8 +130,39 @@ class RxWorker(QtCore.QObject):
         self.done.emit()
         if DEBUG:
             print("\nRx Disconnected successfully")
+    
+    @QtCore.pyqtSlot(int, int, int, int, int, float, float)
+    def sendStart(self, frac, delay, thresh, zc, kx, ky, t):
+        fracQ = int(float_to_fixed(frac, 0, 13, True))
+        delayQ = int(delay)
+        threshQ = int(float_to_fixed(thresh, 12, 3, True))
+        kxQ = int(float_to_fixed(kx, 1, 19, False))
+        kyQ = int(float_to_fixed(ky, 1, 19, False))
+        zcQ = int(zc)
+        timeQ = int(t)
 
+        packet = 0
 
+        packet |= (timeQ & 0xFFFFFFFFFFFFFFFF) << 0
+        packet |= (kyQ & 0xFFFFF) << 64
+        packet |= (kxQ & 0xFFFFF) << 84
+        packet |= (zcQ & 0xFF) << 104
+        packet |= (threshQ & 0xFFFF) << 111
+        packet |= (delayQ & 0xFF) << 127
+        packet |= (fracQ & 0x3FFF) << 135
+
+        packBytes = packet.to_bytes(19, byteorder = 'big')
+
+        self.ser.write(packBytes)
+        if DEBUG:
+            print("\nStart packet sent")
+    
+    @QtCore.pyqtSlot()
+    def sendStop(self):
+        header = struct.pack("!HHH", 0, 0, 2)
+        payload = struct.pack("!I", 0)
+        payload = payload.ljust(32, b'\x00')
+        pck = header + payload
 
 
 class DecWorker(QtCore.QObject):
@@ -171,13 +195,19 @@ class DecWorker(QtCore.QObject):
             except queue.Empty:
                 data = None
 
-            if data is not None and self.mode < 2 and (data[0] & 0x03) < 2:
-                arr = np.frombuffer(data, dtype=self.packetType)
+            if data is not None and self.mode < 2:
+                packet = int.from_bytes(data, byteorder='big')
 
-                valid = arr[arr['valid'] == 1 and arr['type'] == 1]
+                mag = (packet & 0xFFFF)
+                y = (packet >> 16) & 0xFFFFFFFF
+                x = (packet >> 48) & 0xFFFFFFFF
+                t = (packet >> 80) & 0xFFFFFFFFFFFFFFFF
+                mag = np.int16(mag)
+                y = np.int32(y)
+                x = np.int32(x)
+                t = np.uint64(t)
 
-                if len(valid) > 0:
-                    lBuffer.append((valid['x'], valid['y'], valid['t'], valid['mag']))
+                lBuffer.append((x, y, t, mag))
             elif data is not None and self.mode == 2:
                 arr = np.frombuffer(data[1:], dtype=np.float64)
                 self.pulse.emit(arr)
@@ -196,3 +226,83 @@ class DecWorker(QtCore.QObject):
 
         if self.thread:
             self.thread.join()
+
+
+# class TxWorker(QtCore.QObject):
+    
+#     done = QtCore.pyqtSignal()
+#     error = QtCore.pyqtSignal(str)
+
+#     def __init__(self, ip, port=5000):
+#         super().__init__()
+#         self.port = port
+#         self.ip = ip
+#         self.socket = None
+#         self.ser = None
+
+#     @QtCore.pyqtSlot()
+#     def start(self):
+#         self.running = True
+#         # self.socket = QtNetwork.QUdpSocket()
+#         self.ser = serial.Serial(port=PORT, baudrate=BR)
+        
+#     @QtCore.pyqtSlot()
+#     def stop(self):
+#         self.sendStop()
+#         self.running = False
+#         # if self.socket:
+#         #     self.socket.close()
+#         #     self.socket.deleteLater()
+#         #     self.socket = None
+#         if self.ser:
+
+#             try:
+#                 self.ser.flush()
+#             except Exception:
+#                 pass
+#             try:
+
+#                 self.ser.close()
+#             except Exception:
+#                 pass
+#             self.ser = None
+
+#         self.done.emit()
+#         if DEBUG:
+#             print("\nTx Disconnected successfully")
+    
+#     @QtCore.pyqtSlot(int, int, int, int, int, float, float)
+#     def sendStart(self, frac, delay, thresh, zc, kx, ky, t):
+#         fracQ = int(float_to_fixed(frac, 0, 13, True))
+#         delayQ = int(delay)
+#         threshQ = int(float_to_fixed(thresh, 12, 3, True))
+#         kxQ = int(float_to_fixed(kx, 1, 19, False))
+#         kyQ = int(float_to_fixed(ky, 1, 19, False))
+#         zcQ = int(zc)
+#         timeQ = int(t)
+
+#         packet = 0
+
+#         packet |= (timeQ & 0xFFFFFFFFFFFFFFFF) << 0
+#         packet |= (kyQ & 0xFFFFF) << 64
+#         packet |= (kxQ & 0xFFFFF) << 84
+#         packet |= (zcQ & 0xFF) << 104
+#         packet |= (threshQ & 0xFFFF) << 111
+#         packet |= (delayQ & 0xFF) << 127
+#         packet |= (fracQ & 0x3FFF) << 135
+
+#         packBytes = packet.to_bytes(19, byteorder = 'big')
+
+#         self.ser.write(packBytes)
+#         if DEBUG:
+#             print("\nStart packet sent")
+    
+#     @QtCore.pyqtSlot()
+#     def sendStop(self):
+#         header = struct.pack("!HHH", 0, 0, 2)
+#         payload = struct.pack("!I", 0)
+#         payload = payload.ljust(32, b'\x00')
+#         pck = header + payload
+
+#         # self.socket.writeDatagram(pck, QtNetwork.QHostAddress(self.ip), self.port)
+

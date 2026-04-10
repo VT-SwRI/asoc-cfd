@@ -8,7 +8,7 @@ import time
 from plots import HeatmapWidget, PHDWidget, EventRateWidget
 from output_gen.output_gen import ListWriter, ImageWriter
 import queue
-from networking.networking import RxWorker, TxWorker, DecWorker
+from networking.networking import RxWorker, DecWorker
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
 import pyqtgraph as pg
@@ -66,9 +66,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.writer_thread = None
         self.writer_worker = None
         self.image_worker = None
-        self.tx_thread = None
         self.image_thread = None
-        self.tx_worker = None
         self.recv_worker = None
         self.popup = None
         self.decode_worker = None
@@ -311,7 +309,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.sel = 0
         self.mode = self.dataMode.currentIndex()
         self.time = time.time()
-        self.thresh = 50
+        self.thresh = _safe_float(self.threshold.text())
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
@@ -324,6 +322,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.y = _safe_float(self.detY.text()) * 1000
         self.nx = int(self.xSize.currentText())
         self.ny = int(self.ySize.currentText())
+        self.zeroC = int(self.zc.text())
         if self.delay < 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid delay value.")
@@ -465,7 +464,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # create the writer and tx individual threads
         if self.outType.currentIndex() != 0:
             self.writer_thread = QThread()
-        self.tx_thread = QThread()
         self.image_thread = QThread()
 
         # create the workers that are going to be living in the thread
@@ -476,7 +474,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.image_worker = ImageWriter(self.save_folder, self.inType, x = self.x, y = self.y, save = True, nx = self.nx, ny = self.ny)
         else:
             self.image_worker = ImageWriter(self.save_folder, self.inType, x = self.x, y = self.y, save = False, nx = self.nx, ny = self.ny)
-        self.tx_worker = TxWorker(self.ip, self.port)
         
         q = queue.Queue(maxsize=1000000)
         self.recv_worker = RxWorker(q, self.ip, self.port)
@@ -485,13 +482,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # move the workers into their respective threads
         if self.writer_worker is not None:
             self.writer_worker.moveToThread(self.writer_thread)
-        self.tx_worker.moveToThread(self.tx_thread)
         self.image_worker.moveToThread(self.image_thread)
 
         # connect the worker's start function so that it is called when the thread is deployed
         if self.writer_worker is not None:
             self.writer_thread.started.connect(self.writer_worker.start)
-        self.tx_thread.started.connect(self.tx_worker.start)
         self.image_thread.started.connect(self.image_worker.start)
 
 
@@ -502,32 +497,26 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.decode_worker.batch_ready.connect(self.image_worker.writeBatch)
         self.image_worker.image_ready.connect(self.updatePlots)
         self.decode_worker.pulse.connect(self.Estimate)
-        self.startPacket.connect(self.tx_worker.sendStart)
 
         # Each worker has a finished signal it emits when they are destroyed, this connects that signal to the thread's quit function
         if self.writer_worker is not None:
             self.writer_worker.finished.connect(self.writer_thread.quit)
-        self.tx_worker.done.connect(self.tx_thread.quit)
         self.image_worker.finished.connect(self.image_thread.quit)
 
         # delete later ensures proper cleanup of threads
         if self.writer_worker is not None:
             self.writer_thread.finished.connect(self.writer_thread.deleteLater)
-        self.tx_thread.finished.connect(self.tx_thread.deleteLater)
         self.image_thread.finished.connect(self.image_thread.deleteLater)
         
         # deploy each thread, remember this also starts each worker
         if self.writer_worker is not None:
             self.writer_thread.start()
-        self.recv_worker.start()
-        self.tx_thread.start()
+        self.recv_worker.start(self.frac, self.delay, self.thresh, self.zeroC, self.kx, self.ky, self.time)
         self.decode_worker.start()
         self.image_thread.start()
 
         # connect the done signal from the receiver to the function that stops all workers and threads to ensure the socket is closed properly
-        self.tx_worker.done.connect(self.txCleanUp)
         self.recv_worker.done.connect(self.cleanUp)
-       # this function gets the user selected file path and is called whenever the user clicks the "save folder" button
 
     def stop_acquire(self):
         self.timer.stop()
@@ -545,15 +534,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         # invoke the stop function 
         self.recv_worker.stop()
-        QtCore.QMetaObject.invokeMethod(self.tx_worker, "stop", QtCore.Qt.QueuedConnection)
-
-
-    # This function shuts down the transmit thread
-    def txCleanUp(self):
-        self.tx_thread.wait()
-
-        self.tx_thread = None
-        self.tx_worker = None
 
     # This function cleans up the writer and receive threads
     def cleanUp(self):
@@ -579,8 +559,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
     def closeEvent(self, a0):
         if self.recv_worker is not None:
             self.recv_worker.stop()
-        if self.tx_worker is not None:
-            QtCore.QMetaObject.invokeMethod(self.tx_worker, "stop", QtCore.Qt.QueuedConnection)
         
         a0.accept()
         
