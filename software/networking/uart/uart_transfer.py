@@ -142,16 +142,13 @@ def send_config(port: str, baud: int, tx_bytes: bytes, value_149: int, timeout: 
     print(f"{'─'*60}")
 
 
-def clamp(value: int, width: int, name: str) -> int:
-    """Warn and mask if a value exceeds its field width."""
-    mask = (1 << width) - 1
-    if value & ~mask:
-        print(f"Warning: '{name}' value {value} exceeds {width}-bit field, masking to {value & mask}.")
-    return value & mask
 
+def sendStart(port, frac, delay, thresh, zc, kx, ky, t, timeout):
+    ser = serial.Serial(port=port, baudrate=115200, timeout=timeout)
+    ser.reset_input_buffer()
+    ser.reset_output_buffer()
+    time.sleep(0.1)
 
-def sendStart(port, frac, delay, thresh, zc, kx, ky, t):
-    ser = serial.Serial(port=port, baudrate=115200, timeout=DEFAULT_TIMEOUT)
     fracQ = int(float_to_fixed(frac, 0, 13, True))
     delayQ = int(delay)
     threshQ = int(float_to_fixed(thresh, 12, 3, True))
@@ -172,8 +169,9 @@ def sendStart(port, frac, delay, thresh, zc, kx, ky, t):
 
     packBytes = packet.to_bytes(19, byteorder = 'big')
 
-    ser.write(packBytes)
-    print("\nStart packet sent")
+    written = ser.write(packBytes)
+    print(packBytes.hex(' ').upper())
+    print(f"Wrote {written} byte(s) successfully.")
     # Optional: try to read back an 18-byte response from bridge_fsm
     rx = ser.read(RX_BYTES)
 
@@ -232,7 +230,7 @@ def main():
                         help="Print available serial ports and exit.")
 
     # One argument per config field
-    parser.add_argument("--attenuation",    type=int, default=0,
+    parser.add_argument("--attenuation",    type=float, default=0,
                         help="14-bit attenuation (Q0.13 signed, default 0)")
     parser.add_argument("--delay",          type=int, default=0,
                         help="7-bit delay (unsigned 0-127, default 0)")
@@ -256,24 +254,15 @@ def main():
             print("\nRe-run with --port <device> to send config.")
             sys.exit(0)
 
-    # Clamp/mask all fields to their widths
-    attenuation    = clamp(args.attenuation,    14, "attenuation")
-    delay          = clamp(args.delay,           7, "delay")
-    threshold      = clamp(args.threshold,      16, "threshold")
-    zc_neg_samples = clamp(args.zc_neg_samples,  8, "zc_neg_samples")
-    kx             = clamp(args.kx,             20, "kx")
-    ky             = clamp(args.ky,             20, "ky")
-    timestamp      = clamp(args.timestamp,      64, "timestamp")
-
     print("\nConfig fields being sent:")
-    print_fields(attenuation, delay, threshold, zc_neg_samples, kx, ky, timestamp)
+    print_fields(args.attenuation, args.delay, args.threshold, args.zc_neg_samples, args.kx, args.ky, args.timestamp)
 
     # value_149 = build_149(attenuation, delay, threshold, zc_neg_samples, kx, ky, timestamp)
     # tx_bytes  = pack_for_uart(value_149)
 
     # send_config(args.port, args.baud, tx_bytes, value_149, args.timeout)
-    sendStart(args.port, float(attenuation), float(delay), float(threshold),
-               float(zc_neg_samples), float(kx), float(ky), float(timestamp))
+    sendStart(args.port, float(args.attenuation), float(args.delay), float(args.threshold),
+               float(args.zc_neg_samples), float(args.kx), float(args.ky), float(args.timestamp), args.timeout)
 
 
 if __name__ == "__main__":
