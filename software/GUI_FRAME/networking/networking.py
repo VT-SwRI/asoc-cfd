@@ -147,12 +147,11 @@ class RxWorker(QtCore.QObject):
         packet |= (kyQ & 0xFFFFF) << 64
         packet |= (kxQ & 0xFFFFF) << 84
         packet |= (zcQ & 0xFF) << 104
-        packet |= (threshQ & 0xFFFF) << 111
-        packet |= (delayQ & 0xFF) << 127
+        packet |= (threshQ & 0xFFFF) << 112
+        packet |= (delayQ & 0x7F) << 128
         packet |= (fracQ & 0x3FFF) << 135
 
         packBytes = packet.to_bytes(19, byteorder = 'big')
-
         self.ser.write(packBytes)
         if DEBUG:
             print("\nStart packet sent")

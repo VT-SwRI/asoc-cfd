@@ -315,8 +315,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
         self.ip = self.boardIP.text()
         self.port = int(self.boardPort.text())
-        self.kx = _safe_float(self.kxVal.text())
-        self.ky = _safe_float(self.kyVal.text())
         self.ts = _safe_float(self.tsDetails.text())
         self.x = _safe_float(self.detX.text()) * 1000
         self.y = _safe_float(self.detY.text()) * 1000
@@ -358,6 +356,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid detector y value.")
             self.popup.exec()
             return
+        
+        self.xprop = _safe_float(self.kxVal.text())
+        self.yprop = _safe_float(self.kyVal.text())
+        self.kx = self.calc_k(self.xprop, self.fs)
+        self.ky = self.calc_k(self.yprop, self.fs)
         if self.kx < 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid kx value.")
@@ -368,10 +371,12 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid ky value.")
             self.popup.exec()
             return
-        
         self.setup = 1
         self.open_popup()
- 
+
+    def calc_k(self, v_prop_mm_ns, fs_ghz):
+        return v_prop_mm_ns * 1000.0 / (2.0 * 1024.0 * fs_ghz)
+
     def getFilePath(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Save Folder")
 
