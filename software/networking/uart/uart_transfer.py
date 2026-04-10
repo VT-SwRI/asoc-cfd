@@ -29,10 +29,11 @@ import serial.tools.list_ports
 import argparse
 import sys
 import time
+import numpy as np
 
 # ── constants ──────────────────────────────────────────────────────────────────
 DEFAULT_BAUD    = 115200
-DEFAULT_TIMEOUT = 2
+DEFAULT_TIMEOUT = 10
 TX_BYTES        = 19       # 152 bits on the wire (149-bit payload + 3 padding LSBs)
 RX_BYTES        = 18       # 144-bit result from bridge_fsm (optional read-back)
 
@@ -149,6 +150,74 @@ def clamp(value: int, width: int, name: str) -> int:
     return value & mask
 
 
+def sendStart(port, frac, delay, thresh, zc, kx, ky, t):
+    ser = serial.Serial(port=port, baudrate=115200, timeout=DEFAULT_TIMEOUT)
+    fracQ = int(float_to_fixed(frac, 0, 13, True))
+    delayQ = int(delay)
+    threshQ = int(float_to_fixed(thresh, 12, 3, True))
+    kxQ = int(float_to_fixed(kx, 1, 19, False))
+    kyQ = int(float_to_fixed(ky, 1, 19, False))
+    zcQ = int(zc)
+    timeQ = int(t)
+
+    packet = 0
+
+    packet |= (timeQ & 0xFFFFFFFFFFFFFFFF) << 0
+    packet |= (kyQ & 0xFFFFF) << 64
+    packet |= (kxQ & 0xFFFFF) << 84
+    packet |= (zcQ & 0xFF) << 104
+    packet |= (threshQ & 0xFFFF) << 111
+    packet |= (delayQ & 0xFF) << 127
+    packet |= (fracQ & 0x3FFF) << 135
+
+    packBytes = packet.to_bytes(19, byteorder = 'big')
+
+    ser.write(packBytes)
+    print("\nStart packet sent")
+    # Optional: try to read back an 18-byte response from bridge_fsm
+    rx = ser.read(RX_BYTES)
+
+    if len(rx) == RX_BYTES:
+        fields = unpack_response(rx)
+        print(f"\nFPGA response ({RX_BYTES} bytes):")
+        print(f"  Bytes : {rx.hex(' ').upper()}")
+        print(f"  tag   : 0x{fields['tag']:016X}")
+        print(f"  x     : {fields['x']}")
+        print(f"  y     : {fields['y']}")
+        print(f"  mag   : {fields['mag']}")
+    else:
+        print(f"\n(No TX response from FPGA — {len(rx)}/{RX_BYTES} bytes received, this is expected if TX is disabled.)")
+
+def fixed_to_float(num, Qint, Qfrac, sgn):
+    len = Qint + Qfrac + (1 if sgn else 0)
+
+    num &= (1 << len) - 1
+
+    if sgn:
+        if num & (1 << (len - 1)):
+            num -= (1 << len)
+
+    Q = 1 << Qfrac
+    return float(num) / float(Q)
+
+def float_to_fixed(num, Qint, Qfrac, sgn):
+    Q = 1 << Qfrac
+    val = qRound(num * Q)
+    len = Qint + Qfrac + (1 if sgn else 0)
+    if sgn:
+        min_val = -(1 << (len - 1))
+        max_val = (1 << (len - 1)) - 1
+    else:
+        min_val = 0
+        max_val = (1 << len) - 1
+
+    val = max(min_val, min(max_val, val))
+    return val
+
+def qRound(num):
+    return int(np.floor(num + 0.5)) if num >= 0 else int(np.ceil(num - 0.5))
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Send a 149-bit FPGA config built from individual named fields."
@@ -199,10 +268,12 @@ def main():
     print("\nConfig fields being sent:")
     print_fields(attenuation, delay, threshold, zc_neg_samples, kx, ky, timestamp)
 
-    value_149 = build_149(attenuation, delay, threshold, zc_neg_samples, kx, ky, timestamp)
-    tx_bytes  = pack_for_uart(value_149)
+    # value_149 = build_149(attenuation, delay, threshold, zc_neg_samples, kx, ky, timestamp)
+    # tx_bytes  = pack_for_uart(value_149)
 
-    send_config(args.port, args.baud, tx_bytes, value_149, args.timeout)
+    # send_config(args.port, args.baud, tx_bytes, value_149, args.timeout)
+    sendStart(args.port, float(attenuation), float(delay), float(threshold),
+               float(zc_neg_samples), float(kx), float(ky), float(timestamp))
 
 
 if __name__ == "__main__":
