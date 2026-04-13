@@ -1,7 +1,6 @@
 import numpy as np
 from PyQt5.QtCore import QObject, pyqtSignal
 from PyQt5 import QtNetwork
-
 from PyQt5 import QtCore, QtNetwork
 import struct
 import socket
@@ -201,6 +200,8 @@ class DecWorker(QtCore.QObject):
                 y = (packet >> 16) & 0xFFFFFFFF
                 x = (packet >> 48) & 0xFFFFFFFF
                 t = (packet >> 80) & 0xFFFFFFFFFFFFFFFF
+
+
                 mag = np.int16(mag)
                 y = np.int32(y)
                 x = np.int32(x)
