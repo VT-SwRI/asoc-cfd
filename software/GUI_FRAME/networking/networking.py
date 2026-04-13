@@ -10,8 +10,8 @@ import serial
 import time
 
 DEBUG = 0
-PORT = 'COM3'
-BR = 9600
+PORT = 'COM4'
+BR = 115200
 
 def fixed_to_float(num, Qint, Qfrac, sgn):
     len = Qint + Qfrac + (1 if sgn else 0)
@@ -194,20 +194,21 @@ class DecWorker(QtCore.QObject):
                 data = None
 
             if data is not None and self.mode < 2:
-                packet = int.from_bytes(data, byteorder='big')
+                print(data.hex(' ').upper())
 
-                mag = (packet & 0xFFFF)
-                y = (packet >> 16) & 0xFFFFFFFF
-                x = (packet >> 48) & 0xFFFFFFFF
-                t = (packet >> 80) & 0xFFFFFFFFFFFFFFFF
+                t   = int.from_bytes(data[0:8],  byteorder='big', signed=False)
+                x   = int.from_bytes(data[8:12],  byteorder='big', signed=True)
+                y   = int.from_bytes(data[12:16], byteorder='big', signed=True)
+                mag = int.from_bytes(data[16:18], byteorder='big', signed=True)
 
-
-                mag = np.int16(mag)
-                y = np.int32(y)
-                x = np.int32(x)
-                t = np.uint64(t)
 
                 lBuffer.append((x, y, t, mag))
+
+                print(f"Raw Hex: {data.hex(' ').upper()}")
+                print(f"  tag : {t}")
+                print(f"  x   : {x}")
+                print(f"  y   : {y}")
+                print(f"  mag : {mag}")
             elif data is not None and self.mode == 2:
                 arr = np.frombuffer(data[1:], dtype=np.float64)
                 self.pulse.emit(arr)

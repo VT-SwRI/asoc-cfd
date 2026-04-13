@@ -303,7 +303,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
         self.sel = 0
         self.mode = self.dataMode.currentIndex()
-        self.time = time.time()
+        self.time = time.time_ns() // 1000
         self.thresh = _safe_float(self.threshold.text())
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)

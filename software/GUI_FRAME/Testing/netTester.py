@@ -117,10 +117,10 @@ def sendStart(frac, delay, thresh, zc, kx, ky, time, ser):
 def main():
     zc = 100
     zc = np.uint8(zc)
-    # print(time.time_ns() // 1000)
-    ser = serial.Serial(port = 'COM3', baudrate=9600, timeout=1)
+    print(time.time())
+    # ser = serial.Serial(port = 'COM3', baudrate=9600, timeout=1)
     # while True:
-    sendStart(0, 3  , 0, 0, 0, 0, 0, ser)
+    # sendStart(0, 3  , 0, 0, 0, 0, 0, ser)
         # data = ser.read(19)
         # if len(data) == 19:
         #     print(list(data))
