@@ -32,7 +32,7 @@ import time
 import numpy as np
 
 # ── constants ──────────────────────────────────────────────────────────────────
-DEFAULT_BAUD    = 115200
+DEFAULT_BAUD    = 800000
 DEFAULT_TIMEOUT = 10
 TX_BYTES        = 19       # 152 bits on the wire (149-bit payload + 3 padding LSBs)
 RX_BYTES        = 18       # 144-bit result from bridge_fsm (optional read-back)
@@ -239,9 +239,9 @@ def main():
     parser.add_argument("--zc",             type=int, default=0,
                         dest="zc_neg_samples",
                         help="8-bit zc_neg_samples (unsigned 0-255, default 0) — drives LEDs")
-    parser.add_argument("--kx",             type=int, default=0,
+    parser.add_argument("--kx",             type=float, default=0,
                         help="20-bit kx (UQ1.19 unsigned, default 0)")
-    parser.add_argument("--ky",             type=int, default=0,
+    parser.add_argument("--ky",             type=float, default=0,
                         help="20-bit ky (UQ1.19 unsigned, default 0)")
     parser.add_argument("--timestamp",      type=int, default=0,
                         help="64-bit timestamp (unsigned, default 0)")
