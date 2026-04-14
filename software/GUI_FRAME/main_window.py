@@ -11,18 +11,17 @@ import queue
 from networking.networking import RxWorker, DecWorker
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
+import serial.tools.list_ports as serialPorts
 import pyqtgraph as pg
 
 
 class EtherDAQMock(QtWidgets.QMainWindow):
-    startPacket = QtCore.pyqtSignal(int, int, int, int, int, float, float)
-
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("EtherDaq")
         self.setGeometry(300, 300, 1300, 1000)
-
+        self.ports = [p.device for p in serialPorts.comports()]
         # create the tabs
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
@@ -93,7 +92,23 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('mag', 'f4')])
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self._update_seconds_status)
+        self.portTimer = QtCore.QTimer()
+        self.portTimer.timeout.connect(self.updatePorts)
+        self.portTimer.start(1000)
      
+    def updatePorts(self):
+        currentPorts = [p.device for p in serialPorts.comports()]
+        if currentPorts != self.ports:
+            currentPort = self.comPort.currentText()
+            self.comPort.blockSignals(True)
+            self.comPort.clear()
+            self.comPort.addItem("None")
+            self.comPort.addItems(sorted(currentPorts))
+            index = self.comPort.findText(currentPort)
+            if index != -1:
+                self.comPort.setCurrentIndex(index)
+            self.comPort.blockSignals(False)
+            self.ports = currentPorts
 
     def initTab1(self):
         # creates the layout (left column and right column)
@@ -204,8 +219,12 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         netLay.setContentsMargins(10, 8, 10, 8)
         netLay.setHorizontalSpacing(10)
         netLay.setVerticalSpacing(8)
-        self.comPort = QtWidgets.QLineEdit("COM3")
+        self.comPort = QtWidgets.QComboBox()
+        self.comPort.addItems(["None"])
         self.comPort.setFixedWidth(100)
+        self.comPort.addItems(self.ports)
+        # self.comPort = QtWidgets.QLineEdit("COM3")
+        # self.comPort.setFixedWidth(100)
         self.baudRate = QtWidgets.QLineEdit("9600")
         self.baudRate.setFixedWidth(100)
         netLay.addWidget(QtWidgets.QLabel("COM Port:"), 0, 0)
@@ -255,9 +274,9 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.detX.setFixedWidth(100)
         self.detY = QtWidgets.QLineEdit("102")
         self.detY.setFixedWidth(100)
-        self.kxVal = QtWidgets.QLineEdit("1")
+        self.kxVal = QtWidgets.QLineEdit("1.39")
         self.kxVal.setFixedWidth(100)
-        self.kyVal = QtWidgets.QLineEdit("1")
+        self.kyVal = QtWidgets.QLineEdit("1.33")
         self.kyVal.setFixedWidth(100)
         detLay.addWidget(QtWidgets.QLabel("Detector X (mm):"), 0, 0)
         detLay.addWidget(self.detX, 0, 1)
@@ -303,12 +322,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
         self.sel = 0
         self.mode = self.dataMode.currentIndex()
-        self.time = time.time_ns() // 1000
         self.thresh = _safe_float(self.threshold.text())
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
-        self.com = self.comPort.text()
+        self.com = self.comPort.currentText()
         self.br = int(self.baudRate.text())
         self.x = _safe_float(self.detX.text()) * 1000
         self.y = _safe_float(self.detY.text()) * 1000
@@ -330,11 +348,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid sampling rate.")
             self.popup.exec()
             return
-        # if not isValidIP(self.ip):
-        #     self.setup = 0
-        #     self.popup = PopupWindow("Error", "Invalid IP address.")
-        #     self.popup.exec()
-        #     return
+        if self.com == "None":
+            self.setup = 0
+            self.popup = PopupWindow("Error", "Select a COM port.")
+            self.popup.exec()
+            return
         if self.br <= 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid baud rate.")
@@ -425,7 +443,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.acqType.setEnabled(False)
             self.statusBar().showMessage("Acquiring...", 2000)
 
-            self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
             if self.mode < 2:
                 self.phdPlot.start()
                 self.erPlot.start()
@@ -510,7 +527,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # deploy each thread, remember this also starts each worker
         if self.writer_worker is not None:
             self.writer_thread.start()
-        self.recv_worker.start(self.frac, self.delay, self.thresh, self.zeroC, self.kx, self.ky, self.time)
+        self.recv_worker.start(self.frac, self.delay, self.thresh, self.zeroC, self.kx, self.ky, self.mode)
         self.decode_worker.start()
         self.image_thread.start()
 
