@@ -34,8 +34,8 @@ import threading
 import numpy as np
 
 # ── constants ──────────────────────────────────────────────────────────────────
-DEFAULT_BAUD    = 800000
-DEFAULT_TIMEOUT = 1          # short timeout so the RX thread can loop/check exit
+DEFAULT_BAUD    = 921600
+DEFAULT_TIMEOUT = 2          # short timeout so the RX thread can loop/check exit
 TX_BYTES        = 19
 RX_BYTES        = 18         # one bridge_fsm packet = 18 bytes
 
@@ -86,11 +86,11 @@ def build_packet(frac, delay, thresh, zc, kx, ky, t) -> bytes:
 
     packet = 0
     packet |= (timeQ  & 0xFFFFFFFFFFFFFFFF) << 0
-    packet |= (kyQ    & 0xFFFFF)            << 64
-    packet |= (kxQ    & 0xFFFFF)            << 84
+    packet |= (0x1BB55    & 0xFFFFF)            << 64
+    packet |= (0x1CF55    & 0xFFFFF)            << 84
     packet |= (zcQ    & 0xFF)               << 104
-    packet |= (threshQ & 0xFFFF)            << 111
-    packet |= (delayQ & 0xFF)               << 127
+    packet |= (0x08FC & 0xFFFF)            << 112
+    packet |= (delayQ & 0xFF)               << 128
     packet |= (fracQ  & 0x3FFF)             << 135
 
     return packet.to_bytes(TX_BYTES, byteorder='big')
@@ -202,7 +202,7 @@ def main():
         description="Send a 149-bit FPGA config then display a live RX terminal."
     )
     parser.add_argument("--port",    "-p", default=None)
-    parser.add_argument("--baud",    "-b", type=int,   default=115200)
+    parser.add_argument("--baud",    "-b", type=int,   default=DEFAULT_BAUD)
     parser.add_argument("--timeout", "-t", type=float, default=DEFAULT_TIMEOUT)
     parser.add_argument("--list-ports", "-l", action="store_true")
 
