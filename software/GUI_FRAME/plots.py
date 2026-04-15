@@ -20,6 +20,7 @@ class HeatmapWidget(QtWidgets.QWidget):
         self.plot = self.view.addPlot()
         self.plot.setLabel('left', 'Y-Position')
         self.plot.setLabel('bottom', 'X-Position')
+        self.plot.setTitle('X-Y Hitmap')
         # self.plot.setAspectLocked(True, ratio = 1)
 
         # Image item
@@ -77,6 +78,7 @@ class PHDWidget(QtWidgets.QWidget):
         self.plot.setLabel('left', 'Counts')
         self.plot.setLabel('bottom', 'Bin')
         self.plot.showGrid(x = False, y = False)
+        self.plot.setTitle('Pulse Height Distribution Histogram')
 
         self.bar = pg.BarGraphItem(x = np.arange(self.bins), height = np.zeros(self.bins), width = 1)
 
@@ -132,6 +134,7 @@ class EventRateWidget(QtWidgets.QWidget):
         self.plot.setLabel('bottom', 'Time (s)')
         self.plot.showGrid(x = False, y = False)
 
+        self.plot.setTitle('Running Event Rate')
         self.curve = self.plot.plot(pen = pg.mkPen(width=2))
 
         self.plot.enableAutoRange(axis = 'y', enable = False)
@@ -172,7 +175,7 @@ class EventRateWidget(QtWidgets.QWidget):
         vb.setMenuEnabled(True)
         vb.setMouseEnabled(x = True, y = True)
         self.curve.setData(self.times, self.rates)
-        self.running = not stopAcq
+        self.running = stopAcq
     
     def update(self):
         now = time.time() - self.startTime

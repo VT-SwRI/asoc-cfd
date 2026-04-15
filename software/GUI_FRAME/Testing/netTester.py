@@ -105,21 +105,26 @@ def sendStart(frac, delay, thresh, zc, kx, ky, time, ser):
     packet |= (time & 0xFFFFFFFFFFFFFFFF) << 0
     packet |= (kyQ & 0xFFFFF) << 64
     packet |= (kxQ & 0xFFFFF) << 84
-    packet |= (zcQ & 0x7F) << 104
-    packet |= (threshQ & 0xFFFF) << 111
-    packet |= (delayQ & 0xFF) << 127
+    packet |= (zcQ & 0xFF) << 104
+    packet |= (threshQ & 0xFFFF) << 112
+    packet |= (delayQ & 0x7F) << 128
     packet |= (fracQ & 0x3FFF) << 135
 
     packBytes = packet.to_bytes(19, byteorder = 'big')
-
+    print(packBytes)
     ser.write(packBytes)
 
 def main():
     zc = 100
     zc = np.uint8(zc)
-    print(hex(zc))
-    ser = serial.Serial(port = 'COM3', baudrate=9600, timeout=1)
-    sendStart(1, 2, 3, 4, 5, 6, 7,  ser)      
+    print(time.time())
+    # ser = serial.Serial(port = 'COM3', baudrate=9600, timeout=1)
+    # while True:
+    # sendStart(0, 3  , 0, 0, 0, 0, 0, ser)
+        # data = ser.read(19)
+        # if len(data) == 19:
+        #     print(list(data))
+
 
 
 if __name__ == "__main__":

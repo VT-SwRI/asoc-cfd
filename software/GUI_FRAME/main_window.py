@@ -11,18 +11,17 @@ import queue
 from networking.networking import RxWorker, DecWorker
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
+import serial.tools.list_ports as serialPorts
 import pyqtgraph as pg
 
 
 class EtherDAQMock(QtWidgets.QMainWindow):
-    startPacket = QtCore.pyqtSignal(int, int, int, int, int, float, float)
-
 
     def __init__(self):
         super().__init__()
         self.setWindowTitle("EtherDaq")
         self.setGeometry(300, 300, 1300, 1000)
-
+        self.ports = [p.device for p in serialPorts.comports()]
         # create the tabs
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
@@ -81,20 +80,35 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.delay = -1
         self.fs = -1
         self.setup = 0
-        self.ip = "127.0.0.1"
-        self.port = 561
+        self.com = "None"
+        self.br = 9600
         self.kx = 1
         self.ky = 1
         self.x = 102
         self.y = 102
-        self.ts = 1024
         self.nx = 4096
         self.ny = 4096
 
         self.inType = np.dtype([('xpos', 'f4'), ('ypos', 'f4'), ('time', 'f8'), ('mag', 'f4')])
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self._update_seconds_status)
+        self.portTimer = QtCore.QTimer()
+        self.portTimer.timeout.connect(self.updatePorts)
+        self.portTimer.start(1000)
      
+    def updatePorts(self):
+        currentPorts = [p.device for p in serialPorts.comports()]
+        if currentPorts != self.ports:
+            currentPort = self.comPort.currentText()
+            self.comPort.blockSignals(True)
+            self.comPort.clear()
+            self.comPort.addItem("None")
+            self.comPort.addItems(sorted(currentPorts))
+            index = self.comPort.findText(currentPort)
+            if index != -1:
+                self.comPort.setCurrentIndex(index)
+            self.comPort.blockSignals(False)
+            self.ports = currentPorts
 
     def initTab1(self):
         # creates the layout (left column and right column)
@@ -205,14 +219,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         netLay.setContentsMargins(10, 8, 10, 8)
         netLay.setHorizontalSpacing(10)
         netLay.setVerticalSpacing(8)
-        self.boardIP = QtWidgets.QLineEdit("127.0.0.1")
-        self.boardIP.setFixedWidth(100)
-        self.boardPort = QtWidgets.QLineEdit("561")
-        self.boardPort.setFixedWidth(100)
-        netLay.addWidget(QtWidgets.QLabel("FPGA Board IP Address:"), 0, 0)
-        netLay.addWidget(self.boardIP, 0, 1)
-        netLay.addWidget(QtWidgets.QLabel("FPGA Board Port:"), 1, 0)
-        netLay.addWidget(self.boardPort, 1, 1)
+        self.comPort = QtWidgets.QComboBox()
+        self.comPort.addItems(["None"])
+        self.comPort.setFixedWidth(100)
+        self.comPort.addItems(self.ports)
+        # self.comPort = QtWidgets.QLineEdit("COM3")
+        # self.comPort.setFixedWidth(100)
+        self.baudRate = QtWidgets.QLineEdit("9600")
+        self.baudRate.setFixedWidth(100)
+        netLay.addWidget(QtWidgets.QLabel("COM Port:"), 0, 0)
+        netLay.addWidget(self.comPort, 0, 1)
+        netLay.addWidget(QtWidgets.QLabel("UART Baud Rate:"), 1, 0)
+        netLay.addWidget(self.baudRate, 1, 1)
         netBox.setSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         leftCol.addWidget(netBox)
         
@@ -256,22 +274,18 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.detX.setFixedWidth(100)
         self.detY = QtWidgets.QLineEdit("102")
         self.detY.setFixedWidth(100)
-        self.kxVal = QtWidgets.QLineEdit("1")
+        self.kxVal = QtWidgets.QLineEdit("1.39")
         self.kxVal.setFixedWidth(100)
-        self.kyVal = QtWidgets.QLineEdit("1")
+        self.kyVal = QtWidgets.QLineEdit("1.33")
         self.kyVal.setFixedWidth(100)
-        self.tsDetails = QtWidgets.QLineEdit("1024")
-        self.tsDetails.setFixedWidth(100)
         detLay.addWidget(QtWidgets.QLabel("Detector X (mm):"), 0, 0)
         detLay.addWidget(self.detX, 0, 1)
         detLay.addWidget(QtWidgets.QLabel("Detector Y (mm):"), 1, 0)
         detLay.addWidget(self.detY, 1, 1)
-        detLay.addWidget(QtWidgets.QLabel("X-axis Propagation Constant (um/ts):"), 2, 0)
+        detLay.addWidget(QtWidgets.QLabel("X-axis Propagation Speed (mm/ns):"), 2, 0)
         detLay.addWidget(self.kxVal, 2, 1)
-        detLay.addWidget(QtWidgets.QLabel("Y-axis Propagation Constant (um/ts):"), 3, 0)
+        detLay.addWidget(QtWidgets.QLabel("Y-axis Propagation Speed (mm/ns):"), 3, 0)
         detLay.addWidget(self.kyVal, 3, 1)
-        detLay.addWidget(QtWidgets.QLabel("Timestamp Details:"), 4, 0)
-        detLay.addWidget(self.tsDetails, 4, 1)
         detBox.setSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         leftCol.addWidget(detBox)
 
@@ -308,16 +322,12 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         
         self.sel = 0
         self.mode = self.dataMode.currentIndex()
-        self.time = time.time()
         self.thresh = _safe_float(self.threshold.text())
         self.delay = int(self.delayTime.text())
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
-        self.ip = self.boardIP.text()
-        self.port = int(self.boardPort.text())
-        self.kx = _safe_float(self.kxVal.text())
-        self.ky = _safe_float(self.kyVal.text())
-        self.ts = _safe_float(self.tsDetails.text())
+        self.com = self.comPort.currentText()
+        self.br = int(self.baudRate.text())
         self.x = _safe_float(self.detX.text()) * 1000
         self.y = _safe_float(self.detY.text()) * 1000
         self.nx = int(self.xSize.currentText())
@@ -338,14 +348,14 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid sampling rate.")
             self.popup.exec()
             return
-        if not isValidIP(self.ip):
+        if self.com == "None":
             self.setup = 0
-            self.popup = PopupWindow("Error", "Invalid IP address.")
+            self.popup = PopupWindow("Error", "Select a COM port.")
             self.popup.exec()
             return
-        if self.port <= 0:
+        if self.br <= 0:
             self.setup = 0
-            self.popup = PopupWindow("Error", "Invalid port value.")
+            self.popup = PopupWindow("Error", "Invalid baud rate.")
             self.popup.exec()
             return
         if self.x <= 0:
@@ -358,6 +368,11 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid detector y value.")
             self.popup.exec()
             return
+        
+        self.xprop = _safe_float(self.kxVal.text())
+        self.yprop = _safe_float(self.kyVal.text())
+        self.kx = self.calc_k(self.xprop, self.fs)
+        self.ky = self.calc_k(self.yprop, self.fs)
         if self.kx < 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid kx value.")
@@ -368,10 +383,12 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.popup = PopupWindow("Error", "Invalid ky value.")
             self.popup.exec()
             return
-        
         self.setup = 1
         self.open_popup()
- 
+
+    def calc_k(self, v_prop_mm_ns, fs_ghz):
+        return v_prop_mm_ns * 1000.0 / (2.0 * 1024.0 * fs_ghz)
+
     def getFilePath(self):
         folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Save Folder")
 
@@ -426,7 +443,6 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.acqType.setEnabled(False)
             self.statusBar().showMessage("Acquiring...", 2000)
 
-            self.startPacket.emit(self.sel, self.mode, self.time, self.thresh, self.delay, self.frac, self.fs)
             if self.mode < 2:
                 self.phdPlot.start()
                 self.erPlot.start()
@@ -476,7 +492,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
             self.image_worker = ImageWriter(self.save_folder, self.inType, x = self.x, y = self.y, save = False, nx = self.nx, ny = self.ny)
         
         q = queue.Queue(maxsize=1000000)
-        self.recv_worker = RxWorker(q, self.ip, self.port)
+        self.recv_worker = RxWorker(q, self.com, self.br)
         self.decode_worker = DecWorker(q, self.inType, self.mode)
 
         # move the workers into their respective threads
@@ -511,7 +527,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         # deploy each thread, remember this also starts each worker
         if self.writer_worker is not None:
             self.writer_thread.start()
-        self.recv_worker.start(self.frac, self.delay, self.thresh, self.zeroC, self.kx, self.ky, self.time)
+        self.recv_worker.start(self.frac, self.delay, self.thresh, self.zeroC, self.kx, self.ky, self.mode)
         self.decode_worker.start()
         self.image_thread.start()
 
