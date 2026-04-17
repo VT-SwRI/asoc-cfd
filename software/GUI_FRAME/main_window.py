@@ -129,7 +129,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
 
         dataModeLbl = QtWidgets.QLabel("Mode:")
         self.dataMode = QtWidgets.QComboBox()
-        self.dataMode.addItems(["Standard", "Test", "Estimate"])
+        self.dataMode.addItems(["Standard", "Test"])
         self.dataMode.setFixedWidth(120)
 
         typeLabel = QtWidgets.QLabel("Output Type:")
