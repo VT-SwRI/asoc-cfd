@@ -142,9 +142,9 @@ class RxWorker(QtCore.QObject):
 
         packBytes = packet.to_bytes(19, byteorder = 'big')
         self.ser.write(packBytes)
-        if s == 1:
+        if s == 1 and DEBUG:
             print(f"Start packet: {packBytes.hex(' ')}")
-        if s == 0:
+        if s == 0 and DEBUG:
             print(f"Stop packet: {packBytes.hex(' ')}")
 class DecWorker(QtCore.QObject):
     batch_ready = QtCore.pyqtSignal(object)
@@ -186,12 +186,12 @@ class DecWorker(QtCore.QObject):
 
 
                 lBuffer.append((x, y, t, mag))
-
-                print(f"Raw Hex: {data.hex(' ').upper()}")
-                print(f"  tag : {t}")
-                print(f"  x   : {x}")
-                print(f"  y   : {y}")
-                print(f"  mag : {mag}")
+                if DEBUG:
+                    print(f"Raw Hex: {data.hex(' ').upper()}")
+                    print(f"  tag : {t}")
+                    print(f"  x   : {x}")
+                    print(f"  y   : {y}")
+                    print(f"  mag : {mag}")
             elif data is not None and self.mode == 2:
                 arr = np.frombuffer(data[1:], dtype=np.float64)
                 self.pulse.emit(arr)

@@ -250,7 +250,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.sampleRate.setFixedWidth(100)
         self.zc = QtWidgets.QLineEdit("8")
         self.zc.setFixedWidth(100)
-        paramLay.addWidget(QtWidgets.QLabel("Delay Time (ns):"), 0, 0)
+        paramLay.addWidget(QtWidgets.QLabel("Delay Time (samples):"), 0, 0)
         paramLay.addWidget(self.delayTime, 0, 1)
         paramLay.addWidget(QtWidgets.QLabel("Fraction Parameter:"), 1, 0)
         paramLay.addWidget(self.fractionParam, 1, 1)
@@ -297,7 +297,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.xSize = QtWidgets.QComboBox()
         self.ySize = QtWidgets.QComboBox()
         for cb in (self.xSize, self.ySize):
-            cb.addItems(["512", "1024", "2048", "4096"])
+            cb.addItems(["256", "512", "1024", "2048", "4096"])
             cb.setCurrentText("4096")
             cb.setFixedWidth(100)
         sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
@@ -327,6 +327,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.frac = _safe_float(self.fractionParam.text(), 0.0)
         self.fs = _safe_float(self.sampleRate.text(), 1.0)
         self.com = self.comPort.currentText()
+        # self.com = 'COM4'
         self.br = int(self.baudRate.text())
         self.x = _safe_float(self.detX.text()) * 1000
         self.y = _safe_float(self.detY.text()) * 1000
@@ -373,6 +374,10 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.yprop = _safe_float(self.kyVal.text())
         self.kx = self.calc_k(self.xprop, self.fs)
         self.ky = self.calc_k(self.yprop, self.fs)
+        print(f"KX constant: {self.kx}")
+        print(f"KY constant: {self.ky}")
+        # self.kx = 0.2263
+        # self.ky = 0.2164
         if self.kx < 0:
             self.setup = 0
             self.popup = PopupWindow("Error", "Invalid kx value.")
