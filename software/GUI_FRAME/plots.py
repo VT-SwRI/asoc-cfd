@@ -113,7 +113,8 @@ class PHDWidget(QtWidgets.QWidget):
 
     def clear(self):
         self.hist[:] = 0
-        self.ymax = 50
+        self.ymax = 25
+        self.plot.setYRange(0, int(self.ymax * 1.1))
         self.bar.setOpts(height = self.hist)
 
 class EventRateWidget(QtWidgets.QWidget):
