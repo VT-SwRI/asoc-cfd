@@ -41,6 +41,7 @@ class HeatmapWidget(QtWidgets.QWidget):
 
         self.img.setLevels((0, 10))
 
+
     def set_image(self, image, x, y, factor=1):
 
         self.factor = factor
@@ -64,6 +65,16 @@ class HeatmapWidget(QtWidgets.QWidget):
     def clear(self):
         if self.img.image is not None:
             self.img.setImage(np.zeros_like(self.img.image), autoLevels=False)
+
+    def hasHeightForWidth(self):
+       return True
+
+    def heightForWidth(self, width):
+        return width
+
+    def resizeEvent(self, event):
+        side = min(self.width(), self.height())
+        self.resize(side, side)
 
 class PHDWidget(QtWidgets.QWidget):
     def __init__(self, bins = 256, parent = None):
