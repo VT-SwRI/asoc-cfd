@@ -297,7 +297,7 @@ class EtherDAQMock(QtWidgets.QMainWindow):
         self.xSize = QtWidgets.QComboBox()
         self.ySize = QtWidgets.QComboBox()
         for cb in (self.xSize, self.ySize):
-            cb.addItems(["256", "512", "1024", "2048", "4096"])
+            cb.addItems(["128", "256", "512", "1024", "2048", "4096"])
             cb.setCurrentText("4096")
             cb.setFixedWidth(100)
         sizeLay.addWidget(QtWidgets.QLabel("X Size:"), 0, 0)
