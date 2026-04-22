@@ -77,11 +77,11 @@ class ImageWriter(QObject):
         yp = yp[mask]
         np.add.at(self.image, (yp, xp), 1)
 
-        mag = batch['mag']
+        mag = batch['mag'][mask]
         mag = (mag.astype(np.int32) + 32768) >> 8
         mag = np.bincount(mag, minlength = 256)
 
-        self.count += len(batch)
+        self.count += len(xp)
 
         if (time.time() - self.ref) >= self.refresh: 
             self.ref = time.time()
