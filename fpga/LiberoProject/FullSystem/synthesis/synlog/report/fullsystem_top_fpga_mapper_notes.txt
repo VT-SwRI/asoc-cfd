@@ -1,0 +1,120 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\bridge_fsm.v":73:4:73:9|Removing sequential instance cnt_rejected[15:0] (in view: work.bridge_fsm(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\bridge_fsm.v":73:4:73:9|Removing sequential instance cnt_dropped[15:0] (in view: work.bridge_fsm(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_rx.v":67:4:67:9|Found counter in view:work.uart_rx_43s_0_1_2_4_1(verilog) instance r_bit_index[2:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Found counter in view:work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog) instance r_samples_written[15:0] 
+@N: MF239 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":176:36:176:81|Found 16-bit decrementor, 'r_state16_a_4[15:0]'
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[10] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[11] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[12] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[13] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[14] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[15] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\host_uart.v":163:4:163:9|Found counter in view:work.host_uart_43s_151s_0_1_0_1_2_3_4(verilog) instance tx_idx[4:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_rx.v":67:4:67:9|Found counter in view:work.uart_rx_43s_0_1_2_4_0(verilog) instance r_bit_index[2:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_tx.v":47:4:47:9|Found counter in view:work.uart_tx_43s_0_1_2_3_4(verilog) instance r_clk_count[5:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_tx.v":47:4:47:9|Found counter in view:work.uart_tx_43s_0_1_2_3_4(verilog) instance r_bit_index[2:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\timestamp_generator.v":84:4:84:9|Found counter in view:work.timestamp_generator_40000000s_40s_6s(verilog) instance timestamp[63:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\timestamp_generator.v":64:4:64:9|Found counter in view:work.timestamp_generator_40000000s_40s_6s(verilog) instance div_cnt[5:0] 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\adc_preprocess_4ch.v":232:54:232:82|Found 3-bit incrementor, 'un1_y1_out_0[3:0]'
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\adc_preprocess_4ch.v":233:54:233:82|Found 3-bit incrementor, 'un1_y2_out_0[3:0]'
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\adc_preprocess_4ch.v":230:54:230:82|Found 3-bit incrementor, 'un2_x1_out_0[3:0]'
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\adc_preprocess_4ch.v":231:54:231:82|Found 3-bit incrementor, 'un1_x2_out_0[3:0]'
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF184 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_4ch.v":251:45:251:61|Found 17 by 17 bit subtractor, 'un1_sel_cb_2_0_0[16:0]'
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_4ch.v":250:59:250:65|Found 17-bit incrementor, 'un1_sel_cb[16:0]'
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_4ch.v":250:59:250:65|Found 17-bit incrementor, 'un1_sel_cb_0[16:0]'
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":131:4:131:9|Found counter in view:work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog) instance delay_fill_cnt[6:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":212:4:212:9|Found counter in view:work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog) instance neg_cnt[7:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":261:4:261:9|Found counter in view:work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog) instance fill_cnt[2:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":104:4:104:9|Found counter in view:work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog) instance wr_ptr[6:0] 
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":104:4:104:9|Found counter in view:work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog) instance idx_curr[9:0] 
+@N: MF184 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":85:37:85:55|Found 7 by 7 bit subtractor, 'un1_delay_reg_1_0_0[6:0]'
+@N: MF176 |Default generator successful 
+@N: MF184 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":220:21:220:48|Found 17 by 17 bit subtractor, 'un1_bip_0_0[16:0]'
+@N: MF176 |Default generator successful 
+@N: MF239 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":139:16:139:50|Found 7-bit decrementor, 'delay_filled5_a_4[6:0]'
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":240:54:240:75|Found 8 by 8 bit less-than operator ('<') un5_zc (in view: work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog))
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_channel_frontend.v":252:55:252:77|Found 16 by 16 bit less-than operator ('<') un1_thresh_reg (in view: work.cfd_channel_frontend_7s_1024s_10s_10s_6(verilog))
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[15] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[14] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[13] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[12] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[11] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[10] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[9] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[8] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[7] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[6] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[5] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[4] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[3] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[2] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[1] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Removing sequential instance dout[0] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF668 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Adding external logic to RAM mem_tile[17:0] (in view: work.cfd_delay_line_ram_16s_7s_128s(verilog)) to resolve possible read/write conflicts. To eliminate external logic, set syn_ramstyle = no_rw_check, or disable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\serial_frac_div.v":44:4:44:9|Found counter in view:work.serial_frac_div_17s_10s(verilog) instance bit_cnt[3:0] 
+@N: MF184 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\serial_frac_div.v":42:31:42:57|Found 17 by 17 bit subtractor, 'un1_denom_1_0_0[16:0]'
+@N: MF176 |Default generator successful 
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\serial_frac_div.v":41:32:41:60|Found 18 by 18 bit less-than operator ('<') un1_rem (in view: work.serial_frac_div_17s_10s(verilog))
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\position_calculator.v":111:4:111:9|Found counter in view:work.position_calc_Z1(verilog) instance bit_cnt[4:0] 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\position_calculator.v":107:45:107:73|Found 23-bit incrementor, 'un1_accum[40:18]'
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\peak_detector_4ch.v":115:24:115:38|Found 16 by 16 bit less-than operator ('<') peak05 (in view: work.peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s(verilog))
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\peak_detector_4ch.v":116:24:116:38|Found 16 by 16 bit less-than operator ('<') peak15 (in view: work.peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s(verilog))
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\peak_detector_4ch.v":117:24:117:38|Found 16 by 16 bit less-than operator ('<') peak25 (in view: work.peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s(verilog))
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\peak_detector_4ch.v":118:24:118:38|Found 16 by 16 bit less-than operator ('<') peak35 (in view: work.peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s(verilog))
+@N: MF135 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":185:4:185:9|RAM pos_mem_tag[63:0] (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) is 4 words by 64 bits.
+@N: MF135 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":185:4:185:9|RAM pos_mem_y[31:0] (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) is 4 words by 32 bits.
+@N: MF135 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":185:4:185:9|RAM pos_mem_x[31:0] (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) is 4 words by 32 bits.
+@N: MF135 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":220:4:220:9|RAM mag_mem_tag[63:0] (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) is 4 words by 64 bits.
+@N: MF135 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":220:4:220:9|RAM mag_mem_val[15:0] (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) is 4 words by 16 bits.
+@N: MF179 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":144:34:144:62|Found 64 by 64 bit less-than operator ('<') cmp_pos_older_2 (in view: work.event_builder_64s_32s_16s_2s_4s(verilog))
+@N: MO231 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":106:4:106:9|Found counter in view:work.pattern_generator(verilog) instance div_cnt[14:0] 
+@N: MF176 |Default generator successful 
+@N: MF239 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":167:36:167:53|Found 16-bit decrementor, 'un9_step_left_next[15:0]'
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":222:46:222:56|Found 32-bit incrementor, 'un4_x_abs_r_1[31:0]'
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":223:46:223:56|Found 32-bit incrementor, 'un3_y_abs_r_1[31:0]'
+@N: MF238 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":324:58:324:77|Found 32-bit incrementor, 'un3_out_tag[31:0]'
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance x_abs_r[2] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance x_abs_r[1] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance x_abs_r[0] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance y_abs_r[2] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance y_abs_r[1] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":217:4:217:9|Removing sequential instance y_abs_r[0] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\pattern_gen.v":252:4:252:9|Removing sequential instance state[1] (in view: work.pattern_generator(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF794 |RAM mem_y2[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_y1[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_x2[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_x1[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem[15:0] required 144 registers during mapping 
+@N: MF794 |RAM mag_mem_val[15:0] required 832 registers during mapping 
+@N: MF794 |RAM mem_y2[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_y1[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_x2[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem_x1[11:0] required 3 registers during mapping 
+@N: MF794 |RAM mem[15:0] required 125 registers during mapping 
+@N: MF794 |RAM mag_mem_val[15:0] required 832 registers during mapping 
+@N: MF322 |Retiming summary: 0 registers retimed to 29 
+@N: FP130 |Promoting Net i_clk_c on CLKBUF  i_clk_pad 
+@N: FP130 |Promoting Net u_dsp_pipeline.pp_valid on CLKINT  I_284 
+@N: FP130 |Promoting Net u_dsp_pipeline.u_preprocess.do_shift on CLKINT  I_285 
+@N: FP130 |Promoting Net u_dsp_pipeline.u_cfd.event_start on CLKINT  I_286 
+@N: FP130 |Promoting Net u_dsp_pipeline.u_event_builder.pos_rptr[0] on CLKINT  I_287 
+@N: FP130 |Promoting Net u_dsp_pipeline.u_cfd.N_34_0 on CLKINT  I_288 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

@@ -1,0 +1,25 @@
+*****************************************************************
+Pin Report - Date: Sun May 03 16:46:59 2026 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: fullsystem_top
+Family: ProASIC3E
+Die: A3PE1500
+Package: 208 PQFP
+*****************************************************************
+Port           |Pin |Fixed |Function         |I/O Std |Output Drive (mA) |Slew |Resistor Pull |Schmitt Trigger |Input Delay |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
+---------------|----|------|-----------------|--------|------------------|-----|--------------|----------------|------------|-----|-----------------|------------|--------------|
+i_clk           26   Yes    GFA0/IO190NPB6V2  LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+i_rst           68   Yes    IO153PDB5V2       LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+i_uart_data_rx  205  Yes    GAA1/IO00PDB0V0   LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+i_uart_host_rx  161  Yes    GBB1/IO56PDB1V3   LVTTL    ---                ---   None           No               Off          ---   ---               No           Yes
+o_led1          63   Yes    IO161PSB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led2          61   Yes    IO163PSB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led3          60   Yes    GEC2/IO164PDB5V3  LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led4          59   Yes    IO164NDB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led5          58   Yes    GEB2/IO165PDB5V3  LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led6          57   Yes    IO165NDB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led7          56   Yes    GEA2/IO166PDB5V3  LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_led8          55   Yes    IO166NDB5V3       LVTTL    12                 High  None           ---              ---          No    35                No           Yes
+o_uart_host_tx  159  Yes    GBA1/IO57PDB1V3   LVTTL    12                 High  None           ---              ---          No    35                No           Yes

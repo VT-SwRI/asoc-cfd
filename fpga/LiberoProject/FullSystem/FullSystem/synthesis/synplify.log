@@ -1,0 +1,110 @@
+
+Starting:    C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
+Hostname:    ANTHONY
+Date:        Sat May 02 17:50:29 2026
+Version:     L-2016.09M-SP1-5
+
+Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log fullsystem_top_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+
+Implementation not found: synthesis
+
+log file: "C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.srr"
+
+Running: synthesis in foreground
+
+
+
+Running fullsystem_top_syn|synthesis
+
+
+Running: compile (Compile) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:29 2026
+
+
+Running: compile_flow (Compile Process) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:29 2026
+
+
+Running: compiler (Compile Input) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:29 2026
+
+Copied C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\synwork\fullsystem_top_comp.srs to C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.srs
+
+
+compiler completed
+# Sat May 02 17:50:32 2026
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+
+Running: multi_srs_gen (Multi-srs Generator) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:32 2026
+
+
+multi_srs_gen completed
+# Sat May 02 17:50:32 2026
+
+Return Code: 0
+Run Time:00h:00m:00s
+
+Copied C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\synwork\fullsystem_top_mult.srs to C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.srs
+
+Complete: Compile Process on fullsystem_top_syn|synthesis
+
+
+Running: premap (Pre-mapping) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:32 2026
+
+
+premap completed with warnings
+# Sat May 02 17:50:33 2026
+
+Return Code: 1
+Run Time:00h:00m:01s
+
+Complete: Compile on fullsystem_top_syn|synthesis
+
+
+Running: map (Map) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:33 2026
+
+License granted for 4 parallel jobs
+
+
+Running: fpga_mapper (Map & Optimize) on fullsystem_top_syn|synthesis
+# Sat May 02 17:50:33 2026
+
+Copied C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\synwork\fullsystem_top_m.srm to C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.srm
+
+
+fpga_mapper completed with warnings
+# Sat May 02 17:51:02 2026
+
+Return Code: 1
+Run Time:00h:00m:29s
+
+Complete: Map on fullsystem_top_syn|synthesis
+
+Complete: Logic Synthesis on fullsystem_top_syn|synthesis
+
+Copied C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.srr to C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\backup\fullsystem_top.srr
+
+TCL script complete: "fullsystem_top_syn.tcl"
+
+exit status=0
+
+exit status=0
+
+License checkin: synplifypro_actel
+

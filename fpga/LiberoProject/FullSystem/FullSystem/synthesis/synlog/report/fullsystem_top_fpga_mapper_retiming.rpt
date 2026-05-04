@@ -1,0 +1,42 @@
+
+		#####  BEGIN RETIMING REPORT  #####
+
+Retiming summary : 0 registers retimed to 29
+
+Original and Pipelined registers replaced by retiming :
+		None
+
+New registers created by retiming :
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_0
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_2
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_4
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_5
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_7
+		u_dsp_pipeline.u_cfd.fe_x1.u_delay.dout_ret_8
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_0
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_2
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_4
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_5
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_7
+		u_dsp_pipeline.u_cfd.fe_x2.u_delay.dout_ret_8
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_0
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_2
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_4
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_5
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_7
+		u_dsp_pipeline.u_cfd.fe_y1.u_delay.dout_ret_8
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_0
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_1
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_2
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_4
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_5
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_7
+		u_dsp_pipeline.u_cfd.fe_y2.u_delay.dout_ret_8
+
+
+		#####   END RETIMING REPORT  #####
+

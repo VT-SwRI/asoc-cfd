@@ -1,0 +1,50 @@
+ ** Message System Log
+ ** Database: 
+ ** Date:   Sat May 02 17:50:13 2026
+
+
+****************
+Macro Parameters
+****************
+
+Name                            : mult_16x14_3p
+Family                          : PA3
+Output Format                   : VERILOG
+Type                            : Multiplier
+Variation                       : Booth Advanced Options
+Clock                           : Rising
+DataA Width                     : 16
+DataB Width                     : 14
+Representation                  : Signed
+Final Adder                     : Instantiate
+Pipeline Stages                 : 3
+Summation Network               : Wallace
+Max PGen Width                  : 0
+Final Adder Speed               : Sklansky
+Hybrid Val                      : 0
+Insert Pad                      : No
+Insert I/O Reg                  : No
+DebugLevel                      : 0
+
+**************
+Compile Report
+**************
+
+
+Netlist Resource Report
+=======================
+
+    CORE                       Used:   1204  Total:  38400   (3.14%)
+    IO (W/ clocks)             Used:      0  Total:    147   (0.00%)
+    Differential IO            Used:      0  Total:     65   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      0  Total:     18   (0.00%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:      0  Total:     60   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Wrote Verilog netlist to C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/FullSystem/smartgen\mult_16x14_3p\mult_16x14_3p.v.
+
+ ** Log Ended:   Sat May 02 17:50:14 2026
+

@@ -1,0 +1,18 @@
+FlashPro
+Version: 11.9.6.7
+Release: v11.9 SP6
+
+Software Version: 11.9.6.7
+PDB file
+'C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\designer\impl1\fullsystem_t\
+op.pdb' has been loaded successfully.
+DESIGN : fullsystem_top;  CHECKSUM : 71BD;  PDB_VERSION : 1.9
+Warning: The programmer with id '05191' in the project file cannot be detected and connected.
+Opened
+'C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\designer\impl1\fullsystem_t\
+op_fp\fullsystem_top.pro'
+Rescanning for Programmers...
+Rescanning for Programmers DONE.
+Rescanning for Programmers...
+Rescanning for Programmers DONE.
+Project closed.

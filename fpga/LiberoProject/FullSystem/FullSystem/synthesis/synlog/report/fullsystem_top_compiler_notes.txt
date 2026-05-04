@@ -1,0 +1,95 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_rx.v":21:7:21:13|Synthesizing module uart_rx in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_packet_parser.v":22:7:22:24|Synthesizing module uart_packet_parser in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":28:7:28:18|Synthesizing module event_buffer in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_tx.v":21:7:21:13|Synthesizing module uart_tx in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\host_uart.v":43:7:43:15|Synthesizing module host_uart in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_config_fsm.v":29:7:29:21|Synthesizing module uart_config_fsm in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\timestamp_generator.v":23:7:23:25|Synthesizing module timestamp_generator in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\adc_preprocess_4ch.v":25:7:25:24|Synthesizing module adc_preprocess_4ch in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_delay_line_ram.v":19:7:19:24|Synthesizing module cfd_delay_line_ram in library work.
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_delay_line_ram.v":36:4:36:9|Found RAM mem, depth=128, width=16
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":991:7:991:10|Synthesizing module DFN1 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2137:7:2137:10|Synthesizing module BUFF in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2114:7:2114:10|Synthesizing module XOR2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2:7:2:10|Synthesizing module AND2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":79:7:79:9|Synthesizing module AO1 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1406:7:1406:10|Synthesizing module MAJ3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1441:7:1441:9|Synthesizing module MX2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2119:7:2119:10|Synthesizing module XOR3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1585:7:1585:9|Synthesizing module OR3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":17:7:17:10|Synthesizing module AND3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":61:7:61:10|Synthesizing module AO16 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":7:7:7:11|Synthesizing module AND2A in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":114:7:114:10|Synthesizing module AOI1 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":1229:7:1229:9|Synthesizing module GND in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\proasic3e.v":2051:7:2051:9|Synthesizing module VCC in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":5:7:5:19|Synthesizing module mult_16x14_3p in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_channel_frontend.v":31:7:31:26|Synthesizing module cfd_channel_frontend in library work.
+@N: CG179 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_channel_frontend.v":232:65:232:71|Removing redundant assignment.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\serial_frac_div.v":21:7:21:21|Synthesizing module serial_frac_div in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_4ch.v":30:7:30:13|Synthesizing module cfd_4ch in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\position_calculator.v":31:7:31:19|Synthesizing module position_calc in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\peak_detector_4ch.v":23:7:23:23|Synthesizing module peak_detector_4ch in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":31:7:31:19|Synthesizing module event_builder in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\dsp_pipeline.v":41:7:41:18|Synthesizing module dsp_pipeline in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":46:7:46:23|Synthesizing module pattern_generator in library work.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[0] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[1] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[2] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[12] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[13] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[14] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_mag[15] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[32] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[33] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[34] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[35] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[36] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[37] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[38] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[39] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[40] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[41] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[42] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[43] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[44] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[45] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[46] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[47] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[48] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[56] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[58] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[60] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Register bit out_tag[61] is always 0.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\mux_gain_test.v":21:7:21:19|Synthesizing module mux_gain_test in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\bridge_fsm.v":26:7:26:16|Synthesizing module bridge_fsm in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pulse_extender.v":21:7:21:20|Synthesizing module pulse_extender in library work.
+@N: CG364 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\fullsystem_top.v":61:7:61:20|Synthesizing module fullsystem_top in library work.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\bridge_fsm.v":73:4:73:9|Trying to extract state machine for register state.
+@N: CL159 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\mux_gain_test.v":25:34:25:36|Input clk is unused.
+@N: CL159 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\mux_gain_test.v":26:34:26:36|Input rst is unused.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":217:4:217:9|Register bit x_abs_r[32] is always 0.
+@N: CL189 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":217:4:217:9|Register bit y_abs_r[32] is always 0.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v":252:4:252:9|Trying to extract state machine for register state.
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":185:4:185:9|Found RAM pos_mem_tag, depth=4, width=64
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":185:4:185:9|Found RAM pos_mem_x, depth=4, width=32
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":185:4:185:9|Found RAM pos_mem_y, depth=4, width=32
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":220:4:220:9|Found RAM mag_mem_tag, depth=4, width=64
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v":220:4:220:9|Found RAM mag_mem_val, depth=4, width=16
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\position_calculator.v":111:4:111:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_4ch.v":274:4:274:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_config_fsm.v":62:4:62:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\host_uart.v":163:4:163:9|Trying to extract state machine for register tx_state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_tx.v":47:4:47:9|Trying to extract state machine for register r_state.
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":91:4:91:9|Found RAM mem_x1, depth=1024, width=12
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":91:4:91:9|Found RAM mem_x2, depth=1024, width=12
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":91:4:91:9|Found RAM mem_y1, depth=1024, width=12
+@N: CL134 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":91:4:91:9|Found RAM mem_y2, depth=1024, width=12
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v":91:4:91:9|Trying to extract state machine for register r_state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_packet_parser.v":66:4:66:9|Trying to extract state machine for register r_state.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_packet_parser.v":66:4:66:9|Trying to extract state machine for register r_byte_idx.
+@N: CL201 :"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_rx.v":67:4:67:9|Trying to extract state machine for register r_state.
+@N|Running in 64-bit mode
+

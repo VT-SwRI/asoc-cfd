@@ -1,0 +1,1 @@
+@W: MT530 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_rx.v":67:4:67:9|Found inferred clock fullsystem_top|i_clk which controls 6980 sequential elements including u_uart_data_rx.r_state[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 
