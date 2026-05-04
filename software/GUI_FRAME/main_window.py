@@ -6,9 +6,9 @@ import os
 from datetime import datetime
 import time
 from plots import HeatmapWidget, PHDWidget, EventRateWidget
-from output_gen.output_gen import ListWriter, ImageWriter
+from output_gen import ListWriter, ImageWriter
 import queue
-from networking.networking import RxWorker, DecWorker
+from networking import RxWorker, DecWorker
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import ipaddress
 import serial.tools.list_ports as serialPorts
