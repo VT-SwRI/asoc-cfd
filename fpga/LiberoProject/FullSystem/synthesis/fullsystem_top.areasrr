@@ -1,0 +1,1180 @@
+----------------------------------------------------------------------
+Report for cell fullsystem_top.verilog
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AX1E         1       1.0        1.0
+                               BUFF       258       1.0      258.0
+                             CLKBUF         1       0.0        0.0
+                             CLKINT         1       0.0        0.0
+                                GND         1       0.0        0.0
+                              INBUF         3       0.0        0.0
+                               NOR3         1       1.0        1.0
+                               OA1B         1       1.0        1.0
+                               OAI1         1       1.0        1.0
+                             OUTBUF         9       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1C         1       1.0        1.0
+                         bridge_fsm         1     155.0      155.0
+                       dsp_pipeline         1   14964.0    14964.0
+          event_buffer_1024s_4s_10s_3s_0_1_2         1     206.0      206.0
+          host_uart_43s_151s_0_1_0_1_2_3_4         1     909.0      909.0
+                      mux_gain_test         1     145.0      145.0
+                  pattern_generator         1    2141.0     2141.0
+          pulse_extender_40000000s_26s_6         1     237.0      237.0
+          pulse_extender_40000000s_26s_6_0         1     243.0      243.0
+          pulse_extender_40000000s_26s_6_1         1     237.0      237.0
+          pulse_extender_40000000s_26s_6_2         1     237.0      237.0
+          pulse_extender_40000000s_26s_6_3         1     237.0      237.0
+          pulse_extender_40000000s_26s_6_4         1     237.0      237.0
+          pulse_extender_40000000s_26s_6_5         1     237.0      237.0
+          timestamp_generator_40000000s_40s_6s         1     309.0      309.0
+                    uart_config_fsm         1     176.0      176.0
+          uart_packet_parser_1024s_1s_170_85_0_1_2_3_4         1     390.0      390.0
+              uart_rx_43s_0_1_2_4_1         1     158.0      158.0
+                            
+                         TOTAL            296              21481.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_5.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led7
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2B        11       1.0       11.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_4.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led6
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2B        11       1.0       11.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_3.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led5
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2B        11       1.0       11.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_2.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led4
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B        10       1.0       10.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_1.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led3
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B        10       1.0       10.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6_0.netlist
+  Original Cell name pulse_extender_40000000s_26s_6
+     Instance path:  u_led2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        29       1.0       29.0
+                           DFN1E0C1         4       1.0        4.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B        10       1.0       10.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            245                243.0
+----------------------------------------------------------------------
+Report for cell pulse_extender_40000000s_26s_6.netlist
+  Original Cell name pulse_extender_40000000s_26s
+     Instance path:  u_led1
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        43       1.0       43.0
+                                AO1        42       1.0       42.0
+                               AOI1         2       1.0        2.0
+                             DFN1C1        26       1.0       26.0
+                           DFN1E0C1         4       1.0        4.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         9       1.0        9.0
+                              NOR2B        11       1.0       11.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XOR2        75       1.0       75.0
+                            
+                         TOTAL            239                237.0
+----------------------------------------------------------------------
+Report for cell bridge_fsm.netlist
+     Instance path:  u_bridge
+                                          Cell usage:
+                               cell       count     area    count*area
+                             DFN1C1         2       1.0        2.0
+                           DFN1E1C1       144       1.0      144.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                              NOR3A         7       1.0        7.0
+                               OR2B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL            157                155.0
+----------------------------------------------------------------------
+Report for cell mux_gain_test.netlist
+     Instance path:  u_mux
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                                MX2       116       1.0      116.0
+                               MX2C         1       1.0        1.0
+                              NOR2A        28       1.0       28.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL            147                145.0
+----------------------------------------------------------------------
+Report for cell pattern_generator.netlist
+     Instance path:  u_pattern_gen
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        20       1.0       20.0
+                               AND3        95       1.0       95.0
+                                AO1        70       1.0       70.0
+                               AO13         1       1.0        1.0
+                               AO1A        11       1.0       11.0
+                               AO1B        39       1.0       39.0
+                               AO1D        66       1.0       66.0
+                                AX1         1       1.0        1.0
+                               AX1A         1       1.0        1.0
+                               AX1C         4       1.0        4.0
+                               AX1E         1       1.0        1.0
+                              AXOI4         1       1.0        1.0
+                               DFN1       297       1.0      297.0
+                             DFN1C1        49       1.0       49.0
+                             DFN1E1        70       1.0       70.0
+                             DFN1P1         8       1.0        8.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               MAJ3         1       1.0        1.0
+                                MX2       105       1.0      105.0
+                               MX2B        60       1.0       60.0
+                               NOR2        32       1.0       32.0
+                              NOR2A       228       1.0      228.0
+                              NOR2B       187       1.0      187.0
+                               NOR3        46       1.0       46.0
+                              NOR3A        31       1.0       31.0
+                              NOR3B        25       1.0       25.0
+                              NOR3C        38       1.0       38.0
+                                OA1        22       1.0       22.0
+                               OA1A         6       1.0        6.0
+                               OA1B        51       1.0       51.0
+                               OA1C        65       1.0       65.0
+                                OR2        88       1.0       88.0
+                               OR2A        87       1.0       87.0
+                               OR2B         8       1.0        8.0
+                                OR3        69       1.0       69.0
+                               OR3A         2       1.0        2.0
+                               OR3B         2       1.0        2.0
+                               OR3C         5       1.0        5.0
+                                VCC         1       0.0        0.0
+                                XA1         2       1.0        2.0
+                               XA1B        61       1.0       61.0
+                               XA1C        16       1.0       16.0
+                              XNOR2       127       1.0      127.0
+                                XO1         1       1.0        1.0
+                               XO1A         1       1.0        1.0
+                               XOR2        40       1.0       40.0
+                            
+                         TOTAL           2143               2141.0
+----------------------------------------------------------------------
+Report for cell dsp_pipeline.netlist
+     Instance path:  u_dsp_pipeline
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                 adc_preprocess_4ch         1    1705.0     1705.0
+          cfd_4ch_7s_1024s_10s_10s_0_1_2_3_4         1    8484.0     8484.0
+          event_builder_64s_32s_16s_2s_4s         1    2466.0     2466.0
+          peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s         1     966.0      966.0
+                   position_calc_Z1         1    1343.0     1343.0
+                            
+                         TOTAL              7              14964.0
+----------------------------------------------------------------------
+Report for cell event_builder_64s_32s_16s_2s_4s.netlist
+     Instance path:  u_dsp_pipeline.u_event_builder
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        20       1.0       20.0
+                              AND2A        11       1.0       11.0
+                               AND3        43       1.0       43.0
+                                AO1        17       1.0       17.0
+                               AO1C        21       1.0       21.0
+                              AOI1A        21       1.0       21.0
+                              AXOI4         1       1.0        1.0
+                             CLKINT         1       0.0        0.0
+                             DFN1C1       131       1.0      131.0
+                             DFN1E1       832       1.0      832.0
+                           DFN1E1C1       290       1.0      290.0
+                                GND         1       0.0        0.0
+                                MX2       704       1.0      704.0
+                              NOR2A        35       1.0       35.0
+                              NOR2B         1       1.0        1.0
+                               NOR3         4       1.0        4.0
+                              NOR3A        15       1.0       15.0
+                              NOR3B        21       1.0       21.0
+                              NOR3C        10       1.0       10.0
+                                OA1         7       1.0        7.0
+                               OA1A        14       1.0       14.0
+                                OR2         2       1.0        2.0
+                               OR2A        49       1.0       49.0
+                                OR3        20       1.0       20.0
+                                VCC         1       0.0        0.0
+                              XNOR2       112       1.0      112.0
+                                XO1        21       1.0       21.0
+                               XOR2        64       1.0       64.0
+                            
+                         TOTAL           2469               2466.0
+----------------------------------------------------------------------
+Report for cell peak_detector_4ch_16s_64s_16s_3s_18s_4294934528s.netlist
+     Instance path:  u_dsp_pipeline.u_peak
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         4       1.0        4.0
+                              AND2A        12       1.0       12.0
+                               AND3        20       1.0       20.0
+                                AO1        44       1.0       44.0
+                               AO1C        12       1.0       12.0
+                              AOI1A        32       1.0       32.0
+                               AX1D         9       1.0        9.0
+                              AXOI1         4       1.0        4.0
+                             DFN1C1       211       1.0      211.0
+                           DFN1E0C1        60       1.0       60.0
+                           DFN1E0P1         4       1.0        4.0
+                           DFN1E1C1       144       1.0      144.0
+                                GND         1       0.0        0.0
+                               MAJ3        37       1.0       37.0
+                              NOR2A        51       1.0       51.0
+                              NOR2B        89       1.0       89.0
+                              NOR3C         9       1.0        9.0
+                                OA1        14       1.0       14.0
+                               OA1A         8       1.0        8.0
+                                OR2         8       1.0        8.0
+                               OR2A        52       1.0       52.0
+                                VCC         1       0.0        0.0
+                                XA1         7       1.0        7.0
+                              XNOR2        56       1.0       56.0
+                                XO1         5       1.0        5.0
+                               XOR2        46       1.0       46.0
+                               XOR3        28       1.0       28.0
+                            
+                         TOTAL            968                966.0
+----------------------------------------------------------------------
+Report for cell position_calc_Z1.netlist
+     Instance path:  u_dsp_pipeline.u_pos_calc
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         9       1.0        9.0
+                               AND3        28       1.0       28.0
+                                AO1       110       1.0      110.0
+                               AO13        19       1.0       19.0
+                               AO18         1       1.0        1.0
+                               AO1A         4       1.0        4.0
+                               AX1C         2       1.0        2.0
+                               AX1D        39       1.0       39.0
+                             DFN1C1        17       1.0       17.0
+                           DFN1E0C1       274       1.0      274.0
+                           DFN1E1C1       175       1.0      175.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                               MAJ3         3       1.0        3.0
+                                MX2        97       1.0       97.0
+                               MX2B         2       1.0        2.0
+                               NOR2         7       1.0        7.0
+                              NOR2A        21       1.0       21.0
+                              NOR2B       174       1.0      174.0
+                               NOR3         5       1.0        5.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B        41       1.0       41.0
+                              NOR3C        27       1.0       27.0
+                                OA1        44       1.0       44.0
+                               OA1B         1       1.0        1.0
+                                OR2        62       1.0       62.0
+                               OR2A        11       1.0       11.0
+                               OR2B         1       1.0        1.0
+                                OR3        25       1.0       25.0
+                               OR3B         3       1.0        3.0
+                               OR3C         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XA1A        15       1.0       15.0
+                               XAI1         2       1.0        2.0
+                              XNOR2        29       1.0       29.0
+                              XNOR3        10       1.0       10.0
+                               XOR2        64       1.0       64.0
+                               XOR3        13       1.0       13.0
+                            
+                         TOTAL           1345               1343.0
+----------------------------------------------------------------------
+Report for cell cfd_4ch_7s_1024s_10s_10s_0_1_2_3_4.netlist
+     Instance path:  u_dsp_pipeline.u_cfd
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         5       1.0        5.0
+                               AND3        18       1.0       18.0
+                                AO1        34       1.0       34.0
+                               AO13         7       1.0        7.0
+                               AO1A         2       1.0        2.0
+                              AOI1B         1       1.0        1.0
+                               AX1B         8       1.0        8.0
+                               AX1D         1       1.0        1.0
+                             CLKINT         1       0.0        0.0
+                             DFN1C1        21       1.0       21.0
+                           DFN1E1C1       445       1.0      445.0
+                             DFN1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                MX2        97       1.0       97.0
+                               MX2B         2       1.0        2.0
+                               MX2C        96       1.0       96.0
+                               NOR2         1       1.0        1.0
+                              NOR2A        18       1.0       18.0
+                              NOR2B        27       1.0       27.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         4       1.0        4.0
+                              NOR3C         9       1.0        9.0
+                               OA1A        13       1.0       13.0
+                               OA1B         3       1.0        3.0
+                                OR2         5       1.0        5.0
+                               OR2A        10       1.0       10.0
+                               OR2B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                              XNOR2         4       1.0        4.0
+                              XNOR3         3       1.0        3.0
+                               XOR2        30       1.0       30.0
+          cfd_channel_frontend_7s_1024s_10s_10s_6_3         1    1827.0     1827.0
+          cfd_channel_frontend_7s_1024s_10s_10s_6_3_0         1    1819.0     1819.0
+          cfd_channel_frontend_7s_1024s_10s_10s_6_3_1         1    1816.0     1816.0
+          cfd_channel_frontend_7s_1024s_10s_10s_6_3_2         1    1818.0     1818.0
+            serial_frac_div_17s_10s         1     335.0      335.0
+                            
+                         TOTAL            877               8484.0
+----------------------------------------------------------------------
+Report for cell serial_frac_div_17s_10s.netlist
+     Instance path:  u_dsp_pipeline.u_cfd.u_div
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                              AND2A         2       1.0        2.0
+                               AND3         5       1.0        5.0
+                                AO1        38       1.0       38.0
+                               AO13         5       1.0        5.0
+                               AO1A         1       1.0        1.0
+                               AO1C         7       1.0        7.0
+                              AOI1A         5       1.0        5.0
+                               AX1A         1       1.0        1.0
+                               AX1D         4       1.0        4.0
+                             DFN1C1         1       1.0        1.0
+                           DFN1E0C1         2       1.0        2.0
+                           DFN1E1C1        57       1.0       57.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                MX2        18       1.0       18.0
+                               MX2A        15       1.0       15.0
+                               NOR2         2       1.0        2.0
+                              NOR2A        46       1.0       46.0
+                              NOR2B        35       1.0       35.0
+                              NOR3B         1       1.0        1.0
+                              NOR3C         4       1.0        4.0
+                                OA1         2       1.0        2.0
+                               OA1A        12       1.0       12.0
+                                OR2         9       1.0        9.0
+                               OR2A        24       1.0       24.0
+                                VCC         1       0.0        0.0
+                               XA1A         1       1.0        1.0
+                               XAI1         1       1.0        1.0
+                              XNOR2        15       1.0       15.0
+                               XOR2        12       1.0       12.0
+                               XOR3         8       1.0        8.0
+                            
+                         TOTAL            337                335.0
+----------------------------------------------------------------------
+Report for cell cfd_channel_frontend_7s_1024s_10s_10s_6_3_2.netlist
+  Original Cell name cfd_channel_frontend_7s_1024s_10s_10s_6_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                              AND2A         5       1.0        5.0
+                               AND3         6       1.0        6.0
+                                AO1        16       1.0       16.0
+                               AO13        13       1.0       13.0
+                               AO1A         3       1.0        3.0
+                               AO1B         1       1.0        1.0
+                               AO1C         6       1.0        6.0
+                               AOI1         1       1.0        1.0
+                              AOI1A        10       1.0       10.0
+                              AOI1B         1       1.0        1.0
+                               AX1A         7       1.0        7.0
+                               AX1B         7       1.0        7.0
+                               AX1C         3       1.0        3.0
+                               AX1E         2       1.0        2.0
+                              AXOI4         1       1.0        1.0
+                             DFN1C1        11       1.0       11.0
+                           DFN1E0C1         5       1.0        5.0
+                           DFN1E1C1       258       1.0      258.0
+                           DFN1E1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2         1       1.0        1.0
+                               NOR2         6       1.0        6.0
+                              NOR2A        32       1.0       32.0
+                              NOR2B        28       1.0       28.0
+                              NOR3A         9       1.0        9.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         4       1.0        4.0
+                                OA1         2       1.0        2.0
+                               OA1A         7       1.0        7.0
+                               OA1B         2       1.0        2.0
+                               OA1C         9       1.0        9.0
+                                OR2         4       1.0        4.0
+                               OR2A        28       1.0       28.0
+                               OR2B         1       1.0        1.0
+                                OR3         6       1.0        6.0
+                               OR3B         1       1.0        1.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                               XA1A         5       1.0        5.0
+                               XA1B         7       1.0        7.0
+                               XA1C         4       1.0        4.0
+                              XNOR2        26       1.0       26.0
+                              XNOR3         6       1.0        6.0
+                                XO1         1       1.0        1.0
+                               XO1A         1       1.0        1.0
+                               XOR2        23       1.0       23.0
+                               XOR3         6       1.0        6.0
+          cfd_delay_line_ram_16s_7s_128s_3_2         1      71.0       71.0
+                    mult_16x14_3p_2         1    1160.0     1160.0
+                            
+                         TOTAL            591               1818.0
+----------------------------------------------------------------------
+Report for cell mult_16x14_3p_2.netlist
+  Original Cell name mult_16x14_3p
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y2.mult_att
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2       201       1.0      201.0
+                              AND2A         3       1.0        3.0
+                               AND3         7       1.0        7.0
+                                AO1        70       1.0       70.0
+                               AO16        18       1.0       18.0
+                               AOI1         7       1.0        7.0
+                               BUFF        53       1.0       53.0
+                               DFN1       293       1.0      293.0
+                                GND         1       0.0        0.0
+                               MAJ3        81       1.0       81.0
+                                MX2       119       1.0      119.0
+                                OR3         7       1.0        7.0
+                                VCC         1       0.0        0.0
+                               XOR2       220       1.0      220.0
+                               XOR3        81       1.0       81.0
+                            
+                         TOTAL           1162               1160.0
+----------------------------------------------------------------------
+Report for cell cfd_delay_line_ram_16s_7s_128s_3_2.netlist
+  Original Cell name cfd_delay_line_ram_16s_7s_128s_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y2.u_delay
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AOI1         1       1.0        1.0
+                               DFN1        38       1.0       38.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         1       1.0        1.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1A         5       1.0        5.0
+                               XA1C         1       1.0        1.0
+                               XOR2         6       1.0        6.0
+                            
+                         TOTAL             74                 71.0
+----------------------------------------------------------------------
+Report for cell cfd_channel_frontend_7s_1024s_10s_10s_6_3_1.netlist
+  Original Cell name cfd_channel_frontend_7s_1024s_10s_10s_6_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y1
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                              AND2A         5       1.0        5.0
+                               AND3         6       1.0        6.0
+                                AO1        16       1.0       16.0
+                               AO13        13       1.0       13.0
+                               AO1A         2       1.0        2.0
+                               AO1B         1       1.0        1.0
+                               AO1C         6       1.0        6.0
+                              AOI1A        10       1.0       10.0
+                              AOI1B         1       1.0        1.0
+                               AX1A         7       1.0        7.0
+                               AX1B         8       1.0        8.0
+                               AX1C         3       1.0        3.0
+                               AX1E         3       1.0        3.0
+                              AXOI4         1       1.0        1.0
+                             DFN1C1        11       1.0       11.0
+                           DFN1E0C1         5       1.0        5.0
+                           DFN1E1C1       258       1.0      258.0
+                           DFN1E1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2         1       1.0        1.0
+                               NOR2         6       1.0        6.0
+                              NOR2A        32       1.0       32.0
+                              NOR2B        28       1.0       28.0
+                              NOR3A         8       1.0        8.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         4       1.0        4.0
+                                OA1         2       1.0        2.0
+                               OA1A         8       1.0        8.0
+                               OA1B         2       1.0        2.0
+                               OA1C         9       1.0        9.0
+                                OR2         4       1.0        4.0
+                               OR2A        28       1.0       28.0
+                               OR2B         1       1.0        1.0
+                                OR3         6       1.0        6.0
+                               OR3B         1       1.0        1.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                               XA1A         6       1.0        6.0
+                               XA1B         7       1.0        7.0
+                               XA1C         4       1.0        4.0
+                              XNOR2        25       1.0       25.0
+                              XNOR3         6       1.0        6.0
+                                XO1         1       1.0        1.0
+                               XO1A         1       1.0        1.0
+                               XOR2        22       1.0       22.0
+                               XOR3         6       1.0        6.0
+          cfd_delay_line_ram_16s_7s_128s_3_1         1      70.0       70.0
+                    mult_16x14_3p_1         1    1160.0     1160.0
+                            
+                         TOTAL            590               1816.0
+----------------------------------------------------------------------
+Report for cell mult_16x14_3p_1.netlist
+  Original Cell name mult_16x14_3p
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y1.mult_att
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2       201       1.0      201.0
+                              AND2A         3       1.0        3.0
+                               AND3         7       1.0        7.0
+                                AO1        70       1.0       70.0
+                               AO16        18       1.0       18.0
+                               AOI1         7       1.0        7.0
+                               BUFF        53       1.0       53.0
+                               DFN1       293       1.0      293.0
+                                GND         1       0.0        0.0
+                               MAJ3        81       1.0       81.0
+                                MX2       119       1.0      119.0
+                                OR3         7       1.0        7.0
+                                VCC         1       0.0        0.0
+                               XOR2       220       1.0      220.0
+                               XOR3        81       1.0       81.0
+                            
+                         TOTAL           1162               1160.0
+----------------------------------------------------------------------
+Report for cell cfd_delay_line_ram_16s_7s_128s_3_1.netlist
+  Original Cell name cfd_delay_line_ram_16s_7s_128s_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_y1.u_delay
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AOI1         1       1.0        1.0
+                               DFN1        37       1.0       37.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         1       1.0        1.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1A         5       1.0        5.0
+                               XA1C         1       1.0        1.0
+                               XOR2         6       1.0        6.0
+                            
+                         TOTAL             73                 70.0
+----------------------------------------------------------------------
+Report for cell cfd_channel_frontend_7s_1024s_10s_10s_6_3_0.netlist
+  Original Cell name cfd_channel_frontend_7s_1024s_10s_10s_6_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                              AND2A         5       1.0        5.0
+                               AND3         6       1.0        6.0
+                                AO1        16       1.0       16.0
+                               AO13        13       1.0       13.0
+                               AO1A         4       1.0        4.0
+                               AO1B         1       1.0        1.0
+                               AO1C         6       1.0        6.0
+                               AOI1         3       1.0        3.0
+                              AOI1A        10       1.0       10.0
+                              AOI1B         1       1.0        1.0
+                                AX1         3       1.0        3.0
+                               AX1A         4       1.0        4.0
+                               AX1B         7       1.0        7.0
+                               AX1C         4       1.0        4.0
+                               AX1E         1       1.0        1.0
+                             DFN1C1        11       1.0       11.0
+                           DFN1E0C1         5       1.0        5.0
+                           DFN1E1C1       258       1.0      258.0
+                           DFN1E1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                MX2         1       1.0        1.0
+                               NOR2         6       1.0        6.0
+                              NOR2A        31       1.0       31.0
+                              NOR2B        29       1.0       29.0
+                              NOR3A         9       1.0        9.0
+                              NOR3B         6       1.0        6.0
+                              NOR3C         4       1.0        4.0
+                                OA1         2       1.0        2.0
+                               OA1A        13       1.0       13.0
+                               OA1B         2       1.0        2.0
+                               OA1C         2       1.0        2.0
+                                OR2         4       1.0        4.0
+                               OR2A        29       1.0       29.0
+                               OR2B         2       1.0        2.0
+                                OR3         6       1.0        6.0
+                               OR3B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                               XA1A         5       1.0        5.0
+                               XA1B         7       1.0        7.0
+                               XA1C         4       1.0        4.0
+                              XNOR2        26       1.0       26.0
+                              XNOR3         6       1.0        6.0
+                                XO1         1       1.0        1.0
+                               XO1A         1       1.0        1.0
+                               XOR2        23       1.0       23.0
+                               XOR3         6       1.0        6.0
+          cfd_delay_line_ram_16s_7s_128s_3_0         1      70.0       70.0
+                    mult_16x14_3p_0         1    1160.0     1160.0
+                            
+                         TOTAL            593               1819.0
+----------------------------------------------------------------------
+Report for cell mult_16x14_3p_0.netlist
+  Original Cell name mult_16x14_3p
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x2.mult_att
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2       201       1.0      201.0
+                              AND2A         3       1.0        3.0
+                               AND3         7       1.0        7.0
+                                AO1        70       1.0       70.0
+                               AO16        18       1.0       18.0
+                               AOI1         7       1.0        7.0
+                               BUFF        53       1.0       53.0
+                               DFN1       293       1.0      293.0
+                                GND         1       0.0        0.0
+                               MAJ3        81       1.0       81.0
+                                MX2       119       1.0      119.0
+                                OR3         7       1.0        7.0
+                                VCC         1       0.0        0.0
+                               XOR2       220       1.0      220.0
+                               XOR3        81       1.0       81.0
+                            
+                         TOTAL           1162               1160.0
+----------------------------------------------------------------------
+Report for cell cfd_delay_line_ram_16s_7s_128s_3_0.netlist
+  Original Cell name cfd_delay_line_ram_16s_7s_128s_3
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x2.u_delay
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AOI1         1       1.0        1.0
+                               DFN1        37       1.0       37.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         1       1.0        1.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1A         5       1.0        5.0
+                               XA1C         1       1.0        1.0
+                               XOR2         6       1.0        6.0
+                            
+                         TOTAL             73                 70.0
+----------------------------------------------------------------------
+Report for cell cfd_channel_frontend_7s_1024s_10s_10s_6_3.netlist
+  Original Cell name cfd_channel_frontend_7s_1024s_10s_10s_6
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x1
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                              AND2A         5       1.0        5.0
+                               AND3         6       1.0        6.0
+                                AO1        16       1.0       16.0
+                               AO13        13       1.0       13.0
+                               AO1A         4       1.0        4.0
+                               AO1B         1       1.0        1.0
+                               AO1C         6       1.0        6.0
+                              AOI1A        10       1.0       10.0
+                               AX1A         7       1.0        7.0
+                               AX1B         6       1.0        6.0
+                               AX1C         4       1.0        4.0
+                               AX1E         1       1.0        1.0
+                              AXOI4         1       1.0        1.0
+                             DFN1C1        11       1.0       11.0
+                           DFN1E0C1         5       1.0        5.0
+                           DFN1E1C1       258       1.0      258.0
+                           DFN1E1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         3       1.0        3.0
+                                MX2         1       1.0        1.0
+                               NOR2         8       1.0        8.0
+                              NOR2A        35       1.0       35.0
+                              NOR2B        29       1.0       29.0
+                              NOR3A        10       1.0       10.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         4       1.0        4.0
+                                OA1         2       1.0        2.0
+                               OA1A         9       1.0        9.0
+                               OA1B         2       1.0        2.0
+                               OA1C         8       1.0        8.0
+                                OR2         4       1.0        4.0
+                               OR2A        27       1.0       27.0
+                               OR2B         2       1.0        2.0
+                                OR3         7       1.0        7.0
+                               OR3B         2       1.0        2.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                               XA1A         4       1.0        4.0
+                               XA1B         7       1.0        7.0
+                               XA1C         4       1.0        4.0
+                              XNOR2        28       1.0       28.0
+                              XNOR3         6       1.0        6.0
+                                XO1         1       1.0        1.0
+                               XO1A         1       1.0        1.0
+                               XOR2        23       1.0       23.0
+                               XOR3         6       1.0        6.0
+          cfd_delay_line_ram_16s_7s_128s_3         1      71.0       71.0
+                      mult_16x14_3p         1    1160.0     1160.0
+                            
+                         TOTAL            600               1827.0
+----------------------------------------------------------------------
+Report for cell mult_16x14_3p.netlist
+  Original Cell name mult_16x14_3p
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x1.mult_att
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2       201       1.0      201.0
+                              AND2A         3       1.0        3.0
+                               AND3         7       1.0        7.0
+                                AO1        70       1.0       70.0
+                               AO16        18       1.0       18.0
+                               AOI1         7       1.0        7.0
+                               BUFF        53       1.0       53.0
+                               DFN1       293       1.0      293.0
+                                GND         1       0.0        0.0
+                               MAJ3        81       1.0       81.0
+                                MX2       119       1.0      119.0
+                                OR3         7       1.0        7.0
+                                VCC         1       0.0        0.0
+                               XOR2       220       1.0      220.0
+                               XOR3        81       1.0       81.0
+                            
+                         TOTAL           1162               1160.0
+----------------------------------------------------------------------
+Report for cell cfd_delay_line_ram_16s_7s_128s_3.netlist
+  Original Cell name cfd_delay_line_ram_16s_7s_128s
+     Instance path:  u_dsp_pipeline.u_cfd.fe_x1.u_delay
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AOI1         1       1.0        1.0
+                               DFN1        38       1.0       38.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         1       1.0        1.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1A         5       1.0        5.0
+                               XA1C         1       1.0        1.0
+                               XOR2         6       1.0        6.0
+                            
+                         TOTAL             74                 71.0
+----------------------------------------------------------------------
+Report for cell adc_preprocess_4ch.netlist
+     Instance path:  u_dsp_pipeline.u_preprocess
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         7       1.0        7.0
+                               AND3         4       1.0        4.0
+                                AO1        95       1.0       95.0
+                               AO13        20       1.0       20.0
+                               AO1A         3       1.0        3.0
+                               AO1C         1       1.0        1.0
+                               AOI1         3       1.0        3.0
+                               AX1C         4       1.0        4.0
+                               AX1D        38       1.0       38.0
+                             CLKINT         2       0.0        0.0
+                             DFN1C1         8       1.0        8.0
+                           DFN1E0C1         8       1.0        8.0
+                           DFN1E1C1       760       1.0      760.0
+                                GND         1       0.0        0.0
+                                INV         5       1.0        5.0
+                               MAJ3        21       1.0       21.0
+                                MX2       158       1.0      158.0
+                               MX2C        13       1.0       13.0
+                              NOR2A        53       1.0       53.0
+                              NOR2B       194       1.0      194.0
+                               NOR3         2       1.0        2.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         4       1.0        4.0
+                              NOR3C        36       1.0       36.0
+                                OA1        15       1.0       15.0
+                               OA1A        24       1.0       24.0
+                                OR2        25       1.0       25.0
+                               OR2A        35       1.0       35.0
+                                OR3        16       1.0       16.0
+                                VCC         1       0.0        0.0
+                                XA1        15       1.0       15.0
+                              XNOR2        24       1.0       24.0
+                              XNOR3        24       1.0       24.0
+                               XOR2        86       1.0       86.0
+                               XOR3         3       1.0        3.0
+                            
+                         TOTAL           1709               1705.0
+----------------------------------------------------------------------
+Report for cell timestamp_generator_40000000s_40s_6s.netlist
+     Instance path:  u_timestamp
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AX1        48       1.0       48.0
+                               AX1C         8       1.0        8.0
+                             DFN1C1         7       1.0        7.0
+                           DFN1E1C1        64       1.0       64.0
+                                GND         1       0.0        0.0
+                                MX2        63       1.0       63.0
+                               MX2A         1       1.0        1.0
+                               NOR2         2       1.0        2.0
+                              NOR2A        11       1.0       11.0
+                              NOR2B        51       1.0       51.0
+                              NOR3B         8       1.0        8.0
+                              NOR3C        30       1.0       30.0
+                                OR2         4       1.0        4.0
+                                VCC         1       0.0        0.0
+                               XA1B         2       1.0        2.0
+                               XOR2        10       1.0       10.0
+                            
+                         TOTAL            311                309.0
+----------------------------------------------------------------------
+Report for cell uart_config_fsm.netlist
+     Instance path:  u_config_fsm
+                                          Cell usage:
+                               cell       count     area    count*area
+                             DFN1C1        15       1.0       15.0
+                           DFN1E1C1       157       1.0      157.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                              NOR2A         1       1.0        1.0
+                              NOR3A         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL            178                176.0
+----------------------------------------------------------------------
+Report for cell host_uart_43s_151s_0_1_0_1_2_3_4.netlist
+     Instance path:  u_host_uart
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         2       1.0        2.0
+                               AO1A         1       1.0        1.0
+                               AO1C         2       1.0        2.0
+                             DFN1C1        15       1.0       15.0
+                           DFN1E1C1       454       1.0      454.0
+                             DFN1P1         3       1.0        3.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         3       1.0        3.0
+                              NOR2A        10       1.0       10.0
+                              NOR2B        12       1.0       12.0
+                              NOR3A         7       1.0        7.0
+                              NOR3B        14       1.0       14.0
+                              NOR3C         7       1.0        7.0
+                               OA1C         2       1.0        2.0
+                                OR2         2       1.0        2.0
+                               OR2B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1B         3       1.0        3.0
+                               XA1C         1       1.0        1.0
+                               XOR2         5       1.0        5.0
+              uart_rx_43s_0_1_2_1_0         1     163.0      163.0
+              uart_tx_43s_0_1_2_3_4         1     201.0      201.0
+                            
+                         TOTAL            549                909.0
+----------------------------------------------------------------------
+Report for cell uart_tx_43s_0_1_2_3_4.netlist
+     Instance path:  u_host_uart.u_uart_tx
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AO1         3       1.0        3.0
+                               AO1A         1       1.0        1.0
+                               AX1A         1       1.0        1.0
+                               AX1E         1       1.0        1.0
+                             DFN1C1         4       1.0        4.0
+                           DFN1E0C1         6       1.0        6.0
+                           DFN1E0P1         1       1.0        1.0
+                           DFN1E1C1        12       1.0       12.0
+                             DFN1P1         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                MX2       140       1.0      140.0
+                               MX2C         5       1.0        5.0
+                               NOR2         1       1.0        1.0
+                              NOR2B         3       1.0        3.0
+                               NOR3         8       1.0        8.0
+                              NOR3B         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OA1A         2       1.0        2.0
+                               OAI1         1       1.0        1.0
+                               OR2B         1       1.0        1.0
+                               OR3B         2       1.0        2.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1B         1       1.0        1.0
+                               XA1C         1       1.0        1.0
+                              XNOR2         1       1.0        1.0
+                               XOR2         2       1.0        2.0
+                            
+                         TOTAL            203                201.0
+----------------------------------------------------------------------
+Report for cell uart_rx_43s_0_1_2_1_0.netlist
+  Original Cell name uart_rx_43s_0_1_2_4_1
+     Instance path:  u_host_uart.u_uart_rx
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         9       1.0        9.0
+                                AO1         1       1.0        1.0
+                               AO1A         8       1.0        8.0
+                               AO1C         1       1.0        1.0
+                             DFN1C1        20       1.0       20.0
+                           DFN1E0C1        12       1.0       12.0
+                           DFN1E1C1         7       1.0        7.0
+                             DFN1P1         3       1.0        3.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         2       1.0        2.0
+                              NOR2A        17       1.0       17.0
+                              NOR2B        20       1.0       20.0
+                               NOR3         3       1.0        3.0
+                              NOR3A         7       1.0        7.0
+                              NOR3B         1       1.0        1.0
+                              NOR3C         1       1.0        1.0
+                                OA1         5       1.0        5.0
+                               OAI1         1       1.0        1.0
+                                OR2        11       1.0       11.0
+                               OR2A         5       1.0        5.0
+                               OR2B         2       1.0        2.0
+                                OR3         7       1.0        7.0
+                               OR3A         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1B         1       1.0        1.0
+                               XA1C         1       1.0        1.0
+                               XOR2        16       1.0       16.0
+                            
+                         TOTAL            165                163.0
+----------------------------------------------------------------------
+Report for cell event_buffer_1024s_4s_10s_3s_0_1_2.netlist
+     Instance path:  u_event_buffer
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                               AO1A         1       1.0        1.0
+                               AO1C         2       1.0        2.0
+                               AO1D         2       1.0        2.0
+                              AOI1B         1       1.0        1.0
+                               AX1D         3       1.0        3.0
+                             DFN1C1        35       1.0       35.0
+                                GND         1       0.0        0.0
+                                MX2        16       1.0       16.0
+                               NOR2         5       1.0        5.0
+                              NOR2A         4       1.0        4.0
+                              NOR2B         4       1.0        4.0
+                              NOR3A         5       1.0        5.0
+                              NOR3C        49       1.0       49.0
+                               OA1B        14       1.0       14.0
+                                OR2        17       1.0       17.0
+                               OR2A         9       1.0        9.0
+                                OR3         6       1.0        6.0
+                               OR3C         1       1.0        1.0
+                             RAM4K9        12       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1B         1       1.0        1.0
+                               XA1C         9       1.0        9.0
+                              XNOR2         7       1.0        7.0
+                              XNOR3         9       1.0        9.0
+                               XOR2         5       1.0        5.0
+                            
+                         TOTAL            220                206.0
+----------------------------------------------------------------------
+Report for cell uart_packet_parser_1024s_1s_170_85_0_1_2_3_4.netlist
+     Instance path:  u_packet_parser
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AO1         2       1.0        2.0
+                               AO1A         4       1.0        4.0
+                               AO1C         1       1.0        1.0
+                               AO1D         1       1.0        1.0
+                               AOI1        12       1.0       12.0
+                              AOI1B         7       1.0        7.0
+                               AX1C         1       1.0        1.0
+                               AX1D         1       1.0        1.0
+                             DFN1C1         3       1.0        3.0
+                           DFN1E0C1        98       1.0       98.0
+                           DFN1E1C1        59       1.0       59.0
+                           DFN1E1P1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         3       1.0        3.0
+                                MX2         7       1.0        7.0
+                               MX2C        13       1.0       13.0
+                               NOR2         9       1.0        9.0
+                              NOR2A        18       1.0       18.0
+                              NOR2B        20       1.0       20.0
+                              NOR3A         4       1.0        4.0
+                              NOR3B         4       1.0        4.0
+                              NOR3C         6       1.0        6.0
+                                OA1         3       1.0        3.0
+                               OA1A         1       1.0        1.0
+                               OA1B         3       1.0        3.0
+                               OA1C         2       1.0        2.0
+                               OAI1         1       1.0        1.0
+                                OR2        15       1.0       15.0
+                               OR2A         8       1.0        8.0
+                               OR2B         1       1.0        1.0
+                                OR3        26       1.0       26.0
+                               OR3C        10       1.0       10.0
+                                VCC         1       0.0        0.0
+                               XA1B        14       1.0       14.0
+                              XNOR2        15       1.0       15.0
+                                XO1         4       1.0        4.0
+                               XO1A         1       1.0        1.0
+                               XOR2        11       1.0       11.0
+                            
+                         TOTAL            392                390.0
+----------------------------------------------------------------------
+Report for cell uart_rx_43s_0_1_2_4_1.netlist
+  Original Cell name uart_rx_43s_0_1_2_3_4
+     Instance path:  u_uart_data_rx
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         9       1.0        9.0
+                                AO1         5       1.0        5.0
+                               AO1A         2       1.0        2.0
+                               AO1C         1       1.0        1.0
+                             DFN1C1        21       1.0       21.0
+                           DFN1E0C1         8       1.0        8.0
+                           DFN1E1C1        11       1.0       11.0
+                             DFN1P1         3       1.0        3.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         1       1.0        1.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B        31       1.0       31.0
+                               NOR3         5       1.0        5.0
+                              NOR3A         5       1.0        5.0
+                              NOR3C         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                                OR2        14       1.0       14.0
+                               OR2A         4       1.0        4.0
+                               OR2B         5       1.0        5.0
+                                OR3         7       1.0        7.0
+                                VCC         1       0.0        0.0
+                               XA1B         1       1.0        1.0
+                               XA1C         1       1.0        1.0
+                               XOR2        16       1.0       16.0
+                            
+                         TOTAL            160                158.0

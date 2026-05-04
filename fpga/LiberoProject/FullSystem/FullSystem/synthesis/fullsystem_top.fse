@@ -1,0 +1,162 @@
+
+fsm_encoding {176746711} onehot
+
+fsm_state_encoding {176746711} S_IDLE {00001}
+
+fsm_state_encoding {176746711} S_RX_START {00010}
+
+fsm_state_encoding {176746711} S_RX_DATA {00100}
+
+fsm_state_encoding {176746711} S_RX_STOP {01000}
+
+fsm_state_encoding {176746711} S_CLEANUP {10000}
+
+fsm_registers {176746711} {r_state[4]}  {r_state[3]}  {r_state[2]}  {r_state[1]}  {r_state[0]} 
+
+fsm_encoding {256646610} onehot
+
+fsm_state_encoding {256646610} 000 {00000001}
+
+fsm_state_encoding {256646610} 001 {00000010}
+
+fsm_state_encoding {256646610} 010 {00000100}
+
+fsm_state_encoding {256646610} 011 {00001000}
+
+fsm_state_encoding {256646610} 100 {00010000}
+
+fsm_state_encoding {256646610} 101 {00100000}
+
+fsm_state_encoding {256646610} 110 {01000000}
+
+fsm_state_encoding {256646610} 111 {10000000}
+
+fsm_registers {256646610} {r_byte_idx[7]}  {r_byte_idx[6]}  {r_byte_idx[5]}  {r_byte_idx[4]}  {r_byte_idx[3]}  {r_byte_idx[2]}  {r_byte_idx[1]}  {r_byte_idx[0]} 
+
+fsm_encoding {25664669} onehot
+
+fsm_state_encoding {25664669} S_IDLE {00001}
+
+fsm_state_encoding {25664669} S_CNT_HI {00010}
+
+fsm_state_encoding {25664669} S_CNT_LO {00100}
+
+fsm_state_encoding {25664669} S_RX_SAMPLE {01000}
+
+fsm_state_encoding {25664669} S_WAIT_FOOTER {10000}
+
+fsm_registers {25664669} {r_state[4]}  {r_state[3]}  {r_state[2]}  {r_state[1]}  {r_state[0]} 
+
+fsm_encoding {16914918} sequential
+
+fsm_state_encoding {16914918} S_IDLE {00}
+
+fsm_state_encoding {16914918} S_BURST {01}
+
+fsm_state_encoding {16914918} S_GAP {10}
+
+fsm_registers {16914918} {r_state[1]}  {r_state[0]} 
+
+fsm_encoding {1916341636} onehot
+
+fsm_state_encoding {1916341636} TXS_IDLE {00001}
+
+fsm_state_encoding {1916341636} TXS_LOAD {00010}
+
+fsm_state_encoding {1916341636} TXS_SEND {00100}
+
+fsm_state_encoding {1916341636} TXS_WAIT_START {01000}
+
+fsm_state_encoding {1916341636} TXS_WAIT_END {10000}
+
+fsm_registers {1916341636} {tx_state[4]}  {tx_state[3]}  {tx_state[2]}  {tx_state[1]}  {tx_state[0]} 
+
+fsm_encoding {176746711} onehot
+
+fsm_state_encoding {176746711} S_IDLE {00001}
+
+fsm_state_encoding {176746711} S_RX_START {00010}
+
+fsm_state_encoding {176746711} S_RX_DATA {00100}
+
+fsm_state_encoding {176746711} S_RX_STOP {01000}
+
+fsm_state_encoding {176746711} S_CLEANUP {10000}
+
+fsm_registers {176746711} {r_state[4]}  {r_state[3]}  {r_state[2]}  {r_state[1]}  {r_state[0]} 
+
+fsm_encoding {18474477} onehot
+
+fsm_state_encoding {18474477} S_IDLE {00001}
+
+fsm_state_encoding {18474477} S_TX_START {00010}
+
+fsm_state_encoding {18474477} S_TX_DATA {00100}
+
+fsm_state_encoding {18474477} S_TX_STOP {01000}
+
+fsm_state_encoding {18474477} S_CLEANUP {10000}
+
+fsm_registers {18474477} {r_state[4]}  {r_state[3]}  {r_state[2]}  {r_state[1]}  {r_state[0]} 
+
+fsm_encoding {24624625} sequential
+
+fsm_state_encoding {24624625} S_IDLE {00}
+
+fsm_state_encoding {24624625} S_LATCH {01}
+
+fsm_state_encoding {24624625} S_DONE {10}
+
+fsm_registers {24624625} {state[1]}  {state[0]} 
+
+fsm_encoding {1127442744} onehot
+
+fsm_state_encoding {1127442744} S_WAIT {00001}
+
+fsm_state_encoding {1127442744} S_CHECK {00010}
+
+fsm_state_encoding {1127442744} S_DIV_START {00100}
+
+fsm_state_encoding {1127442744} S_DIV_WAIT {01000}
+
+fsm_state_encoding {1127442744} S_OUTPUT {10000}
+
+fsm_registers {1127442744} {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 
+
+fsm_encoding {1411141113} onehot
+
+fsm_state_encoding {1411141113} S_IDLE {0000001}
+
+fsm_state_encoding {1411141113} S_CALC_DT {0000010}
+
+fsm_state_encoding {1411141113} S_MULT_X {0000100}
+
+fsm_state_encoding {1411141113} S_STORE_X {0001000}
+
+fsm_state_encoding {1411141113} S_MULT_Y {0010000}
+
+fsm_state_encoding {1411141113} S_STORE_Y {0100000}
+
+fsm_state_encoding {1411141113} S_OUTPUT {1000000}
+
+fsm_registers {1411141113} {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 
+
+fsm_encoding {2125242522} sequential
+
+fsm_state_encoding {2125242522} S_IDLE {00}
+
+fsm_state_encoding {2125242522} S_RUN {01}
+
+fsm_state_encoding {2125242522} S_DONE {10}
+
+fsm_registers {2125242522} {state[1]}  {state[0]} 
+
+fsm_encoding {5734731} sequential
+
+fsm_state_encoding {5734731} S_IDLE {00}
+
+fsm_state_encoding {5734731} S_SEND {01}
+
+fsm_state_encoding {5734731} S_BUSY {10}
+
+fsm_registers {5734731} {state[1]}  {state[0]} 

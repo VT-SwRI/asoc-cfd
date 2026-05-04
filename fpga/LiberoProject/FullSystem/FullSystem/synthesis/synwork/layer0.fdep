@@ -1,0 +1,122 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\synthesis\\synwork\\fullsystem_top_comp.srs|-top|fullsystem_top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3e.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509361936
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\proasic3e.v":1509031088
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1509033128
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1509033128
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\bridge_fsm.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\adc_preprocess_4ch.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\cfd_delay_line_ram.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\smartgen\\mult_16x14_3p\\mult_16x14_3p.v":1777758614
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\cfd_channel_frontend.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\serial_frac_div.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\cfd_4ch.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\event_builder.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\peak_detector_4ch.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\position_calculator.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\dsp_pipeline.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\event_buffer.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\uart_rx.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\uart_tx.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\host_uart.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\mux_gain_test.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\pattern_gen.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\pulse_extender.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\timestamp_generator.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\uart_config_fsm.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\uart_packet_parser.v":1777758359
+#CUR:"C:\\Users\\aamar\\Documents\\SeniorSem2\\4806-MDE\\FullSystem\\FullSystem\\hdl\\fullsystem_top.v":1777758359
+#numinternalfiles:5
+#defaultlanguage:verilog
+0			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\bridge_fsm.v" verilog
+1			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\adc_preprocess_4ch.v" verilog
+2			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_delay_line_ram.v" verilog
+3			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\smartgen\mult_16x14_3p\mult_16x14_3p.v" verilog
+4			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_channel_frontend.v" verilog
+5			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\serial_frac_div.v" verilog
+6			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\cfd_4ch.v" verilog
+7			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_builder.v" verilog
+8			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\peak_detector_4ch.v" verilog
+9			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\position_calculator.v" verilog
+10			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\dsp_pipeline.v" verilog
+11			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\event_buffer.v" verilog
+12			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_rx.v" verilog
+13			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_tx.v" verilog
+14			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\host_uart.v" verilog
+15			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\mux_gain_test.v" verilog
+16			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pattern_gen.v" verilog
+17			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\pulse_extender.v" verilog
+18			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\timestamp_generator.v" verilog
+19			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_config_fsm.v" verilog
+20			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\uart_packet_parser.v" verilog
+21			"C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\hdl\fullsystem_top.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 -1
+4 2 3
+5 -1
+6 4 5
+7 -1
+8 -1
+9 -1
+10 1 6 9 8 7
+11 -1
+12 -1
+13 -1
+14 12 13
+15 -1
+16 -1
+17 -1
+18 -1
+19 -1
+20 -1
+21 12 20 11 14 19 18 10 16 15 0 17
+#Dependency Lists(Users Of)
+0 21
+1 10
+2 4
+3 4
+4 6
+5 6
+6 10
+7 10
+8 10
+9 10
+10 21
+11 21
+12 14 21
+13 14
+14 21
+15 21
+16 21
+17 21
+18 21
+19 21
+20 21
+21 -1
+#Design Unit to File Association
+module work bridge_fsm 0
+module work adc_preprocess_4ch 1
+module work cfd_delay_line_ram 2
+module work mult_16x14_3p 3
+module work cfd_channel_frontend 4
+module work serial_frac_div 5
+module work cfd_4ch 6
+module work event_builder 7
+module work peak_detector_4ch 8
+module work position_calc 9
+module work dsp_pipeline 10
+module work event_buffer 11
+module work uart_rx 12
+module work uart_tx 13
+module work host_uart 14
+module work mux_gain_test 15
+module work pattern_generator 16
+module work pulse_extender 17
+module work timestamp_generator 18
+module work uart_config_fsm 19
+module work uart_packet_parser 20
+module work fullsystem_top 21

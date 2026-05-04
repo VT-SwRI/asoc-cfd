@@ -1,0 +1,97 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09M-SP1-5
+#--  Project file C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\synthesis\fullsystem_top_syn.prj
+#--  Written on Sat May 02 17:51:02 2026
+
+
+#project files
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/bridge_fsm.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/adc_preprocess_4ch.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/cfd_delay_line_ram.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/smartgen/mult_16x14_3p/mult_16x14_3p.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/cfd_channel_frontend.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/serial_frac_div.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/cfd_4ch.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/event_builder.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/peak_detector_4ch.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/position_calculator.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/dsp_pipeline.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/event_buffer.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/uart_rx.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/uart_tx.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/host_uart.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/mux_gain_test.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/pattern_gen.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/pulse_extender.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/timestamp_generator.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/uart_config_fsm.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/uart_packet_parser.v"
+add_file -verilog "C:/Users/aamar/Documents/SeniorSem2/4806-MDE/FullSystem/hdl/fullsystem_top.v"
+
+
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+
+#device options
+set_option -technology ProASIC3E
+set_option -part A3PE1500
+set_option -package PQFP208
+set_option -speed_grade STD
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "fullsystem_top"
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
+set_option -frequency 100.000
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# actel_options
+set_option -rw_check_on_ram 0
+
+# Microsemi 500K
+set_option -run_prop_extract 1
+set_option -maxfan 24
+set_option -disable_io_insertion 0
+set_option -retiming 0
+set_option -report_path 4000
+set_option -opcond COMWC
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+
+# Microsemi 500K
+set_option -globalthreshold 50
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./fullsystem_top.edn"
+impl -active "synthesis"

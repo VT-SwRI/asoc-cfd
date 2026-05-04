@@ -1,0 +1,477 @@
+KEY LIBERO "11.9"
+KEY CAPTURE "11.9.6.7"
+KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "VERILOG2001"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "FALSE"
+KEY VendorTechnology_Family "ProASIC3E"
+KEY VendorTechnology_Die "IT10X10M3"
+KEY VendorTechnology_Package "pq208"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVTTL"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "IT10X10M3"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "fullsystem_top::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\designer\impl1\adc_preprocess_4ch.ide_des,ide_des"
+STATE="utd"
+TIME="1777758360"
+SIZE="236"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top.adb,adb"
+STATE="utd"
+TIME="1777841214"
+SIZE="13667840"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top.ide_des,ide_des"
+STATE="utd"
+TIME="1777841217"
+SIZE="1044"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top.pdb,pdb"
+STATE="utd"
+TIME="1777759530"
+SIZE="665318"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top_ba.sdf,ba_sdf"
+STATE="utd"
+TIME="1777759494"
+SIZE="13543940"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top_ba.v,ba_hdl"
+STATE="utd"
+TIME="1777759492"
+SIZE="7143588"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top_compile_log.rpt,log"
+STATE="utd"
+TIME="1777758689"
+SIZE="22322"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top_fp\fullsystem_top.pro,pro"
+STATE="utd"
+TIME="1777759800"
+SIZE="2503"
+ENDFILE
+VALUE "<project>\designer\impl1\fullsystem_top_fp\projectData\fullsystem_top.pdb,pdb"
+STATE="utd"
+TIME="1777759800"
+SIZE="665318"
+ENDFILE
+VALUE "<project>\hdl\adc_preprocess_4ch.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="8458"
+ENDFILE
+VALUE "<project>\hdl\bridge_fsm.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="4620"
+ENDFILE
+VALUE "<project>\hdl\cfd_4ch.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="12857"
+ENDFILE
+VALUE "<project>\hdl\cfd_channel_frontend.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="11791"
+ENDFILE
+VALUE "<project>\hdl\cfd_delay_line_ram.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="1557"
+ENDFILE
+VALUE "<project>\hdl\dsp_pipeline.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="9024"
+ENDFILE
+VALUE "<project>\hdl\event_buffer.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="5681"
+ENDFILE
+VALUE "<project>\hdl\event_builder.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="11692"
+ENDFILE
+VALUE "<project>\hdl\fullsystem_top.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="14712"
+ENDFILE
+VALUE "<project>\hdl\host_uart.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="7983"
+ENDFILE
+VALUE "<project>\hdl\mux_gain_test.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="2113"
+ENDFILE
+VALUE "<project>\hdl\pattern_gen.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="13722"
+ENDFILE
+VALUE "<project>\hdl\peak_detector_4ch.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="5707"
+ENDFILE
+VALUE "<project>\hdl\position_calculator.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="8984"
+ENDFILE
+VALUE "<project>\hdl\pulse_extender.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="1867"
+ENDFILE
+VALUE "<project>\hdl\serial_frac_div.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="3199"
+ENDFILE
+VALUE "<project>\hdl\timestamp_generator.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="3470"
+ENDFILE
+VALUE "<project>\hdl\uart_config_fsm.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="4788"
+ENDFILE
+VALUE "<project>\hdl\uart_packet_parser.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="7425"
+ENDFILE
+VALUE "<project>\hdl\uart_rx.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="6099"
+ENDFILE
+VALUE "<project>\hdl\uart_tx.v,hdl"
+STATE="utd"
+TIME="1777758359"
+SIZE="4020"
+ENDFILE
+VALUE "<project>\smartgen\mult_16x14_3p\mult_16x14_3p.cxf,actgen_cxf"
+STATE="utd"
+TIME="1777758614"
+SIZE="1591"
+ENDFILE
+VALUE "<project>\smartgen\mult_16x14_3p\mult_16x14_3p.gen,gen"
+STATE="utd"
+TIME="1777758613"
+SIZE="515"
+PARENT="<project>\smartgen\mult_16x14_3p\mult_16x14_3p.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\mult_16x14_3p\mult_16x14_3p.log,log"
+STATE="utd"
+TIME="1777758614"
+SIZE="1809"
+PARENT="<project>\smartgen\mult_16x14_3p\mult_16x14_3p.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\mult_16x14_3p\mult_16x14_3p.v,hdl"
+STATE="utd"
+TIME="1777758614"
+SIZE="106669"
+PARENT="<project>\smartgen\mult_16x14_3p\mult_16x14_3p.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\synthesis\fullsystem_top.edn,syn_edn"
+STATE="utd"
+TIME="1777758661"
+SIZE="10108126"
+ENDFILE
+VALUE "<project>\synthesis\fullsystem_top.so,so"
+STATE="utd"
+TIME="1777758661"
+SIZE="264"
+ENDFILE
+VALUE "<project>\synthesis\fullsystem_top_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1777758660"
+SIZE="407"
+ENDFILE
+VALUE "<project>\synthesis\fullsystem_top_syn.prj,prj"
+STATE="utd"
+TIME="1777758662"
+SIZE="4095"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "fullsystem_top::work"
+FILE "<project>\hdl\fullsystem_top.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideDESIGNER(<project>\designer\impl1\fullsystem_top.adb,adb)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\fullsystem_top.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\fullsystem_top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\fullsystem_top_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=FALSE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="FPExpress"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Designer\bin\FPExpress.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "fullsystem_top::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideDESIGNER(<project>\designer\impl1\fullsystem_top.adb,adb)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\fullsystem_top.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
+ENDLIST
+LIST ModuleSubBlockList
+LIST "adc_preprocess_4ch::work","hdl\adc_preprocess_4ch.v","FALSE","FALSE"
+ENDLIST
+LIST "bridge_fsm::work","hdl\bridge_fsm.v","FALSE","FALSE"
+ENDLIST
+LIST "cfd_4ch::work","hdl\cfd_4ch.v","FALSE","FALSE"
+SUBBLOCK "cfd_channel_frontend::work","hdl\cfd_channel_frontend.v","FALSE","FALSE"
+SUBBLOCK "serial_frac_div::work","hdl\serial_frac_div.v","FALSE","FALSE"
+ENDLIST
+LIST "cfd_channel_frontend::work","hdl\cfd_channel_frontend.v","FALSE","FALSE"
+SUBBLOCK "cfd_delay_line_ram::work","hdl\cfd_delay_line_ram.v","FALSE","FALSE"
+SUBBLOCK "mult_16x14_3p::work","smartgen\mult_16x14_3p\mult_16x14_3p.v","TRUE","FALSE"
+ENDLIST
+LIST "cfd_delay_line_ram::work","hdl\cfd_delay_line_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "dsp_pipeline::work","hdl\dsp_pipeline.v","FALSE","FALSE"
+SUBBLOCK "adc_preprocess_4ch::work","hdl\adc_preprocess_4ch.v","FALSE","FALSE"
+SUBBLOCK "cfd_4ch::work","hdl\cfd_4ch.v","FALSE","FALSE"
+SUBBLOCK "event_builder::work","hdl\event_builder.v","FALSE","FALSE"
+SUBBLOCK "peak_detector_4ch::work","hdl\peak_detector_4ch.v","FALSE","FALSE"
+SUBBLOCK "position_calc::work","hdl\position_calculator.v","FALSE","FALSE"
+ENDLIST
+LIST "event_buffer::work","hdl\event_buffer.v","FALSE","FALSE"
+ENDLIST
+LIST "event_builder::work","hdl\event_builder.v","FALSE","FALSE"
+ENDLIST
+LIST "fullsystem_top::work","hdl\fullsystem_top.v","FALSE","FALSE"
+SUBBLOCK "bridge_fsm::work","hdl\bridge_fsm.v","FALSE","FALSE"
+SUBBLOCK "dsp_pipeline::work","hdl\dsp_pipeline.v","FALSE","FALSE"
+SUBBLOCK "event_buffer::work","hdl\event_buffer.v","FALSE","FALSE"
+SUBBLOCK "host_uart::work","hdl\host_uart.v","FALSE","FALSE"
+SUBBLOCK "mux_gain_test::work","hdl\mux_gain_test.v","FALSE","FALSE"
+SUBBLOCK "pattern_generator::work","hdl\pattern_gen.v","FALSE","FALSE"
+SUBBLOCK "pulse_extender::work","hdl\pulse_extender.v","FALSE","FALSE"
+SUBBLOCK "timestamp_generator::work","hdl\timestamp_generator.v","FALSE","FALSE"
+SUBBLOCK "uart_config_fsm::work","hdl\uart_config_fsm.v","FALSE","FALSE"
+SUBBLOCK "uart_packet_parser::work","hdl\uart_packet_parser.v","FALSE","FALSE"
+SUBBLOCK "uart_rx::work","hdl\uart_rx.v","FALSE","FALSE"
+ENDLIST
+LIST "host_uart::work","hdl\host_uart.v","FALSE","FALSE"
+SUBBLOCK "uart_rx::work","hdl\uart_rx.v","FALSE","FALSE"
+SUBBLOCK "uart_tx::work","hdl\uart_tx.v","FALSE","FALSE"
+ENDLIST
+LIST "mult_16x14_3p::work","smartgen\mult_16x14_3p\mult_16x14_3p.v","TRUE","FALSE"
+ENDLIST
+LIST "mux_gain_test::work","hdl\mux_gain_test.v","FALSE","FALSE"
+ENDLIST
+LIST "pattern_generator::work","hdl\pattern_gen.v","FALSE","FALSE"
+ENDLIST
+LIST "peak_detector_4ch::work","hdl\peak_detector_4ch.v","FALSE","FALSE"
+ENDLIST
+LIST "position_calc::work","hdl\position_calculator.v","FALSE","FALSE"
+ENDLIST
+LIST "pulse_extender::work","hdl\pulse_extender.v","FALSE","FALSE"
+ENDLIST
+LIST "serial_frac_div::work","hdl\serial_frac_div.v","FALSE","FALSE"
+ENDLIST
+LIST "timestamp_generator::work","hdl\timestamp_generator.v","FALSE","FALSE"
+ENDLIST
+LIST "uart_config_fsm::work","hdl\uart_config_fsm.v","FALSE","FALSE"
+ENDLIST
+LIST "uart_packet_parser::work","hdl\uart_packet_parser.v","FALSE","FALSE"
+ENDLIST
+LIST "uart_rx::work","hdl\uart_rx.v","FALSE","FALSE"
+ENDLIST
+LIST "uart_tx::work","hdl\uart_tx.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

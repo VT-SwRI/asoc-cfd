@@ -1,0 +1,426 @@
+***************************************************************************
+                               Status Report
+                          Sat May 02 17:51:26 2026 ***************************************************************************
+
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+File Name: C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\designer\impl1\fullsystem_top.adb
+Design Name: fullsystem_top  Design State: compile
+Last Saved: Sat May 02 17:51:13 2026
+
+***** Device Data **************************************************
+
+Family: ProASIC3E  Die: A3PE1500  Package: 208 PQFP
+Speed: STD  Voltage: 1.5
+
+Restrict JTAG Pins: YES
+Restrict Probe Pins: YES
+
+Junction Temperature Range:   COM
+Voltage Range:   COM
+
+***** Import Variables *********************************************
+
+Source File(s) Imported on Sat May 02 17:51:10 2026:
+        C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.edn
+
+
+***** CAE Variables ************************************************
+
+Back Annotation File: N/A
+
+
+***** Bitstream Variables ******************************************
+
+Bitstream File: N/A
+     Lock Mode: OFF
+
+
+***** Compile Variables ********************************************
+
+Netlist PIN properties overwrite existing properties: 0
+
+Compile Output:
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : ProASIC3E
+Device      : A3PE1500
+Package     : 208 PQFP
+Source      :
+C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.edn
+Format      : EDIF
+Topcell     : fullsystem_top
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_x2/u_delay/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_x2/u_delay/DOUT_TMP[17] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_y1/u_delay/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_y1/u_delay/DOUT_TMP[17] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_y2/u_delay/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_y2/u_delay/DOUT_TMP[17] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_x1/u_delay/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net u_dsp_pipeline/u_cfd/fe_x1/u_delay/DOUT_TMP[17] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_0 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_0[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_0[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_0[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_0[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_0[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_0 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_1 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_1[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_1[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_1[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_1[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_1[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_1 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_2 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_2[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_2[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_2[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_2[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_2[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_2 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_3 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_3[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_3[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_3[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_3[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_3[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_3 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_4 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_4[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_4[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_4[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_4[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_4[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_4 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_5 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_5[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_5[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_5[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_5[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_5[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_5 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_6 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_6[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_6[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_6[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_6[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_6[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_6 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_7 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_7[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_7[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_7[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_7[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_7[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_7 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_8 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_8[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_8[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_8[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_8[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_8[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_8 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_9 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_9[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_9[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_9[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_9[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_9[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_9 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_10 drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_10[4] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_10[5] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_10[6] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_10[7] drives no load.
+Warning: CMP201: Net u_event_buffer/DOUT_SIG_10[8] drives no load.
+Warning: CMP201: Net u_event_buffer/N_4_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_5_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_6_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_7_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_8_11 drives no load.
+Warning: CMP201: Net u_event_buffer/N_9_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_10_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_11_10 drives no load.
+Warning: CMP201: Net u_event_buffer/N_12_11 drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              2
+  - Tieoff:                 4
+  - Logic combining:        569
+
+    Total macros optimized  575
+
+Warning: CMP503: Remapped 4342 enable flip-flop(s) to a 2-tile implementation because the
+         CLR/PRE pin on the enable flip-flop is not being driven by a global net.
+
+There were 0 error(s) and 177 warning(s) in this design.
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:  25248  Total:  38400   (65.75%)
+    IO (W/ clocks)             Used:     13  Total:    147   (8.84%)
+    Differential IO            Used:      0  Total:     65   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      6  Total:     18   (33.33%)
+    PLL                        Used:      0  Total:      2   (0.00%)
+    RAM/FIFO                   Used:     16  Total:     60   (26.67%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 6      | 6  (100.00%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 17568        | 17568
+    SEQ     | 7680         | 7680
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 4             | 0            | 0
+    Output I/O                            | 9             | 0            | 0
+    Bidirectional I/O                     | 0             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVTTL                           | 3.30v | N/A   | 4     | 9      | 0
+
+I/O Placement:
+
+    Locked  :   0
+    Placed  :   0
+    UnPlaced:  13 ( 100.00% )
+
+Net information report:
+=======================
+
+The following nets drive enable flip-flops that have been remapped to a 2-tile implementation:
+    EffCnt  Type          Name
+    --------------------------
+    24      SET/RESET_NET Net   : i_rst_1_c_0
+                          Driver: i_rst_pad_RNILNG3_40
+    24      SET/RESET_NET Net   : i_rst_1_c_1
+                          Driver: i_rst_pad_RNILNG3_38
+    24      SET/RESET_NET Net   : i_rst_1_c_2
+                          Driver: i_rst_pad_RNILNG3_36
+    24      SET/RESET_NET Net   : i_rst_1_c_3
+                          Driver: i_rst_pad_RNILNG3_37
+    24      SET/RESET_NET Net   : i_rst_1_c_4
+                          Driver: i_rst_pad_RNILNG3_39
+    24      SET/RESET_NET Net   : i_rst_1_c_5
+                          Driver: i_rst_pad_RNILNG3_195
+    24      SET/RESET_NET Net   : i_rst_1_c_6
+                          Driver: i_rst_pad_RNILNG3_198
+    24      SET/RESET_NET Net   : i_rst_1_c_7
+                          Driver: i_rst_pad_RNILNG3_189
+    24      SET/RESET_NET Net   : i_rst_1_c_8
+                          Driver: i_rst_pad_RNILNG3_192
+    24      SET/RESET_NET Net   : i_rst_1_c_9
+                          Driver: i_rst_pad_RNILNG3_201
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    7712    CLK_NET       Net   : i_clk_c
+                          Driver: i_clk_pad
+                          Source: NETLIST
+    747     INT_NET       Net   : u_dsp_pipeline/pp_valid
+                          Driver: u_dsp_pipeline/u_preprocess/out_valid_RNIDPPF
+                          Source: NETLIST
+    384     INT_NET       Net   : u_dsp_pipeline/u_preprocess/do_shift
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active_RNIPD8I1_0
+                          Source: NETLIST
+    336     INT_NET       Net   : u_dsp_pipeline.u_cfd.event_start
+                          Driver: I_286
+                          Source: NETLIST
+    258     INT_NET       Net   : u_dsp_pipeline/u_event_builder/pos_rptr[0]
+                          Driver: u_dsp_pipeline/u_event_builder/pos_rptr_RNI99D7[0]
+                          Source: NETLIST
+    238     INT_NET       Net   : u_dsp_pipeline/u_cfd/N_34_0
+                          Driver: u_dsp_pipeline/u_cfd/state_RNIBCKJ_0[0]
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    25      INT_NET       Net   : u_dsp_pipeline/u_preprocess/flush_active_4
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active_4/U1
+    25      INT_NET       Net   : u_dsp_pipeline/u_preprocess/flush_active_3
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active_3/U1
+    25      INT_NET       Net   : u_dsp_pipeline/u_preprocess/flush_active_2
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active_2/U1
+    25      INT_NET       Net   : u_dsp_pipeline/u_preprocess/flush_active_1
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active_1/U1
+    25      INT_NET       Net   : u_dsp_pipeline/u_preprocess/flush_active
+                          Driver: u_dsp_pipeline/u_preprocess/flush_active/U1
+    24      SET/RESET_NET Net   : i_rst_1_c_0
+                          Driver: i_rst_pad_RNILNG3_40
+    24      SET/RESET_NET Net   : i_rst_1_c_1
+                          Driver: i_rst_pad_RNILNG3_38
+    24      SET/RESET_NET Net   : i_rst_1_c_2
+                          Driver: i_rst_pad_RNILNG3_36
+    24      SET/RESET_NET Net   : i_rst_1_c_3
+                          Driver: i_rst_pad_RNILNG3_37
+    24      SET/RESET_NET Net   : i_rst_1_c_4
+                          Driver: i_rst_pad_RNILNG3_39
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    5470    SET/RESET_NET Net   : i_rst_1_c
+                          Driver: i_rst_pad
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_x2/att_reg[3]
+                          Driver: u_dsp_pipeline/u_cfd/fe_x2/att_reg[3]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_x2/att_reg[5]
+                          Driver: u_dsp_pipeline/u_cfd/fe_x2/att_reg[5]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_x2/att_reg[7]
+                          Driver: u_dsp_pipeline/u_cfd/fe_x2/att_reg[7]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_x2/att_reg[9]
+                          Driver: u_dsp_pipeline/u_cfd/fe_x2/att_reg[9]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_x2/att_reg[11]
+                          Driver: u_dsp_pipeline/u_cfd/fe_x2/att_reg[11]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_y1/att_reg[3]
+                          Driver: u_dsp_pipeline/u_cfd/fe_y1/att_reg[3]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_y1/att_reg[5]
+                          Driver: u_dsp_pipeline/u_cfd/fe_y1/att_reg[5]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_y1/att_reg[7]
+                          Driver: u_dsp_pipeline/u_cfd/fe_y1/att_reg[7]/U1
+    34      INT_NET       Net   : u_dsp_pipeline/u_cfd/fe_y1/att_reg[9]
+                          Driver: u_dsp_pipeline/u_cfd/fe_y1/att_reg[9]/U1
+
+

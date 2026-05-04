@@ -1,0 +1,158 @@
+# Sat May 02 17:50:32 2026
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top_scck.rpt 
+Printing clock  summary report in "C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 118MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 118MB)
+
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_tx.v":47:4:47:9|Removing sequential instance o_tx_done (in view: work.uart_tx_43s_0_1_2_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1213:9:1213:21|Removing sequential instance DFN1_Mult\[0\] (in view: work.mult_16x14_3p_0(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1213:9:1213:21|Removing sequential instance DFN1_Mult\[0\] (in view: work.mult_16x14_3p_1(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1213:9:1213:21|Removing sequential instance DFN1_Mult\[0\] (in view: work.mult_16x14_3p_2(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1213:9:1213:21|Removing sequential instance DFN1_Mult\[0\] (in view: work.mult_16x14_3p_3(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":254:4:254:9|Removing sequential instance drop_pos (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":254:4:254:9|Removing sequential instance drop_mag (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_builder.v":254:4:254:9|Removing sequential instance mag_force_pop (in view: work.event_builder_64s_32s_16s_2s_4s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_busy (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\event_buffer.v":91:4:91:9|Removing sequential instance o_busy (in view: work.event_buffer_1024s_4s_10s_3s_0_1_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":649:9:649:15|Removing sequential instance DFN1_37 (in view: work.mult_16x14_3p_0(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":649:9:649:15|Removing sequential instance DFN1_37 (in view: work.mult_16x14_3p_1(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":649:9:649:15|Removing sequential instance DFN1_37 (in view: work.mult_16x14_3p_2(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":649:9:649:15|Removing sequential instance DFN1_37 (in view: work.mult_16x14_3p_3(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1537:9:1537:16|Removing sequential instance DFN1_187 (in view: work.mult_16x14_3p_0(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1537:9:1537:16|Removing sequential instance DFN1_187 (in view: work.mult_16x14_3p_1(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1537:9:1537:16|Removing sequential instance DFN1_187 (in view: work.mult_16x14_3p_2(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\smartgen\mult_16x14_3p\mult_16x14_3p.v":1537:9:1537:16|Removing sequential instance DFN1_187 (in view: work.mult_16x14_3p_3(verilog)) of type view:PA3.DFN1(prim) because it does not drive other instances.
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 128MB)
+
+
+
+Clock Summary
+*****************
+
+Start                    Requested     Requested     Clock        Clock                   Clock
+Clock                    Frequency     Period        Type         Group                   Load 
+-----------------------------------------------------------------------------------------------
+fullsystem_top|i_clk     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     6980 
+===============================================================================================
+
+@W: MT530 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_rx.v":67:4:67:9|Found inferred clock fullsystem_top|i_clk which controls 6980 sequential elements including u_uart_data_rx.r_state[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\aamar\Documents\SeniorSem2\4806-MDE\FullSystem\FullSystem\synthesis\fullsystem_top.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 128MB)
+
+Encoding state machine r_state[4:0] (in view: work.uart_rx_43s_0_1_2_4_1(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine r_byte_idx[7:0] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00000001
+   001 -> 00000010
+   010 -> 00000100
+   011 -> 00001000
+   100 -> 00010000
+   101 -> 00100000
+   110 -> 01000000
+   111 -> 10000000
+Encoding state machine r_state[4:0] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine r_state[2:0] (in view: work.event_buffer_1024s_4s_10s_3s_0_1_2(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine r_state[4:0] (in view: work.uart_rx_43s_0_1_2_4_0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine r_state[4:0] (in view: work.uart_tx_43s_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine tx_state[4:0] (in view: work.host_uart_43s_151s_0_1_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine state[2:0] (in view: work.uart_config_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[4:0] (in view: work.cfd_4ch_7s_1024s_10s_10s_0_1_2_3_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine state[6:0] (in view: work.position_calc_Z1(verilog))
+original code -> new code
+   000 -> 0000001
+   001 -> 0000010
+   010 -> 0000100
+   011 -> 0001000
+   100 -> 0010000
+   101 -> 0100000
+   110 -> 1000000
+Encoding state machine state[2:0] (in view: work.pattern_generator(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[2:0] (in view: work.bridge_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[10] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[11] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[12] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[13] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[14] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\aamar\documents\seniorsem2\4806-mde\fullsystem\fullsystem\hdl\uart_packet_parser.v":66:4:66:9|Removing sequential instance o_wr_addr[15] (in view: work.uart_packet_parser_1024s_1s_170_85_0_1_2_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 134MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 134MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 02 17:50:33 2026
+
+###########################################################]
